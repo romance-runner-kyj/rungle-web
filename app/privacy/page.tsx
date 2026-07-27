@@ -19,14 +19,14 @@ export default function PrivacyPage() {
     <main className="mx-auto max-w-3xl px-6 py-16 text-[15px]">
       <h1 className="text-3xl font-extrabold">개인정보 처리방침</h1>
       <p className="mt-4 leading-7 text-gray-800">
-        Rungle(이하 &ldquo;서비스&rdquo;)은 「개인정보 보호법」
+        Rungle 운영팀(이하 &ldquo;운영팀&rdquo;)은 「개인정보 보호법」
         제30조에 따라 이용자의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할
         수 있도록 다음과 같이 개인정보 처리방침을 수립·공개합니다.
       </p>
       <p className="mt-3 leading-7 text-gray-800">
         Rungle은 러닝 기록을 불러와 사진·영상에서 베스트컷을 골라주고 기록 오버레이·릴스를
         만들어 공유하는 iOS 앱입니다. 본 방침은 현재 제공 중인 클로즈 베타 버전을 기준으로
-        하며, <strong>현재 버전은 회원 가입·로그인 기능이 없고 별도의 서비스 서버로 개인정보를
+        하며, <strong>현재 버전은 회원 가입·로그인 기능이 없고 별도의 서버로 개인정보를
         전송하지 않습니다.</strong>
       </p>
 
@@ -40,14 +40,14 @@ export default function PrivacyPage() {
           <li><strong>보유 기간:</strong> 이용자 기기 내 보관, 앱 삭제 시 전부 파기</li>
           <li><strong>제3자 제공:</strong> 하지 않음</li>
           <li><strong>개인정보 보호책임자:</strong> 김동호 (admin@rungle.app)</li>
-          <li><strong>문의:</strong> 서비스 (admin@rungle.app)</li>
+          <li><strong>문의:</strong> 운영팀 (admin@rungle.app)</li>
         </ul>
       </div>
 
       <Section title="제1조 (처리하는 개인정보의 항목 및 수집 방법)">
         <p>
-          서비스는 회원 가입 없이 이용하며, 이름·이메일·비밀번호 등 계정 정보를 수집하지
-          않습니다. 서비스 제공을 위해 처리하는 정보는 다음과 같고, 전부 이용자의 기기 안에서
+          서비스는 회원 가입 없이 이용하며, 운영팀은 이름·이메일·비밀번호 등 계정 정보를
+          수집하지 않습니다. 서비스 제공을 위해 처리하는 정보는 다음과 같고, 전부 이용자의 기기 안에서
           처리됩니다.
         </p>
         <div className="overflow-x-auto">
@@ -104,7 +104,7 @@ export default function PrivacyPage() {
 
       <Section title="제3조 (개인정보의 처리 및 보유 기간)">
         <p>
-          처리되는 모든 정보는 <strong>이용자의 기기 안에만 저장</strong>되며, 서비스가 별도
+          처리되는 모든 정보는 <strong>이용자의 기기 안에만 저장</strong>되며, 운영팀이 별도
           서버에 보관하지 않습니다. 이용자가 앱을 삭제하면 앱이 저장한 모든 정보가 함께
           파기됩니다.
         </p>
@@ -116,13 +116,13 @@ export default function PrivacyPage() {
 
       <Section title="제4조 (개인정보의 제3자 제공)">
         <p>
-          서비스는 이용자의 개인정보를 <strong>제3자에게 제공하지 않습니다.</strong> 다만
+          운영팀은 이용자의 개인정보를 <strong>제3자에게 제공하지 않습니다.</strong> 다만
           이용자가 사전에 동의한 경우 또는 법령의 규정에 의한 경우에는 예외로 합니다.
         </p>
       </Section>
 
       <Section title="제5조 (개인정보 처리의 위탁 및 외부 서비스 이용)">
-        <p>서비스는 현재 개인정보 처리 업무를 외부에 위탁하고 있지 않습니다.</p>
+        <p>운영팀은 현재 개인정보 처리 업무를 외부에 위탁하고 있지 않습니다.</p>
         <p>
           다만 베타 기간 중 일부 콘텐츠 분석·편집 기능의 보조를 위해 외부 인공지능(AI) 서비스
           API를 이용할 수 있습니다. 이 경우 해당 기능 처리에 필요한 최소한의 데이터만
@@ -143,7 +143,7 @@ export default function PrivacyPage() {
         <p>
           이용자 및 법정대리인은 언제든지 개인정보의 열람, 정정, 삭제, 처리정지를 요구할 수
           있습니다. 처리되는 정보가 모두 이용자 기기 안에 있으므로 다음 방법으로 직접 행사할
-          수 있으며, 그 밖의 요구는 서비스(admin@rungle.app)에 문의하면 지체 없이 조치합니다.
+          수 있으며, 그 밖의 요구는 운영팀(admin@rungle.app)에 문의하면 지체 없이 조치합니다.
         </p>
         <ul className="list-disc space-y-1 pl-5">
           <li><strong>러닝 기록 접근 철회:</strong> iOS 건강 앱 &gt; 프로필 &gt; 앱 &gt; Rungle에서 읽기 권한 해제</li>
@@ -154,8 +154,8 @@ export default function PrivacyPage() {
 
       <Section title="제8조 (만 14세 미만 아동의 개인정보 처리)">
         <p>
-          서비스는 만 14세 미만 아동을 대상으로 하지 않으며, 만 14세 미만 아동의 개인정보를
-          수집하지 않습니다.{" "}
+          서비스는 만 14세 미만 아동을 대상으로 하지 않으며, 운영팀은 만 14세 미만 아동의
+          개인정보를 수집하지 않습니다.{" "}
           <strong>
             만 14세 미만 아동이 서비스를 이용하려는 경우 반드시 법정대리인(부모 등)의 동의를
             받아야 하며,
@@ -165,7 +165,7 @@ export default function PrivacyPage() {
       </Section>
 
       <Section title="제9조 (개인정보의 안전성 확보 조치)">
-        <p>서비스는 「개인정보 보호법」 제29조에 따라 다음과 같은 안전성 확보 조치를 취하고 있습니다.</p>
+        <p>운영팀은 「개인정보 보호법」 제29조에 따라 다음과 같은 안전성 확보 조치를 취하고 있습니다.</p>
         <ul className="list-disc space-y-1 pl-5">
           <li><strong>기기 내 처리:</strong> 러닝 기록·사진 분석·얼굴 평가·문자인식을 포함한 개인정보 처리를 이용자 기기 안에서 수행하고, iOS 앱 샌드박스로 다른 앱의 접근이 차단됩니다.</li>
           <li><strong>관리적 조치:</strong> 개인정보 취급 인원 최소화, 내부 취급 원칙 수립</li>
@@ -175,7 +175,7 @@ export default function PrivacyPage() {
 
       <Section title="제10조 (개인정보 자동 수집 장치의 설치·운영 및 거부)">
         <p>
-          서비스는 쿠키를 사용하지 않으며, 광고 식별자(IDFA)를 수집하지 않고 앱 추적 투명성(ATT)
+          운영팀은 쿠키를 사용하지 않으며, 광고 식별자(IDFA)를 수집하지 않고 앱 추적 투명성(ATT)
           대상 추적을 하지 않습니다. 서비스 품질 개선을 위한 이용 기록은 앱이 발급한 익명 기기
           식별자 기준으로 기기 내에 자동 생성·보관됩니다(제3조).
         </p>
