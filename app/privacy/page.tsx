@@ -206,7 +206,7 @@ export default function PrivacyPage() {
           페이지를 통해 고지합니다. 특히 회원 가입(소셜 로그인), 서버 전송, 알림 기능 등이
           도입되는 정식 출시 시점에 본 방침이 개정됩니다.
         </p>
-        <p><strong>시행일: 2026년 7월 15일</strong></p>
+        <p><strong>시행일: 2026년 7월 29일</strong></p>
       </Section>
     </main>
   );
