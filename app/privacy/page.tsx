@@ -19,11 +19,9 @@ export default function PrivacyPage() {
     <main className="mx-auto max-w-3xl px-6 py-16 text-[15px]">
       <h1 className="text-3xl font-extrabold">개인정보 처리방침</h1>
       <p className="mt-4 leading-7 text-gray-800">
-        Rungle(이하 &ldquo;서비스&rdquo;) 운영팀(이하 &ldquo;운영팀&rdquo;)은 「개인정보 보호법」
+        Rungle(이하 &ldquo;서비스&rdquo;)은 「개인정보 보호법」
         제30조에 따라 이용자의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할
-        수 있도록 다음과 같이 개인정보 처리방침을 수립·공개합니다. 운영팀은 개인정보를{" "}
-        <strong>적법하고 공정한 방법</strong>으로만 수집하며, 속임수나 그 밖의 부정한
-        수단·방법으로 수집하지 않습니다.
+        수 있도록 다음과 같이 개인정보 처리방침을 수립·공개합니다.
       </p>
       <p className="mt-3 leading-7 text-gray-800">
         Rungle은 러닝 기록을 불러와 사진·영상에서 베스트컷을 골라주고 기록 오버레이·릴스를
@@ -37,11 +35,12 @@ export default function PrivacyPage() {
         <h2 className="font-bold">주요 개인정보 처리 표시(요약)</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5">
           <li><strong>계정 정보:</strong> 수집하지 않음(회원 가입·로그인 없음)</li>
-          <li><strong>처리 항목:</strong> 러닝 기록(HealthKit), 사진·영상, 앱 이용 기록 — 모두 이용자 기기 안에서 처리·보관</li>
+          <li><strong>처리 항목:</strong> 러닝 기록(HealthKit), 사진·영상, 앱 이용 기록 — 모두 이용자 기기 안에서 처리·보관 (일부 콘텐츠 분석 시 외부 AI 이용 가능, 제5조)</li>
           <li><strong>처리 목적:</strong> 베스트컷 추천, 기록 오버레이·릴스 생성, 서비스 품질 개선</li>
           <li><strong>보유 기간:</strong> 이용자 기기 내 보관, 앱 삭제 시 전부 파기</li>
           <li><strong>제3자 제공:</strong> 하지 않음</li>
-          <li><strong>문의:</strong> 개인정보 보호책임자 (hkim4410@gmail.com)</li>
+          <li><strong>개인정보 보호책임자:</strong> 김동호</li>
+          <li><strong>문의:</strong> 서비스 (admin@rungle.app)</li>
         </ul>
       </div>
 
@@ -105,7 +104,7 @@ export default function PrivacyPage() {
 
       <Section title="제3조 (개인정보의 처리 및 보유 기간)">
         <p>
-          처리되는 모든 정보는 <strong>이용자의 기기 안에만 저장</strong>되며, 운영팀이 별도
+          처리되는 모든 정보는 <strong>이용자의 기기 안에만 저장</strong>되며, 서비스가 별도
           서버에 보관하지 않습니다. 이용자가 앱을 삭제하면 앱이 저장한 모든 정보가 함께
           파기됩니다.
         </p>
@@ -117,13 +116,13 @@ export default function PrivacyPage() {
 
       <Section title="제4조 (개인정보의 제3자 제공)">
         <p>
-          운영팀은 이용자의 개인정보를 <strong>제3자에게 제공하지 않습니다.</strong> 다만
+          서비스는 이용자의 개인정보를 <strong>제3자에게 제공하지 않습니다.</strong> 다만
           이용자가 사전에 동의한 경우 또는 법령의 규정에 의한 경우에는 예외로 합니다.
         </p>
       </Section>
 
       <Section title="제5조 (개인정보 처리의 위탁 및 외부 서비스 이용)">
-        <p>운영팀은 현재 개인정보 처리 업무를 외부에 위탁하고 있지 않습니다.</p>
+        <p>서비스는 현재 개인정보 처리 업무를 외부에 위탁하고 있지 않습니다.</p>
         <p>
           다만 베타 기간 중 일부 콘텐츠 분석·편집 기능의 보조를 위해 외부 인공지능(AI) 서비스
           API를 이용할 수 있습니다. 이 경우 해당 기능 처리에 필요한 최소한의 데이터만
@@ -144,7 +143,7 @@ export default function PrivacyPage() {
         <p>
           이용자 및 법정대리인은 언제든지 개인정보의 열람, 정정, 삭제, 처리정지를 요구할 수
           있습니다. 처리되는 정보가 모두 이용자 기기 안에 있으므로 다음 방법으로 직접 행사할
-          수 있으며, 그 밖의 요구는 개인정보 보호책임자에게 문의하면 지체 없이 조치합니다.
+          수 있으며, 그 밖의 요구는 서비스에 문의하면 지체 없이 조치합니다.
         </p>
         <ul className="list-disc space-y-1 pl-5">
           <li><strong>러닝 기록 접근 철회:</strong> iOS 건강 앱 &gt; 프로필 &gt; 앱 &gt; Rungle에서 읽기 권한 해제</li>
@@ -166,11 +165,11 @@ export default function PrivacyPage() {
       </Section>
 
       <Section title="제9조 (개인정보의 안전성 확보 조치)">
-        <p>운영팀은 「개인정보 보호법」 제29조에 따라 다음과 같은 안전성 확보 조치를 취하고 있습니다.</p>
+        <p>서비스는 「개인정보 보호법」 제29조에 따라 다음과 같은 안전성 확보 조치를 취하고 있습니다.</p>
         <ul className="list-disc space-y-1 pl-5">
           <li><strong>기기 내 처리:</strong> 러닝 기록·사진 분석·얼굴 평가·문자인식을 포함한 개인정보 처리를 이용자 기기 안에서 수행하고, iOS 앱 샌드박스로 다른 앱의 접근이 차단됩니다.</li>
-          <li><strong>관리적 조치:</strong> 개인정보 취급 인원 최소화(3인 개발팀), 내부 취급 원칙 수립</li>
-          <li><strong>기술적 조치:</strong> 외부 통신 도입 시 TLS 암호화 적용, 광고 SDK 미사용</li>
+          <li><strong>관리적 조치:</strong> 개인정보 취급 인원 최소화, 내부 취급 원칙 수립</li>
+          <li><strong>기술적 조치:</strong> 외부 통신 도입 시 TLS 암호화 적용</li>
         </ul>
       </Section>
 
@@ -191,15 +190,7 @@ export default function PrivacyPage() {
         </p>
       </Section>
 
-      <Section title="제12조 (개인정보 보호책임자)">
-        <p>이용자는 서비스 이용 중 발생한 모든 개인정보 보호 관련 문의, 불만 처리, 피해 구제 등을 아래 개인정보 보호책임자에게 문의할 수 있습니다.</p>
-        <ul className="list-disc space-y-1 pl-5">
-          <li>개인정보 보호책임자: Rungle 운영팀 김동호</li>
-          <li>이메일: hkim4410@gmail.com</li>
-        </ul>
-      </Section>
-
-      <Section title="제13조 (권익침해 구제 방법)">
+      <Section title="제12조 (권익침해 구제 방법)">
         <p>정보주체는 개인정보 침해로 인한 구제를 받기 위하여 아래 기관에 분쟁 해결이나 상담 등을 신청할 수 있습니다.</p>
         <ul className="list-disc space-y-1 pl-5">
           <li>개인정보침해 신고센터 (한국인터넷진흥원): (국번없이) 118 / privacy.kisa.or.kr</li>
@@ -209,7 +200,7 @@ export default function PrivacyPage() {
         </ul>
       </Section>
 
-      <Section title="제14조 (개인정보 처리방침의 변경)">
+      <Section title="제13조 (개인정보 처리방침의 변경)">
         <p>
           본 개인정보 처리방침의 내용이 추가, 삭제 및 수정되는 경우 시행 최소 7일 전에 본
           페이지를 통해 고지합니다. 특히 회원 가입(소셜 로그인), 서버 전송, 알림 기능 등이
