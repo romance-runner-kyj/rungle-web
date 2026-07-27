@@ -39,7 +39,7 @@ export default function PrivacyPage() {
           <li><strong>처리 목적:</strong> 베스트컷 추천, 기록 오버레이·릴스 생성, 서비스 품질 개선</li>
           <li><strong>보유 기간:</strong> 이용자 기기 내 보관, 앱 삭제 시 전부 파기</li>
           <li><strong>제3자 제공:</strong> 하지 않음</li>
-          <li><strong>개인정보 보호책임자:</strong> 김동호</li>
+          <li><strong>개인정보 보호책임자:</strong> 김동호 (admin@rungle.app)</li>
           <li><strong>문의:</strong> 서비스 (admin@rungle.app)</li>
         </ul>
       </div>
@@ -143,7 +143,7 @@ export default function PrivacyPage() {
         <p>
           이용자 및 법정대리인은 언제든지 개인정보의 열람, 정정, 삭제, 처리정지를 요구할 수
           있습니다. 처리되는 정보가 모두 이용자 기기 안에 있으므로 다음 방법으로 직접 행사할
-          수 있으며, 그 밖의 요구는 서비스에 문의하면 지체 없이 조치합니다.
+          수 있으며, 그 밖의 요구는 서비스(admin@rungle.app)에 문의하면 지체 없이 조치합니다.
         </p>
         <ul className="list-disc space-y-1 pl-5">
           <li><strong>러닝 기록 접근 철회:</strong> iOS 건강 앱 &gt; 프로필 &gt; 앱 &gt; Rungle에서 읽기 권한 해제</li>
