@@ -38,7 +38,7 @@ export default function PrivacyPage() {
           <li><strong>계정 정보:</strong> 수집하지 않음(회원 가입·로그인 없음)</li>
           <li><strong>처리 항목:</strong> 러닝 기록(HealthKit), 사진·영상 — 이용자 기기 안에서만 처리·보관 (일부 콘텐츠 분석 시 외부 AI 이용 가능, 제5조) / 앱 이용 기록 — 분석 도구로 전송(제5조)</li>
           <li><strong>처리 목적:</strong> 베스트컷 추천, 기록 오버레이·릴스 생성, 서비스 품질 개선</li>
-          <li><strong>보유 기간:</strong> 기기 내 정보는 앱 삭제 시 전부 파기, 앱 이용 기록은 위탁 업체 보관 후 목적 달성 시 파기</li>
+          <li><strong>보유 기간:</strong> 기기 내 정보는 앱 삭제 시 파기(익명 기기 식별자만 예외 — 기기에 남습니다, 제3조), 앱 이용 기록은 위탁 업체 보관 후 목적 달성 시 파기</li>
           <li><strong>제3자 제공:</strong> 하지 않음 (다만 앱 이용 기록 분석 업무를 국외 업체에 위탁, 제5조)</li>
           <li><strong>개인정보 보호책임자:</strong> 김동호 (admin@rungle.app)</li>
           <li><strong>문의:</strong> 운영팀 (admin@rungle.app)</li>
@@ -78,7 +78,7 @@ export default function PrivacyPage() {
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">이용 기록(자동 수집)</td>
-                <td className="p-2">앱이 발급한 익명 기기 식별자, 기능 사용 이벤트, 오류 기록, 사용 경험 평가 응답(5점 척도), 러닝 기록에서 뽑은 파생값(거리 구간, 경로 보유 여부 등 — 거리·심박 같은 원본 수치는 제외)</td>
+                <td className="p-2">앱이 발급한 익명 기기 식별자(앱이 처음 켜질 때 만드는 무작위 값 — 기기에서 읽어온 고유 번호가 아닙니다), 기능 사용 이벤트, 오류 기록, 사용 경험 평가 응답(5점 척도), 러닝 기록에서 뽑은 파생값(거리 구간, 경로 보유 여부 등 — 거리·심박 같은 원본 수치는 제외)</td>
                 <td className="p-2">서비스 이용 과정에서 자동 생성, 분석 도구로 전송(제5조)</td>
               </tr>
             </tbody>
@@ -106,12 +106,19 @@ export default function PrivacyPage() {
       <Section title="제3조 (개인정보의 처리 및 보유 기간)">
         <p>
           러닝 기록과 사진·영상은 <strong>이용자의 기기 안에만 저장</strong>되며, 운영팀이 별도
-          서버에 보관하지 않습니다. 이용자가 앱을 삭제하면 앱이 저장한 모든 정보가 함께
-          파기됩니다.
+          서버에 보관하지 않습니다. 이용자가 앱을 삭제하면 앱이 저장한 정보가 함께 파기되며,
+          아래 익명 기기 식별자 하나만 예외입니다.
         </p>
         <ul className="list-disc space-y-1 pl-5">
           <li>베스트컷 후보는 사진 라이브러리의 참조 정보만 사용하며, 이용자가 최종 선택한 사진·클립만 앱에 저장됩니다.</li>
           <li>이용 기록(이벤트 로그)과 오류 기록은 제5조의 위탁 업체 서버에 보관되며, 서비스 품질 개선이라는 목적을 달성하면 파기합니다. 앱을 삭제하면 그 뒤로는 새 기록이 쌓이지 않습니다.</li>
+          <li>
+            <strong>익명 기기 식별자는 앱을 삭제해도 기기에 남습니다.</strong> iOS 키체인(앱의
+            비밀값을 담아두는 저장소)에 두기 때문이며, 같은 기기에 앱을 다시 설치하면 같은
+            값을 이어 씁니다. 값이 기기 밖으로 복사되지 않게 저장해 두어 기기 백업이나 새 기기
+            이전에는 따라가지 않습니다. 지금 버전에는 이 값을 앱에서 지우는 기능이 없으며,
+            운영팀(admin@rungle.app)에 문의하면 위탁 업체에 쌓인 해당 값의 기록을 지워 드립니다.
+          </li>
         </ul>
       </Section>
 
@@ -179,7 +186,7 @@ export default function PrivacyPage() {
 
       <Section title="제6조 (개인정보의 파기 절차 및 방법)">
         <ul className="list-disc space-y-1 pl-5">
-          <li>앱 내 저장 정보는 이용자가 앱을 삭제하면 iOS 시스템에 의해 즉시 파기됩니다.</li>
+          <li>앱 내 저장 정보는 이용자가 앱을 삭제하면 iOS 시스템에 의해 즉시 파기됩니다. 익명 기기 식별자는 앱을 삭제해도 기기에 남습니다(제3조).</li>
           <li>편집 중인 초안·선택한 사진 등은 앱 안에서 해당 항목을 삭제하여 개별적으로 파기할 수 있습니다.</li>
         </ul>
       </Section>
@@ -194,7 +201,7 @@ export default function PrivacyPage() {
         <ul className="list-disc space-y-1 pl-5">
           <li><strong>러닝 기록 접근 철회:</strong> iOS 건강 앱 &gt; 프로필 &gt; 앱 &gt; Rungle에서 읽기 권한 해제</li>
           <li><strong>사진 접근 철회:</strong> iOS 설정 &gt; Rungle &gt; 사진에서 접근 범위 변경 또는 해제</li>
-          <li><strong>전체 삭제:</strong> 앱 삭제 시 앱이 저장한 모든 정보가 파기됩니다</li>
+          <li><strong>전체 삭제:</strong> 앱 삭제 시 앱이 저장한 정보가 파기됩니다. 익명 기기 식별자만 기기에 남으며, 지우려면 운영팀에 문의해 주세요(제3조)</li>
         </ul>
       </Section>
 
