@@ -26,8 +26,9 @@ export default function PrivacyPage() {
       <p className="mt-3 leading-7 text-gray-800">
         Rungle은 러닝 기록을 불러와 사진·영상에서 베스트컷을 골라주고 기록 오버레이·릴스를
         만들어 공유하는 iOS 앱입니다. 본 방침은 현재 제공 중인 클로즈 베타 버전을 기준으로
-        하며, <strong>현재 버전은 회원 가입·로그인 기능이 없고 별도의 서버로 개인정보를
-        전송하지 않습니다.</strong>
+        하며, <strong>현재 버전은 회원 가입·로그인 기능이 없고 운영팀이 직접 운영하는 서버도
+        없습니다. 러닝 기록·사진·영상은 이용자 기기 밖으로 나가지 않으며, 서비스 개선을 위한
+        앱 이용 기록만 외부 분석 도구로 전송됩니다(제5조).</strong>
       </p>
 
       {/* 중요 사항 요약 표시 (개인정보 처리방침 주요 내용) */}
@@ -35,10 +36,10 @@ export default function PrivacyPage() {
         <h2 className="font-bold">주요 개인정보 처리 표시(요약)</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5">
           <li><strong>계정 정보:</strong> 수집하지 않음(회원 가입·로그인 없음)</li>
-          <li><strong>처리 항목:</strong> 러닝 기록(HealthKit), 사진·영상, 앱 이용 기록 — 모두 이용자 기기 안에서 처리·보관 (일부 콘텐츠 분석 시 외부 AI 이용 가능, 제5조)</li>
+          <li><strong>처리 항목:</strong> 러닝 기록(HealthKit), 사진·영상 — 이용자 기기 안에서만 처리·보관 (일부 콘텐츠 분석 시 외부 AI 이용 가능, 제5조) / 앱 이용 기록 — 분석 도구로 전송(제5조)</li>
           <li><strong>처리 목적:</strong> 베스트컷 추천, 기록 오버레이·릴스 생성, 서비스 품질 개선</li>
-          <li><strong>보유 기간:</strong> 이용자 기기 내 보관, 앱 삭제 시 전부 파기</li>
-          <li><strong>제3자 제공:</strong> 하지 않음</li>
+          <li><strong>보유 기간:</strong> 기기 내 정보는 앱 삭제 시 전부 파기, 앱 이용 기록은 위탁 업체 보관 후 목적 달성 시 파기</li>
+          <li><strong>제3자 제공:</strong> 하지 않음 (다만 앱 이용 기록 분석 업무를 국외 업체에 위탁, 제5조)</li>
           <li><strong>개인정보 보호책임자:</strong> 김동호 (admin@rungle.app)</li>
           <li><strong>문의:</strong> 운영팀 (admin@rungle.app)</li>
         </ul>
@@ -47,8 +48,8 @@ export default function PrivacyPage() {
       <Section title="제1조 (처리하는 개인정보의 항목 및 수집 방법)">
         <p>
           서비스는 회원 가입 없이 이용하며, 운영팀은 이름·이메일·비밀번호 등 계정 정보를
-          수집하지 않습니다. 서비스 제공을 위해 처리하는 정보는 다음과 같고, 전부 이용자의 기기 안에서
-          처리됩니다.
+          수집하지 않습니다. 서비스 제공을 위해 처리하는 정보는 다음과 같습니다. 러닝 기록과
+          사진·영상은 이용자의 기기 안에서만 처리하고, 앱 이용 기록만 분석 도구로 보냅니다.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-left">
@@ -77,8 +78,8 @@ export default function PrivacyPage() {
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">이용 기록(자동 수집)</td>
-                <td className="p-2">앱이 발급한 익명 기기 식별자, 기능 사용 이벤트, 오류 기록, 사용 경험 평가 응답(5점 척도)</td>
-                <td className="p-2">서비스 이용 과정에서 자동 생성, 기기 내 보관</td>
+                <td className="p-2">앱이 발급한 익명 기기 식별자, 기능 사용 이벤트, 오류 기록, 사용 경험 평가 응답(5점 척도), 러닝 기록에서 뽑은 파생값(거리 구간, 경로 보유 여부 등 — 거리·심박 같은 원본 수치는 제외)</td>
+                <td className="p-2">서비스 이용 과정에서 자동 생성, 분석 도구로 전송(제5조)</td>
               </tr>
             </tbody>
           </table>
@@ -104,13 +105,13 @@ export default function PrivacyPage() {
 
       <Section title="제3조 (개인정보의 처리 및 보유 기간)">
         <p>
-          처리되는 모든 정보는 <strong>이용자의 기기 안에만 저장</strong>되며, 운영팀이 별도
+          러닝 기록과 사진·영상은 <strong>이용자의 기기 안에만 저장</strong>되며, 운영팀이 별도
           서버에 보관하지 않습니다. 이용자가 앱을 삭제하면 앱이 저장한 모든 정보가 함께
           파기됩니다.
         </p>
         <ul className="list-disc space-y-1 pl-5">
           <li>베스트컷 후보는 사진 라이브러리의 참조 정보만 사용하며, 이용자가 최종 선택한 사진·클립만 앱에 저장됩니다.</li>
-          <li>이용 기록(이벤트 로그)은 기기 내에 보관됩니다. 향후 정식 출시 과정에서 서비스 품질 분석을 위한 서버 전송이 도입될 수 있으며, 도입 시 본 방침을 개정하여 사전에 고지합니다.</li>
+          <li>이용 기록(이벤트 로그)과 오류 기록은 제5조의 위탁 업체 서버에 보관되며, 서비스 품질 개선이라는 목적을 달성하면 파기합니다. 앱을 삭제하면 그 뒤로는 새 기록이 쌓이지 않습니다.</li>
         </ul>
       </Section>
 
@@ -121,10 +122,54 @@ export default function PrivacyPage() {
         </p>
       </Section>
 
-      <Section title="제5조 (개인정보 처리의 위탁 및 외부 서비스 이용)">
-        <p>운영팀은 현재 개인정보 처리 업무를 외부에 위탁하고 있지 않습니다.</p>
+      <Section title="제5조 (개인정보 처리의 위탁 및 국외 이전)">
         <p>
-          다만 베타 기간 중 일부 콘텐츠 분석·편집 기능의 보조를 위해 외부 인공지능(AI) 서비스
+          운영팀은 서비스 품질 개선과 오류 대응을 위해 앱 이용 기록 처리 업무를 다음 업체에
+          위탁하고 있습니다. 두 업체의 서버가 국외에 있어 아래 항목이 국외로 이전됩니다.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-left">
+            <thead>
+              <tr className="border-b border-gray-300 bg-gray-50">
+                <th className="p-2 font-bold">이전받는 자</th>
+                <th className="p-2 font-bold">국가·시기·방법</th>
+                <th className="p-2 font-bold">이전 항목</th>
+                <th className="p-2 font-bold">이용 목적 및 보유 기간</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-gray-200">
+                <td className="p-2 font-semibold">
+                  Amplitude, Inc.
+                  <br />
+                  <a className="underline" href="https://amplitude.com/privacy">amplitude.com/privacy</a>
+                </td>
+                <td className="p-2">미국 / 앱 사용 중 수시 / 네트워크(HTTPS 암호화) 전송</td>
+                <td className="p-2">익명 기기 식별자, 기능 사용 이벤트, 사용 경험 평가 응답, 러닝 기록 파생값(거리 구간, 경로 보유 여부)</td>
+                <td className="p-2">이용 행동 분석과 서비스 품질 개선 / 위탁 종료 또는 목적 달성 시까지</td>
+              </tr>
+              <tr className="border-b border-gray-200">
+                <td className="p-2 font-semibold">
+                  Google LLC
+                  <br />
+                  (Firebase Crashlytics)
+                  <br />
+                  <a className="underline" href="https://policies.google.com/privacy">policies.google.com/privacy</a>
+                </td>
+                <td className="p-2">미국 / 앱이 갑자기 꺼질 때 / 네트워크(HTTPS 암호화) 전송</td>
+                <td className="p-2">익명 기기 식별자, 오류 기록(크래시 로그), 기기·OS 정보</td>
+                <td className="p-2">오류 원인 파악과 안정성 개선 / 위탁 종료 또는 목적 달성 시까지</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          이전 항목에는 <strong>이용자를 식별할 수 있는 계정 정보, 사진·영상 원본, 러닝 기록의
+          원본 수치가 들어가지 않습니다.</strong> 국외 이전을 원하지 않으면 앱을 삭제하면 되고,
+          삭제한 뒤로는 새 기록이 전송되지 않습니다.
+        </p>
+        <p>
+          이와 별개로, 베타 기간 중 일부 콘텐츠 분석·편집 기능의 보조를 위해 외부 인공지능(AI) 서비스
           API를 이용할 수 있습니다. 이 경우 해당 기능 처리에 필요한 최소한의 데이터만
           전송되며, <strong>건강 데이터(러닝 기록 원본값)와 이용자를 식별할 수 있는 정보는
           전송하지 않습니다.</strong> 이용 범위가 확정·변경되는 경우 본 방침을 통해
@@ -142,8 +187,9 @@ export default function PrivacyPage() {
       <Section title="제7조 (정보주체와 법정대리인의 권리·의무 및 행사 방법)">
         <p>
           이용자 및 법정대리인은 언제든지 개인정보의 열람, 정정, 삭제, 처리정지를 요구할 수
-          있습니다. 처리되는 정보가 모두 이용자 기기 안에 있으므로 다음 방법으로 직접 행사할
-          수 있으며, 그 밖의 요구는 운영팀(admin@rungle.app)에 문의하면 지체 없이 조치합니다.
+          있습니다. 러닝 기록·사진·영상은 이용자 기기 안에 있어 다음 방법으로 직접 행사할 수
+          있으며, 앱 이용 기록을 포함한 그 밖의 요구는 운영팀(admin@rungle.app)에 문의하면 지체
+          없이 조치합니다.
         </p>
         <ul className="list-disc space-y-1 pl-5">
           <li><strong>러닝 기록 접근 철회:</strong> iOS 건강 앱 &gt; 프로필 &gt; 앱 &gt; Rungle에서 읽기 권한 해제</li>
@@ -169,7 +215,7 @@ export default function PrivacyPage() {
         <ul className="list-disc space-y-1 pl-5">
           <li><strong>기기 내 처리:</strong> 러닝 기록·사진 분석·얼굴 평가·문자인식을 포함한 개인정보 처리를 이용자 기기 안에서 수행하고, iOS 앱 샌드박스로 다른 앱의 접근이 차단됩니다.</li>
           <li><strong>관리적 조치:</strong> 개인정보 취급 인원 최소화, 내부 취급 원칙 수립</li>
-          <li><strong>기술적 조치:</strong> 외부 통신 도입 시 TLS 암호화 적용</li>
+          <li><strong>기술적 조치:</strong> 외부로 전송하는 구간에 TLS 암호화 적용</li>
         </ul>
       </Section>
 
@@ -177,16 +223,28 @@ export default function PrivacyPage() {
         <p>
           운영팀은 쿠키를 사용하지 않으며, 광고 식별자(IDFA)를 수집하지 않고 앱 추적 투명성(ATT)
           대상 추적을 하지 않습니다. 서비스 품질 개선을 위한 이용 기록은 앱이 발급한 익명 기기
-          식별자 기준으로 기기 내에 자동 생성·보관됩니다(제3조).
+          식별자 기준으로 자동 생성되어 제5조의 위탁 업체로 전송됩니다.
         </p>
       </Section>
 
       <Section title="제11조 (건강 데이터의 취급)">
         <p>
-          Apple HealthKit에서 읽어온 러닝 기록은 콘텐츠 생성 목적으로만 사용합니다. Apple
-          정책에 따라 <strong>건강 데이터를 광고·마케팅 목적으로 사용하지 않으며, 제3자에게
-          제공하지 않습니다.</strong> 이용 기록(이벤트 로그)에도 건강 수치 원본값을 포함하지
-          않습니다.
+          Apple HealthKit에서 읽어온 러닝 기록은 콘텐츠 생성 목적으로만 사용하며, 원본
+          수치(거리·시간·페이스·심박수·GPS 경로 등)는 이용자의 기기 밖으로 나가지 않습니다.
+          Apple 정책에 따라 <strong>건강 데이터를 광고·마케팅 목적으로 사용하지 않고, 제3자에게
+          판매하거나 제공하지 않습니다.</strong>
+        </p>
+        <p>
+          다만 서비스 개선 분석을 위해 <strong>러닝 기록에서 뽑은 파생값</strong>은 제5조의 위탁
+          업체로 전송됩니다. 전송하는 파생값은 다음 두 가지이고, 원본 수치는 복원할 수 없습니다.
+        </p>
+        <ul className="list-disc space-y-1 pl-5">
+          <li><strong>거리 구간:</strong> 5km 미만 / 5km 이상 10km 미만 / 10km 이상 가운데 하나</li>
+          <li><strong>경로 보유 여부:</strong> 해당 러닝에 GPS 경로가 있는지 여부(예·아니오)</li>
+        </ul>
+        <p>
+          이 파생값은 <strong>어떤 거리대의 러닝에서 콘텐츠가 잘 만들어지는지 파악하는 분석
+          목적으로만 쓰며,</strong> 광고·마케팅에 쓰거나 다른 곳에 판매·공유하지 않습니다.
         </p>
       </Section>
 
