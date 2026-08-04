@@ -22,8 +22,7 @@ export default function TermsPage() {
       <p className="mt-4 leading-7 text-gray-800">
         본 약관은 Rungle 운영팀(이하 &ldquo;운영팀&rdquo;)이 제공하는 Rungle 서비스의 이용과
         관련하여 운영팀과 이용자 간의 권리·의무 및 책임 사항을
-        정하는 것을 목적으로 합니다. 본 약관은 현재 제공 중인 클로즈 베타 버전을 기준으로
-        합니다.
+        정하는 것을 목적으로 합니다. 본 약관은 현재 제공 중인 버전을 기준으로 합니다.
       </p>
 
       <Section title="제1조 (정의)">
@@ -79,8 +78,8 @@ export default function TermsPage() {
         </p>
         <p>
           <strong>
-            현재 서비스는 클로즈 베타 버전으로, 기능이 예고 없이 추가·변경될 수 있으며 일부
-            기능이 불완전하게 동작할 수 있습니다.
+            서비스는 계속 개선 중인 초기 버전으로, 기능이 예고 없이 추가·변경될 수 있으며
+            일부 기능이 불완전하게 동작할 수 있습니다.
           </strong>
         </p>
       </Section>
@@ -101,8 +100,8 @@ export default function TermsPage() {
           책임은 이용자 본인에게 있습니다.
         </p>
         <p>
-          이용자가 본 조를 위반한 경우 운영팀은 사전 고지 후 서비스(베타 참여를 포함)의
-          이용을 제한하거나 중단할 수 있습니다.
+          이용자가 본 조를 위반한 경우 운영팀은 사전 고지 후 서비스의 이용을 제한하거나
+          중단할 수 있습니다.
         </p>
       </Section>
 
@@ -136,7 +135,7 @@ export default function TermsPage() {
       <Section title="제7조 (서비스의 변경 및 중단)">
         <ul className="list-disc space-y-1 pl-5">
           <li>
-            운영팀은 베타 운영·기술상 필요에 따라 서비스의 전부 또는 일부를 변경·중단할 수
+            운영팀은 운영·기술상 필요에 따라 서비스의 전부 또는 일부를 변경·중단할 수
             있으며, 서비스 종료 등 중대한 사항은 시행 최소 30일 전에 본 페이지 및 앱 내
             공지를 통해 고지합니다.
           </li>
@@ -151,7 +150,7 @@ export default function TermsPage() {
       <Section title="제8조 (책임의 제한)">
         <ul className="list-disc space-y-1 pl-5">
           <li>
-            서비스는 무상으로 제공되는 베타 버전으로, 운영팀은 고의 또는 중대한 과실이 없는 한
+            서비스는 무상으로 제공되며, 운영팀은 고의 또는 중대한 과실이 없는 한
             서비스 이용과 관련하여 발생한 손해에 대해 책임을 지지 않습니다.
           </li>
           <li>
@@ -182,7 +181,7 @@ export default function TermsPage() {
       </Section>
 
       <Section title="부칙">
-        <p><strong>시행일: 2026년 7월 27일</strong></p>
+        <p><strong>시행일: 2026년 8월 4일</strong></p>
       </Section>
     </main>
   );
