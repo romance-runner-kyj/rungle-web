@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,11 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://pages.rungle.app"),
   title: "Rungle",
   description:
-    "러닝 기록을 불러와 사진·영상에서 베스트컷을 골라주고 기록 오버레이·릴스를 만들어 공유하는 iOS 앱",
+    "An iOS app that imports your running records, picks the best shots from your photos and videos, and turns them into record overlays and reels to share",
 };
 
+// 영어판 루트 레이아웃 — (ko)와 같은 꼴이고 lang만 다르다. html 속성은 루트 레이아웃만 정할 수 있어 둘로 나눴다.
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="ko"
+      lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
