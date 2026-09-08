@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { LangSwitch } from "@/app/lang-switch";
 
 export const metadata: Metadata = {
   title: "고객 지원 | Rungle",
   description: "Rungle 사용 중 막히는 부분과 문의 방법",
+  alternates: { languages: { ko: "/support", en: "/en/support" } },
 };
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -26,6 +28,7 @@ function Faq({ question, children }: { question: string; children: React.ReactNo
 export default function SupportPage() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 text-[15px]">
+      <LangSwitch path="/support" current="ko" />
       <h1 className="text-3xl font-extrabold">고객 지원</h1>
       <p className="mt-4 leading-7 text-gray-800">
         Rungle은 러닝 기록을 불러와 사진·영상에서 베스트컷을 골라주고 기록 오버레이·릴스를
