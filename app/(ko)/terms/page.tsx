@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { LangSwitch } from "@/app/lang-switch";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "이용약관 | Rungle",
   description: "Rungle 이용약관",
+  alternates: { languages: { ko: "/terms", en: "/en/terms" } },
 };
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -18,6 +20,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 export default function TermsPage() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 text-[15px]">
+      <LangSwitch path="/terms" current="ko" />
       <h1 className="text-3xl font-extrabold">이용약관</h1>
       <p className="mt-4 leading-7 text-gray-800">
         본 약관은 Rungle 운영팀(이하 &ldquo;운영팀&rdquo;)이 제공하는 Rungle 서비스의 이용과
