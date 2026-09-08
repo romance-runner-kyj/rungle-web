@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { LangSwitch } from "@/app/lang-switch";
 
 export const metadata: Metadata = {
   title: "개인정보 처리방침 | Rungle",
   description: "Rungle 개인정보 처리방침",
+  alternates: { languages: { ko: "/privacy", en: "/en/privacy" } },
 };
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -17,6 +19,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 export default function PrivacyPage() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 text-[15px]">
+      <LangSwitch path="/privacy" current="ko" />
       <h1 className="text-3xl font-extrabold">개인정보 처리방침</h1>
       <p className="mt-4 leading-7 text-gray-800">
         Rungle 운영팀(이하 &ldquo;운영팀&rdquo;)은 「개인정보 보호법」
