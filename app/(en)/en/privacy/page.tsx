@@ -110,7 +110,7 @@ export default function PrivacyPage() {
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Photos and videos</td>
-                <td className="p-2">Photos and videos taken during your run (candidates for best-shot recommendation and editing). Processed only on your device; <strong>only when you use an AI template</strong>, the single frame you select from a video (a still image reduced to 512 pixels wide, which may show a face) and the template type are sent through the Team&rsquo;s server to the AI providers in Article 5. The whole video and other frames are never sent</td>
+                <td className="p-2">Photos and videos taken during your run (candidates for best-shot recommendation and editing). Processed only on your device; <strong>only when you use an AI template</strong>, the single frame you select from a video (a still image reduced to 512 pixels wide, which may show a face) is sent through the Team&rsquo;s server to the AI providers in Article 5. The server also receives which template you chose, but only the frame goes to the AI providers. The whole video and other frames are never sent</td>
                 <td className="p-2">Read from your photo library if you allow it. The frame is created only when you choose a video and a freeze point yourself in an AI template</td>
               </tr>
               <tr className="border-b border-gray-200">
@@ -158,7 +158,7 @@ export default function PrivacyPage() {
           <li>Importing running records and automatically collecting photos and videos taken during your run</li>
           <li>Best-shot recommendation (evaluating photo and video quality, faces, and composition on your device). <strong>Faces are only detected and evaluated, and are never generated, altered, or retouched except in the freeze-frame creation of AI templates below.</strong></li>
           <li>Creating and editing record overlays, reels, and frame content</li>
-          <li>Pose reading and freeze-frame creation in AI templates. From the single video frame you select, the AI reads the hand position and where the record text can be placed, and, depending on the template, creates a new freeze-frame image with an effect added based on that frame. <strong>When a freeze frame is created, the face and body of the person in the frame may be redrawn by the AI.</strong> The created freeze frame is stored only on your device, and we never process it to identify who someone is (no matching of the same person, no extraction of facial features)</li>
+          <li>Pose reading and freeze-frame creation in AI templates. From the single video frame you select, the AI reads the hand position and where the record text can be placed, and, depending on the template, creates a new freeze-frame image with an effect added based on that frame. <strong>When a freeze frame is created, the face and body of the person in the frame may be redrawn by the AI.</strong> The created freeze frame passes through Google once more so the AI can read where the record text can be placed and check the composition, and is then stored only on your device; we never process it to identify who someone is (no matching of the same person, no extraction of facial features)</li>
           <li>Creating an account and keeping you signed in; backing up and restoring records when you switch devices or reinstall the app</li>
           <li>Running statistics and personalized recommendations by gender and age group (only for users who answered the optional questions)</li>
           <li>Delivering announcements and notifications (in-app inbox)</li>
@@ -189,9 +189,10 @@ export default function PrivacyPage() {
           <li>
             <strong>The video frame sent to the server when you use an AI template is deleted from
             the server as soon as the AI provider&rsquo;s result is returned to the app,</strong> and
-            is not kept in any cache, log, or storage. Server records keep only the job number, file
-            size, and processing status. The freeze frame created by the AI is stored only on your
-            device and is deleted together with the draft that uses it.
+            is not kept in any cache, log, or storage. Server records keep only the job number, the
+            requesting account, the request time, file size, and processing status; the frame and
+            the result are not kept. The freeze frame created by the AI is stored only on your device
+            and is deleted together with the draft that uses it.
           </li>
           <li>Usage records (event logs), error logs, and ad attribution information are stored on the servers of the providers listed in Article 5 and deleted once the purposes of service quality improvement and ad performance measurement are fulfilled. After you delete the app, no new records are collected.</li>
           <li>
@@ -350,8 +351,8 @@ export default function PrivacyPage() {
                   <a className="underline" href="https://policies.google.com/privacy">policies.google.com/privacy</a>
                 </td>
                 <td className="p-2">United States / when you choose a video and a freeze point in an AI template and run it / sent over the network (HTTPS encrypted) through the Team&rsquo;s server</td>
-                <td className="p-2">The single video frame you select (a still image 512 pixels wide, which may show a face), template type</td>
-                <td className="p-2">Reading the hand position and where the record text can be placed in the frame; creating the freeze frame instead when OpenAI&rsquo;s freeze-frame creation is blocked by its safety policy / until the result is returned. Under its paid API terms, Google does not use the frame for training or product improvement and keeps it only for a limited period to monitor for prohibited use</td>
+                <td className="p-2">The single video frame you select (a still image 512 pixels wide, which may show a face), and the freeze frame the AI created from it (for reading where the record text can be placed and checking the composition)</td>
+                <td className="p-2">Reading the hand position in the frame; reading where the record text can be placed and checking the composition in the AI-created freeze frame; creating the freeze frame instead when OpenAI&rsquo;s freeze-frame creation is blocked by its safety policy / until the result is returned. Under its paid API terms, Google does not use the frame for training or product improvement and keeps it only for a limited period to monitor for prohibited use</td>
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">
@@ -370,7 +371,8 @@ export default function PrivacyPage() {
           The transferred information <strong>does not include account information that identifies
           you, original photos or videos, or raw running record figures.</strong> There are two
           exceptions: the single starting coordinate sent to Apple for place-name conversion, and the
-          single video frame sent to Google and OpenAI when you use an AI template. The frame is the
+          single video frame sent to Google and OpenAI when you use an AI template (along with the
+          freeze frame the AI created from it). The frame is the
           original picture before any record overlay is applied, so it contains no running record
           figures, and no account information, device identifier, or running record is sent with it.
           If you do not want your information transferred abroad, delete the app; no new records are
