@@ -40,21 +40,26 @@ export default function PrivacyPage() {
         app without signing in (as a guest). Running records are stored on the Team&rsquo;s server
         (in Korea) for backup and restore, and <strong>your photos and videos never leave your
         device. GPS routes are not stored on the server.</strong>{" "}
-        App usage records for service improvement are sent to an external analytics tool, and
-        install and launch records for ad performance measurement are sent to an external
-        measurement tool (Article 5). The advertising identifier (IDFA) is used only if you allow
-        app tracking (Article 10).
+        There is one exception: when you choose to use a reel template in which artificial
+        intelligence (AI) reads a video frame or creates a freeze-frame image (an &ldquo;AI
+        template&rdquo;), the single video frame you select is sent through the Team&rsquo;s server
+        to overseas AI providers (Google and OpenAI), and the server deletes that frame as soon as it
+        returns the result (Article 5). Gender and age group are optional and you do not have to
+        answer (Article 1). App usage records for service improvement are sent to an external
+        analytics tool, and install and launch records for ad performance measurement are sent to an
+        external measurement tool (Article 5). The advertising identifier (IDFA) is used only if you
+        allow app tracking (Article 10).
       </p>
 
       {/* 중요 사항 요약 표시 (개인정보 처리방침 주요 내용) */}
       <div className="mt-8 rounded-lg border border-gray-300 bg-gray-50 p-5">
         <h2 className="font-bold">Key Points (Summary)</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5">
-          <li><strong>Account information:</strong> When you sign up with a social login, we collect the login provider, the user identifier issued by that provider, and your email (Article 1). Your nickname is generated and assigned by the service, not collected</li>
-          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server (GPS routes excluded); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored only on your device (external AI may be used for some content analysis, Article 5) / Device information and app usage records: registered on the server and sent to analytics tools (Article 5) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5)</li>
-          <li><strong>Purposes:</strong> Best-shot recommendations, creating record overlays and reels, account login and record backup and restore, service quality improvement, ad performance measurement (finding out which ad led to an install)</li>
-          <li><strong>Retention:</strong> Account information and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled</li>
-          <li><strong>Sharing with third parties:</strong> Not done in principle. While we run ads, install and share-completed events may be provided to Meta (Article 4; not currently provided). App usage analysis, ad performance measurement, and converting coordinates to place names are outsourced to overseas providers (Article 5)</li>
+          <li><strong>Account information:</strong> When you sign up with a social login, we collect the login provider, the user identifier issued by that provider, and your email (Article 1). Your nickname is generated and assigned by the service, not collected. Gender and age group are optional; you can skip them and still use every feature (Article 1)</li>
+          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server (GPS routes excluded); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored only on your device. Only when you use an AI template, the single video frame you select is sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Article 5) / Device information and app usage records: registered on the server and sent to analytics tools (Article 5) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5)</li>
+          <li><strong>Purposes:</strong> Best-shot recommendations, creating record overlays and reels, pose reading and freeze-frame creation in AI templates, account login and record backup and restore, running statistics and personalized recommendations by gender and age group, service quality improvement, ad performance measurement (finding out which ad led to an install)</li>
+          <li><strong>Retention:</strong> Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); the video frame sent to AI providers is deleted from the server as soon as the result is received (Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled</li>
+          <li><strong>Sharing with third parties:</strong> Not done in principle. While we run ads, install and share-completed events may be provided to Meta (Article 4; not currently provided). App usage analysis, ad performance measurement, converting coordinates to place names, and frame reading and freeze-frame creation for AI templates are outsourced to overseas providers (Article 5)</li>
           <li><strong>Privacy officer:</strong> Dongho Kim (admin@rungle.app)</li>
           <li><strong>Contact:</strong> The Team (admin@rungle.app)</li>
         </ul>
@@ -64,8 +69,9 @@ export default function PrivacyPage() {
         <p>
           You sign up for the service with a social login; the Team does not create or receive its
           own IDs or passwords. We process the following information to provide the service. Photos
-          and videos are processed only on your device, and running record measurements are stored
-          on the server for backup.
+          and videos are processed only on your device (the only exception is the single frame sent
+          when you use an AI template), and running record measurements are stored on the server for
+          backup.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-left">
@@ -81,6 +87,11 @@ export default function PrivacyPage() {
                 <td className="p-2 font-semibold">Account information</td>
                 <td className="p-2">Login provider (Google, Apple, Kakao, or Naver), the user identifier issued by the provider, and email. If you use Apple&rsquo;s &lsquo;Hide My Email&rsquo;, the relay address Apple creates is collected. We do not receive your name or profile photo</td>
                 <td className="p-2">Received from the provider when you sign in with a social login</td>
+              </tr>
+              <tr className="border-b border-gray-200">
+                <td className="p-2 font-semibold">Profile information (optional)</td>
+                <td className="p-2">Gender (female or male) and age group. <strong>Both are optional, and every feature works the same if you do not answer.</strong> You enter a birth year, but the server stores only a 10-year age group (for example, 20s) and does not keep the birth year itself. We do not collect your name, birthday (month and day), or phone number</td>
+                <td className="p-2">Entered by you in a form shown once after signing in (you can skip it) and on the My Info screen. For Naver login, received from Naver only if you opt in on Naver&rsquo;s consent screen</td>
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Nickname</td>
@@ -99,8 +110,8 @@ export default function PrivacyPage() {
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Photos and videos</td>
-                <td className="p-2">Photos and videos taken during your run (candidates for best-shot recommendation and editing)</td>
-                <td className="p-2">Read from your photo library if you allow it</td>
+                <td className="p-2">Photos and videos taken during your run (candidates for best-shot recommendation and editing). Processed only on your device; <strong>only when you use an AI template</strong>, the single frame you select from a video (a still image reduced to 512 pixels wide, which may show a face) is sent through the Team&rsquo;s server to the AI providers in Article 5. The server also receives which template you chose, but only the frame goes to the AI providers. The whole video and other frames are never sent</td>
+                <td className="p-2">Read from your photo library if you allow it. The frame is created only when you choose a video and a freeze point yourself in an AI template</td>
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Record screen captures</td>
@@ -137,15 +148,19 @@ export default function PrivacyPage() {
           (as a guest). In that case we do not collect account information, and your records are
           linked only to the anonymous device identifier. Records backed up to the server while you
           are a guest are merged into your account when you sign in later.
+          <strong>Gender and age group are also optional.</strong> If you skip the form, we do not
+          ask again, and you can change your answers at any time on the My Info screen.
         </p>
       </Section>
 
       <Section title="Article 2 (Purposes of Processing)">
         <ul className="list-disc space-y-1 pl-5">
           <li>Importing running records and automatically collecting photos and videos taken during your run</li>
-          <li>Best-shot recommendation (evaluating photo and video quality, faces, and composition on your device). <strong>Faces are only detected and evaluated, never generated, altered, or retouched.</strong></li>
+          <li>Best-shot recommendation (evaluating photo and video quality, faces, and composition on your device). <strong>Faces are only detected and evaluated, and are never generated, altered, or retouched except in the freeze-frame creation of AI templates below.</strong></li>
           <li>Creating and editing record overlays, reels, and frame content</li>
+          <li>Pose reading and freeze-frame creation in AI templates. From the single video frame you select, the AI reads the hand position and where the record text can be placed, and, depending on the template, creates a new freeze-frame image with an effect added based on that frame. <strong>When a freeze frame is created, the face and body of the person in the frame may be redrawn by the AI.</strong> The created freeze frame passes through Google once more so the AI can read where the record text can be placed and check the composition, and is then stored only on your device; we never process it to identify who someone is (no matching of the same person, no extraction of facial features)</li>
           <li>Creating an account and keeping you signed in; backing up and restoring records when you switch devices or reinstall the app</li>
+          <li>Running statistics and personalized recommendations by gender and age group (only for users who answered the optional questions)</li>
           <li>Delivering announcements and notifications (in-app inbox)</li>
           <li>Analyzing usage records to improve service quality and recommendation features</li>
           <li>Ad performance measurement (finding out which ad led to an install). <strong>The advertising identifier is used only if you allow app tracking, and photos, location, and health records are never used for ad performance measurement.</strong></li>
@@ -168,8 +183,17 @@ export default function PrivacyPage() {
             lets you recover an account deleted by mistake; signing in again during that time cancels
             the deletion.
           </li>
+          <li>Gender and age group are kept with your account information and deleted together when the account is deleted. You can change them on the My Info screen; to erase your answers entirely, contact the Team (admin@rungle.app).</li>
           <li>Records backed up to the server as a guest are linked only to the anonymous device identifier, not to an account. To delete these records without an account, contact the Team (admin@rungle.app).</li>
           <li>Best-shot candidates use only references to your photo library; only the photos and clips you finally select are stored in the app.</li>
+          <li>
+            <strong>The video frame sent to the server when you use an AI template is deleted from
+            the server as soon as the AI provider&rsquo;s result is returned to the app,</strong> and
+            is not kept in any cache, log, or storage. Server records keep only the job number, the
+            requesting account, the request time, file size, and processing status; the frame and
+            the result are not kept. The freeze frame created by the AI is stored only on your device
+            and is deleted together with the draft that uses it.
+          </li>
           <li>Usage records (event logs), error logs, and ad attribution information are stored on the servers of the providers listed in Article 5 and deleted once the purposes of service quality improvement and ad performance measurement are fulfilled. After you delete the app, no new records are collected.</li>
           <li>
             <strong>The anonymous device identifier stays on your device even after you delete the
@@ -258,10 +282,10 @@ export default function PrivacyPage() {
         </p>
         <p>
           Separately, the Team outsources the processing of app usage records for service quality
-          improvement and error response, ad performance measurement, and the conversion of
-          coordinates into place names for displaying the running location to the providers below.
-          Their servers are located outside Korea, so the following information is transferred
-          abroad.
+          improvement and error response, ad performance measurement, the conversion of coordinates
+          into place names for displaying the running location, and frame reading and freeze-frame
+          creation for AI templates to the providers below. Their servers are located outside Korea,
+          so the following information is transferred abroad.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-left">
@@ -318,24 +342,51 @@ export default function PrivacyPage() {
                 <td className="p-2">One starting coordinate of the running route (latitude and longitude)</td>
                 <td className="p-2">Converting the coordinate into a place name (reverse geocoding) / until the conversion is complete. The returned place name is stored only on your device</td>
               </tr>
+              <tr className="border-b border-gray-200">
+                <td className="p-2 font-semibold">
+                  Google LLC
+                  <br />
+                  (Gemini API)
+                  <br />
+                  <a className="underline" href="https://policies.google.com/privacy">policies.google.com/privacy</a>
+                </td>
+                <td className="p-2">United States / when you choose a video and a freeze point in an AI template and run it / sent over the network (HTTPS encrypted) through the Team&rsquo;s server</td>
+                <td className="p-2">The single video frame you select (a still image 512 pixels wide, which may show a face), and the freeze frame the AI created from it (for reading where the record text can be placed and checking the composition)</td>
+                <td className="p-2">Reading the hand position in the frame; reading where the record text can be placed and checking the composition in the AI-created freeze frame; creating the freeze frame instead when OpenAI&rsquo;s freeze-frame creation is blocked by its safety policy / until the result is returned. Under its paid API terms, Google does not use the frame for training or product improvement and keeps it only for a limited period to monitor for prohibited use</td>
+              </tr>
+              <tr className="border-b border-gray-200">
+                <td className="p-2 font-semibold">
+                  OpenAI, L.L.C.
+                  <br />
+                  <a className="underline" href="https://openai.com/policies/privacy-policy/">openai.com/policies/privacy-policy</a>
+                </td>
+                <td className="p-2">United States / when you run an AI template that creates a freeze frame / sent over the network (HTTPS encrypted) through the Team&rsquo;s server</td>
+                <td className="p-2">The single video frame you select (a still image 512 pixels wide, which may show a face)</td>
+                <td className="p-2">Creating a freeze-frame image with an effect added based on the frame / until the result is returned. OpenAI does not use data received through its API for training and deletes it after keeping it for up to 30 days for abuse monitoring</td>
+              </tr>
             </tbody>
           </table>
         </div>
         <p>
           The transferred information <strong>does not include account information that identifies
-          you, original photos or videos, or raw running record figures.</strong> The single
-          starting coordinate sent to Apple for place-name conversion is the only exception; no raw
-          running record other than that coordinate is sent anywhere. If you do not want your
-          information transferred abroad, delete the app; no new records are sent after deletion.
-          To block only the advertising identifier, turn off app tracking in iOS Settings &gt;
-          Privacy &amp; Security &gt; Tracking (Article 7).
+          you, original photos or videos, or raw running record figures.</strong> There are two
+          exceptions: the single starting coordinate sent to Apple for place-name conversion, and the
+          single video frame sent to Google and OpenAI when you use an AI template (along with the
+          freeze frame the AI created from it). The frame is the
+          original picture before any record overlay is applied, so it contains no running record
+          figures, and no account information, device identifier, or running record is sent with it.
+          If you do not want your information transferred abroad, delete the app; no new records are
+          sent after deletion. To block only the advertising identifier, turn off app tracking in
+          iOS Settings &gt; Privacy &amp; Security &gt; Tracking (Article 7).
         </p>
         <p>
-          Separately, we may use external artificial intelligence (AI) service APIs to assist some
-          content analysis and editing features. In that case only the minimum data needed for the
-          feature is sent, and <strong>health data (raw running record values) and information that
-          identifies you are never sent.</strong> We will disclose the scope of use through this
-          policy when it is decided or changed.
+          <strong>If you only want to avoid the transfer to AI providers, simply do not use AI
+          templates.</strong> No frame is sent until you choose a video and a freeze point in such a
+          template and run it yourself, and nothing other than that template is restricted if you do
+          not use it. Google and OpenAI act as processors on the Team&rsquo;s behalf and, under their
+          paid API terms, may not use the frame for their own purposes or for training. We do not
+          send photos or videos to any AI service other than these two, and we will disclose any
+          change in scope through this policy.
         </p>
       </Section>
 
@@ -358,6 +409,8 @@ export default function PrivacyPage() {
         <ul className="list-disc space-y-1 pl-5">
           <li><strong>Revoke access to running records:</strong> iOS Health app &gt; Profile &gt; Apps &gt; Rungle, turn off read access</li>
           <li><strong>Revoke photo access:</strong> iOS Settings &gt; Rungle &gt; Photos, change or remove the access level</li>
+          <li><strong>Refuse sending a frame to AI providers:</strong> Simply do not choose an AI template. All other templates and features remain available (Article 5)</li>
+          <li><strong>Change gender or age group:</strong> You can change them on the My Info screen in the app. To erase your answers, contact the Team (Article 3)</li>
           <li><strong>Revoke app tracking (advertising identifier):</strong> Turn off Rungle in iOS Settings &gt; Privacy &amp; Security &gt; Tracking, or turn off Allow Tracking in iOS Settings &gt; Rungle. Once off, the advertising identifier is no longer used, and the service is not restricted in any way</li>
           <li><strong>Delete your account:</strong> Request it at any time from the My Info screen in the app. 30 days after the request, the account information and running record backups on the server are permanently deleted; signing in again before then cancels the deletion</li>
           <li><strong>Delete everything:</strong> Deleting the app destroys the information the app stored. Information on the server remains after you delete the app, so also request account deletion as above. Only the anonymous device identifier stays on the device; contact the Team to have it erased (Article 3)</li>
@@ -382,7 +435,8 @@ export default function PrivacyPage() {
       <Section title="Article 9 (Security Measures)">
         <p>The Team takes the following security measures in accordance with Article 29 of Korea&rsquo;s Personal Information Protection Act.</p>
         <ul className="list-disc space-y-1 pl-5">
-          <li><strong>On-device processing:</strong> Personal information processing, including photo analysis, face evaluation, and text recognition, is performed on your device, and the iOS app sandbox blocks access from other apps.</li>
+          <li><strong>On-device processing:</strong> Personal information processing, including photo analysis, face evaluation, and text recognition, is performed on your device, and the iOS app sandbox blocks access from other apps. The only exception is the single video frame for AI templates, which passes through the server to the AI providers; the server deletes the frame as soon as it returns the result and does not store it.</li>
+          <li><strong>Minimal storage:</strong> Birth year is stored only as a 10-year age group, and the original value is not kept.</li>
           <li><strong>Administrative measures:</strong> Minimizing the staff who handle personal information and setting internal handling rules</li>
           <li><strong>Technical measures:</strong> TLS encryption on all external connections; the server is placed in a segment not directly reachable from outside, with access limited to the minimum staff; server credentials are kept in a separate secrets management service</li>
           <li><strong>Access limited to your own data:</strong> Running records stored on the server can be viewed and edited only by the signed-in owner; ownership is checked on every request.</li>
@@ -415,7 +469,9 @@ export default function PrivacyPage() {
           them.</strong> In line with Apple&rsquo;s policies, <strong>health data is never used for
           advertising or marketing, and is never sold or provided to third parties.</strong>{" "}
           Neither health data nor values derived from it are sent to the ad performance measurement
-          tool in Article 5 or to Meta in Article 4.
+          tool in Article 5 or to Meta in Article 4. The video frame sent to the AI providers in
+          Article 5 is the original picture before any record overlay is applied, so it contains no
+          health data.
         </p>
         <p>
           <strong>The running location name</strong> is generated when you open the overlay editor,
@@ -459,26 +515,30 @@ export default function PrivacyPage() {
           only from a feature you choose to use and existing usage does not change, the change may
           take effect at the same time as the notice. In particular, this policy will be revised when
           any of the following is introduced: storing location data (GPS routes) on the server,
-          routing photos or videos through external AI analysis, server push notifications
-          (notifications sent from the Team&rsquo;s server; the run detection notification currently
-          offered is a local notification created only on your device), or uploading photos or
-          videos to the server.
+          server push notifications (notifications sent from the Team&rsquo;s server; the run
+          detection notification currently offered is a local notification created only on your
+          device), sending a whole video or multiple frames to external AI, or storing photos or
+          videos on the server.
         </p>
         <p className="text-gray-600">
-          This revision reflects ad performance measurement. Compared with the previous policy
-          (effective September 2, 2026), the changes are: the ad attribution information item
-          (Article 1), the ad performance measurement purpose (Article 2), conditional provision to
-          Meta (Article 4), the transfer to Japan by the ad performance measurement tool (Airbridge)
-          (Article 5), how to revoke app tracking (Article 7), and the conditions for collecting the
-          advertising identifier (Article 10).
+          This revision reflects the optional gender and age group questions and the use of overseas
+          AI in AI templates. Compared with the previous policy (effective September 8, 2026), the
+          changes are: the profile information item (gender and age group) and the video frame sent
+          for AI templates (Article 1), the purposes of pose reading and freeze-frame creation and of
+          statistics and personalized recommendations by gender and age group (Article 2), the
+          retention of gender and age group and the immediate deletion of the frame (Article 3), the
+          transfers to Google (Gemini API) and OpenAI and how to refuse them (Article 5), how to
+          refuse sending a frame and how to change gender and age group (Article 7), the exception to
+          on-device processing and minimal storage of the age group (Article 9), and the note that
+          the frame sent to AI contains no health data (Article 11).
         </p>
         <p className="text-gray-600">
-          This revision takes effect at the same time as its notice. The newly added processing (ad
-          performance measurement) begins only once you install the app version released after this
-          policy is published (1.1.1), and does not occur in earlier versions. No advance notice
-          period was set because there were no existing users to notify in advance.
+          This revision takes effect at the same time as its notice. The newly added processing
+          (collecting gender and age group, and sending a frame for AI templates) happens only in
+          features you choose yourself, begins only once you install the app version released after
+          this policy is published (1.2.0), and does not occur in earlier versions.
         </p>
-        <p><strong>Date of notice and effective date: September 8, 2026</strong></p>
+        <p><strong>Date of notice and effective date: September 9, 2026</strong></p>
       </Section>
     </main>
   );
