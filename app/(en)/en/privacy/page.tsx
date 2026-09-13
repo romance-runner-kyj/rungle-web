@@ -70,8 +70,9 @@ export default function PrivacyPage() {
           You sign up for the service with a social login; the Team does not create or receive its
           own IDs or passwords. We process the following information to provide the service. Photos
           and videos are processed only on your device (the only exception is the single frame sent
-          when you use an AI template), and running record measurements are stored on the server for
-          backup.
+          when you use an AI template, and the freeze frame the AI creates from it, which the Team
+          keeps on its server for 90 days after your last edit so you can keep editing it), and
+          running record measurements are stored on the server for backup.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-left">
@@ -110,7 +111,7 @@ export default function PrivacyPage() {
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Photos and videos</td>
-                <td className="p-2">Photos and videos taken during your run (candidates for best-shot recommendation and editing). Processed only on your device; <strong>only when you use an AI template</strong>, the single frame you select from a video (a still image reduced to 512 pixels wide, which may show a face) is sent through the Team&rsquo;s server to the AI providers in Article 5. The server also receives which template you chose, but only the frame goes to the AI providers. The whole video and other frames are never sent</td>
+                <td className="p-2">Photos and videos taken during your run (candidates for best-shot recommendation and editing). Processed only on your device; <strong>only when you use an AI template</strong>, the single frame you select from a video (a still image reduced to 512 pixels wide, which may show a face) is sent through the Team&rsquo;s server to the AI providers in Article 5. The server also receives which template you chose, but only the frame goes to the AI providers. The whole video and other frames are never sent The freeze frame the AI creates from that frame is kept on the Team&rsquo;s server for 90 days after your last edit (Article 3).</td>
                 <td className="p-2">Read from your photo library if you allow it. The frame is created only when you choose a video and a freeze point yourself in an AI template</td>
               </tr>
               <tr className="border-b border-gray-200">
@@ -170,7 +171,8 @@ export default function PrivacyPage() {
       <Section title="Article 3 (Processing and Retention Period)">
         <p>
           <strong>Photos and videos are stored only on your device</strong>; the Team does not keep
-          them on the server. Account information, device information, and running record backups
+          them on the server. The one exception is the freeze frame an AI template creates, which is
+          kept as described below. Account information, device information, and running record backups
           are stored on the Team&rsquo;s server (in Korea). When you delete the app, the information
           the app stored on your device is deleted with it, with one exception: the anonymous device
           identifier described below. Information on the server remains after you delete the app,
@@ -190,9 +192,13 @@ export default function PrivacyPage() {
             <strong>The video frame sent to the server when you use an AI template is deleted from
             the server as soon as the AI provider&rsquo;s result is returned to the app,</strong> and
             is not kept in any cache, log, or storage. Server records keep only the job number, the
-            requesting account, the request time, file size, and processing status; the frame and
-            the result are not kept. The freeze frame created by the AI is stored only on your device
-            and is deleted together with the draft that uses it.
+            requesting account, the request time, file size, and processing status; the contents of
+            the frame and the result are not kept. <strong>The freeze frame created by the AI is kept
+            on the Team&rsquo;s server (in Korea, encrypted storage) for 90 days after your last
+            edit</strong> so you can keep editing it and restore it on another device, and is then
+            deleted automatically. It is deleted immediately when you delete your account. The freeze
+            frame is also stored on your device and is deleted there together with the draft that
+            uses it.
           </li>
           <li>Usage records (event logs), error logs, and ad attribution information are stored on the servers of the providers listed in Article 5 and deleted once the purposes of service quality improvement and ad performance measurement are fulfilled. After you delete the app, no new records are collected.</li>
           <li>
@@ -435,7 +441,7 @@ export default function PrivacyPage() {
       <Section title="Article 9 (Security Measures)">
         <p>The Team takes the following security measures in accordance with Article 29 of Korea&rsquo;s Personal Information Protection Act.</p>
         <ul className="list-disc space-y-1 pl-5">
-          <li><strong>On-device processing:</strong> Personal information processing, including photo analysis, face evaluation, and text recognition, is performed on your device, and the iOS app sandbox blocks access from other apps. The only exception is the single video frame for AI templates, which passes through the server to the AI providers; the server deletes the frame as soon as it returns the result and does not store it.</li>
+          <li><strong>On-device processing:</strong> Personal information processing, including photo analysis, face evaluation, and text recognition, is performed on your device, and the iOS app sandbox blocks access from other apps. The only exception is the single video frame for AI templates, which passes through the server to the AI providers; the server deletes the frame as soon as it returns the result and does not store it. The freeze frame the AI creates is kept in encrypted storage that only the Team&rsquo;s server can access, and you download only your own freeze frames through short-lived signed URLs.</li>
           <li><strong>Minimal storage:</strong> Birth year is stored only as a 10-year age group, and the original value is not kept.</li>
           <li><strong>Administrative measures:</strong> Minimizing the staff who handle personal information and setting internal handling rules</li>
           <li><strong>Technical measures:</strong> TLS encryption on all external connections; the server is placed in a segment not directly reachable from outside, with access limited to the minimum staff; server credentials are kept in a separate secrets management service</li>
@@ -538,7 +544,16 @@ export default function PrivacyPage() {
           features you choose yourself, begins only once you install the app version released after
           this policy is published (1.2.0), and does not occur in earlier versions.
         </p>
-        <p><strong>Date of notice and effective date: September 9, 2026</strong></p>
+        <p className="text-gray-600">
+          Revision of September 14, 2026: server retention of the freeze frame created by the AI (90
+          days after your last edit; deleted immediately when you delete your account) was added to
+          Articles 1, 3, and 9. The policy effective September 9 stated that the freeze frame was
+          stored only on your device; it is now kept on the server so you can keep editing it and
+          restore it on another device. This retention occurs only when you choose to use an AI
+          template and does not change existing usage, so it takes effect at the same time as its
+          notice and applies from the app version released after this policy is published.
+        </p>
+        <p><strong>Date of notice and effective date: September 14, 2026</strong> (AI template provisions first effective September 9, 2026)</p>
       </Section>
     </main>
   );
