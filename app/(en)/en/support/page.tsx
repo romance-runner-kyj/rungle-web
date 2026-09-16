@@ -130,9 +130,21 @@ export default function SupportPage() {
 
         <Faq question="What happens to my data if I delete the app?">
           <p>
-            It is all deleted with the app. Rungle keeps the content you made and your settings only
-            on your device, so iOS removes them when you delete the app. Results you already saved
-            to your library remain.
+            What was on your device is deleted with the app. Drafts you were editing and your
+            settings live only on your device, so iOS removes them when you delete the app. Results
+            you already saved to your library remain.
+          </p>
+          <p>
+            What was on the server remains. If you used the app signed in, your account
+            information, running record backups, and the freeze frames made with AI templates are
+            on the Team&rsquo;s server. To delete those as well, request account deletion from the
+            My Info screen before deleting the app. They are permanently deleted 30 days after the
+            request, and signing in again before then cancels it. Running record backups made as a
+            guest also stay on the server; to delete them, email{" "}
+            <a className="underline" href="mailto:admin@rungle.app">
+              admin@rungle.app
+            </a>
+            .
           </p>
         </Faq>
 
