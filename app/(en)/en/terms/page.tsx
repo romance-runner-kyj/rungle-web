@@ -149,8 +149,9 @@ export default function TermsPage() {
             least 30 days in advance on this page and through in-app announcements.
           </li>
           <li>
-            Your Content and records are stored only on your device, so Content stored on your
-            device remains even if the Service is suspended. Backing up Content in case you change
+            Your Content and records are in principle stored on your device (what is backed up to
+            the server is governed by the Privacy Policy), so Content stored on your device
+            remains even if the Service is suspended. Backing up Content in case you change
             devices or delete the app is your responsibility.
           </li>
         </ul>

@@ -111,8 +111,16 @@ export default function SupportPage() {
             out well also happens on your device.
           </p>
           <p>
-            Faces are only evaluated for how well they came out; they are never generated, altered,
-            or retouched. The details are in the{" "}
+            The one exception is AI templates. The single video frame you select is sent through
+            the Team&rsquo;s server to the AI providers, and the server deletes that frame as soon as
+            it returns the result. The freeze frame the AI creates is kept on the Team&rsquo;s
+            server for 90 days after your last edit so you can keep editing it and restore it on
+            another device.
+          </p>
+          <p>
+            Faces are only evaluated for how well they came out; except for freeze-frame creation
+            in AI templates, they are never generated, altered, or retouched. The details are in
+            the{" "}
             <a className="underline" href="/en/privacy">
               Privacy Policy
             </a>
@@ -122,9 +130,21 @@ export default function SupportPage() {
 
         <Faq question="What happens to my data if I delete the app?">
           <p>
-            It is all deleted with the app. Rungle keeps the content you made and your settings only
-            on your device, so iOS removes them when you delete the app. Results you already saved
-            to your library remain.
+            What was on your device is deleted with the app. Drafts you were editing and your
+            settings live only on your device, so iOS removes them when you delete the app. Results
+            you already saved to your library remain.
+          </p>
+          <p>
+            What was on the server remains. If you used the app signed in, your account
+            information, running record backups, and the freeze frames made with AI templates are
+            on the Team&rsquo;s server. To delete those as well, request account deletion from the
+            My Info screen before deleting the app. They are permanently deleted 30 days after the
+            request, and signing in again before then cancels it. Running record backups made as a
+            guest also stay on the server; to delete them, email{" "}
+            <a className="underline" href="mailto:admin@rungle.app">
+              admin@rungle.app
+            </a>
+            .
           </p>
         </Faq>
 
