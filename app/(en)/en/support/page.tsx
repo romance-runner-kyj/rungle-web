@@ -111,8 +111,16 @@ export default function SupportPage() {
             out well also happens on your device.
           </p>
           <p>
-            Faces are only evaluated for how well they came out; they are never generated, altered,
-            or retouched. The details are in the{" "}
+            The one exception is AI templates. The single video frame you select is sent through
+            the Team&rsquo;s server to the AI providers, and the server deletes that frame as soon as
+            it returns the result. The freeze frame the AI creates is kept on the Team&rsquo;s
+            server for 90 days after your last edit so you can keep editing it and restore it on
+            another device.
+          </p>
+          <p>
+            Faces are only evaluated for how well they came out; except for freeze-frame creation
+            in AI templates, they are never generated, altered, or retouched. The details are in
+            the{" "}
             <a className="underline" href="/en/privacy">
               Privacy Policy
             </a>

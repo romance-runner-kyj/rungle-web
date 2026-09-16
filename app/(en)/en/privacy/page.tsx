@@ -44,7 +44,9 @@ export default function PrivacyPage() {
         intelligence (AI) reads a video frame or creates a freeze-frame image (an &ldquo;AI
         template&rdquo;), the single video frame you select is sent through the Team&rsquo;s server
         to overseas AI providers (Google and OpenAI), and the server deletes that frame as soon as it
-        returns the result (Article 5). Gender and age group are optional and you do not have to
+        returns the result (Article 5). The freeze frame the AI creates is kept on the Team&rsquo;s
+        server (in Korea) for 90 days after your last edit so you can keep editing it and restore it
+        on another device (Article 3). Gender and age group are optional and you do not have to
         answer (Article 1). App usage records for service improvement are sent to an external
         analytics tool, and install and launch records for ad performance measurement are sent to an
         external measurement tool (Article 5). The advertising identifier (IDFA) is used only if you
@@ -56,9 +58,9 @@ export default function PrivacyPage() {
         <h2 className="font-bold">Key Points (Summary)</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5">
           <li><strong>Account information:</strong> When you sign up with a social login, we collect the login provider, the user identifier issued by that provider, and your email (Article 1). Your nickname is generated and assigned by the service, not collected. Gender and age group are optional; you can skip them and still use every feature (Article 1)</li>
-          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server (GPS routes excluded); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored only on your device. Only when you use an AI template, the single video frame you select is sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Article 5) / Device information and app usage records: registered on the server and sent to analytics tools (Article 5) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5)</li>
-          <li><strong>Purposes:</strong> Best-shot recommendations, creating record overlays and reels, pose reading and freeze-frame creation in AI templates, account login and record backup and restore, running statistics and personalized recommendations by gender and age group, service quality improvement, ad performance measurement (finding out which ad led to an install)</li>
-          <li><strong>Retention:</strong> Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); the video frame sent to AI providers is deleted from the server as soon as the result is received (Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled</li>
+          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server (GPS routes excluded); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored only on your device. Only when you use an AI template, the single video frame you select is sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Article 5), and only the freeze frame the AI creates is also kept on the Team&rsquo;s server (Article 3) / Device information and app usage records: registered on the server and sent to analytics tools (Article 5) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5)</li>
+          <li><strong>Purposes:</strong> Best-shot recommendations, creating record overlays and reels, pose reading and freeze-frame creation in AI templates, account login and record backup and restore, continued editing and cross-device restore of AI-created freeze frames, running statistics and personalized recommendations by gender and age group, service quality improvement, ad performance measurement (finding out which ad led to an install)</li>
+          <li><strong>Retention:</strong> Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); the video frame sent to AI providers is deleted from the server as soon as the result is received, and the freeze frame the AI creates is kept for 90 days after your last edit and then deleted (deleted together with your account information when you delete your account, Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled</li>
           <li><strong>Sharing with third parties:</strong> Not done in principle. While we run ads, install and share-completed events may be provided to Meta (Article 4; not currently provided). App usage analysis, ad performance measurement, converting coordinates to place names, and frame reading and freeze-frame creation for AI templates are outsourced to overseas providers (Article 5)</li>
           <li><strong>Privacy officer:</strong> Dongho Kim (admin@rungle.app)</li>
           <li><strong>Contact:</strong> The Team (admin@rungle.app)</li>
@@ -111,7 +113,7 @@ export default function PrivacyPage() {
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Photos and videos</td>
-                <td className="p-2">Photos and videos taken during your run (candidates for best-shot recommendation and editing). Processed only on your device; <strong>only when you use an AI template</strong>, the single frame you select from a video (a still image reduced to 512 pixels wide, which may show a face) is sent through the Team&rsquo;s server to the AI providers in Article 5. The server also receives which template you chose, but only the frame goes to the AI providers. The whole video and other frames are never sent The freeze frame the AI creates from that frame is kept on the Team&rsquo;s server for 90 days after your last edit (Article 3).</td>
+                <td className="p-2">Photos and videos taken during your run (candidates for best-shot recommendation and editing). Processed only on your device; <strong>only when you use an AI template</strong>, the single frame you select from a video (a still image reduced to 512 pixels wide, which may show a face) is sent through the Team&rsquo;s server to the AI providers in Article 5. The server also receives which template you chose, but only the frame goes to the AI providers. The whole video and other frames are never sent. The freeze frame the AI creates from that frame is kept on the Team&rsquo;s server for 90 days after your last edit (Article 3).</td>
                 <td className="p-2">Read from your photo library if you allow it. The frame is created only when you choose a video and a freeze point yourself in an AI template</td>
               </tr>
               <tr className="border-b border-gray-200">
@@ -159,8 +161,9 @@ export default function PrivacyPage() {
           <li>Importing running records and automatically collecting photos and videos taken during your run</li>
           <li>Best-shot recommendation (evaluating photo and video quality, faces, and composition on your device). <strong>Faces are only detected and evaluated, and are never generated, altered, or retouched except in the freeze-frame creation of AI templates below.</strong></li>
           <li>Creating and editing record overlays, reels, and frame content</li>
-          <li>Pose reading and freeze-frame creation in AI templates. From the single video frame you select, the AI reads the hand position and where the record text can be placed, and, depending on the template, creates a new freeze-frame image with an effect added based on that frame. <strong>When a freeze frame is created, the face and body of the person in the frame may be redrawn by the AI.</strong> The created freeze frame passes through Google once more so the AI can read where the record text can be placed and check the composition, and is then stored only on your device; we never process it to identify who someone is (no matching of the same person, no extraction of facial features)</li>
+          <li>Pose reading and freeze-frame creation in AI templates. From the single video frame you select, the AI reads the hand position and where the record text can be placed, and, depending on the template, creates a new freeze-frame image with an effect added based on that frame. <strong>When a freeze frame is created, the face and body of the person in the frame may be redrawn by the AI.</strong> The created freeze frame passes through Google once more so the AI can read where the record text can be placed and check the composition, and is then stored on your device and on the Team&rsquo;s server (Article 3); we never process it to identify who someone is (no matching of the same person, no extraction of facial features)</li>
           <li>Creating an account and keeping you signed in; backing up and restoring records when you switch devices or reinstall the app</li>
+          <li>Keeping the freeze frame the AI creates on the server so you can keep editing it and restore it on another device</li>
           <li>Running statistics and personalized recommendations by gender and age group (only for users who answered the optional questions)</li>
           <li>Delivering announcements and notifications (in-app inbox)</li>
           <li>Analyzing usage records to improve service quality and recommendation features</li>
@@ -195,10 +198,13 @@ export default function PrivacyPage() {
             requesting account, the request time, file size, and processing status; the contents of
             the frame and the result are not kept. <strong>The freeze frame created by the AI is kept
             on the Team&rsquo;s server (in Korea, encrypted storage) for 90 days after your last
-            edit</strong> so you can keep editing it and restore it on another device, and is then
-            deleted automatically. It is deleted immediately when you delete your account. The freeze
-            frame is also stored on your device and is deleted there together with the draft that
-            uses it.
+            edit (or after it was created, if you never edit it)</strong> so you can keep editing it
+            and restore it on another device, and is then deleted automatically. If you request
+            account deletion, it is deleted together with your account information after the 30-day
+            grace period. AI templates can be used only with a signed-in account, so no freeze frame
+            is created on the server while you are a guest. To delete a freeze frame from the server
+            before the 90 days are up, contact the Team (admin@rungle.app). The freeze frame is also
+            stored on your device and is deleted there together with the draft that uses it.
           </li>
           <li>Usage records (event logs), error logs, and ad attribution information are stored on the servers of the providers listed in Article 5 and deleted once the purposes of service quality improvement and ad performance measurement are fulfilled. After you delete the app, no new records are collected.</li>
           <li>
@@ -275,8 +281,8 @@ export default function PrivacyPage() {
                   <br />
                   <a className="underline" href="https://aws.amazon.com/privacy">aws.amazon.com/privacy</a>
                 </td>
-                <td className="p-2">Server operations: storing account information, device information, running record backups, and notifications</td>
-                <td className="p-2">Republic of Korea (Seoul region) / until account deletion or the end of the contract</td>
+                <td className="p-2">Server operations: storing account information, device information, running record backups, notifications, and the freeze frames the AI creates</td>
+                <td className="p-2">Republic of Korea (Seoul region) / until account deletion or the end of the contract (AI-created freeze frames: 90 days after your last edit, Article 3)</td>
               </tr>
             </tbody>
           </table>
@@ -400,7 +406,8 @@ export default function PrivacyPage() {
         <ul className="list-disc space-y-1 pl-5">
           <li>Information stored in the app is deleted immediately by iOS when you delete the app. The anonymous device identifier stays on the device even after you delete the app (Article 3).</li>
           <li>Drafts being edited, selected photos, and similar items can be deleted individually in the app.</li>
-          <li>Account information, running record backups, and notifications stored on the server are deleted by an automated process 30 days after you request account deletion, in a way that cannot be recovered.</li>
+          <li>Account information, running record backups, notifications, and AI-created freeze frames stored on the server are deleted by an automated process 30 days after you request account deletion, in a way that cannot be recovered.</li>
+          <li>AI-created freeze frames stored on the server are also deleted by the storage&rsquo;s automatic expiry rule 90 days after your last edit, even if you do not delete your account (Article 3).</li>
         </ul>
       </Section>
 
@@ -418,7 +425,8 @@ export default function PrivacyPage() {
           <li><strong>Refuse sending a frame to AI providers:</strong> Simply do not choose an AI template. All other templates and features remain available (Article 5)</li>
           <li><strong>Change gender or age group:</strong> You can change them on the My Info screen in the app. To erase your answers, contact the Team (Article 3)</li>
           <li><strong>Revoke app tracking (advertising identifier):</strong> Turn off Rungle in iOS Settings &gt; Privacy &amp; Security &gt; Tracking, or turn off Allow Tracking in iOS Settings &gt; Rungle. Once off, the advertising identifier is no longer used, and the service is not restricted in any way</li>
-          <li><strong>Delete your account:</strong> Request it at any time from the My Info screen in the app. 30 days after the request, the account information and running record backups on the server are permanently deleted; signing in again before then cancels the deletion</li>
+          <li><strong>Delete AI-created freeze frames from the server:</strong> To delete them before the 90 days are up, contact the Team. When you delete your account, they are deleted together with your account information (Article 3)</li>
+          <li><strong>Delete your account:</strong> Request it at any time from the My Info screen in the app. 30 days after the request, the account information, running record backups, and AI-created freeze frames on the server are permanently deleted; signing in again before then cancels the deletion</li>
           <li><strong>Delete everything:</strong> Deleting the app destroys the information the app stored. Information on the server remains after you delete the app, so also request account deletion as above. Only the anonymous device identifier stays on the device; contact the Team to have it erased (Article 3)</li>
         </ul>
       </Section>
@@ -523,8 +531,8 @@ export default function PrivacyPage() {
           any of the following is introduced: storing location data (GPS routes) on the server,
           server push notifications (notifications sent from the Team&rsquo;s server; the run
           detection notification currently offered is a local notification created only on your
-          device), sending a whole video or multiple frames to external AI, or storing photos or
-          videos on the server.
+          device), sending a whole video or multiple frames to external AI, or storing your original
+          photos or videos on the server.
         </p>
         <p className="text-gray-600">
           This revision reflects the optional gender and age group questions and the use of overseas
@@ -545,15 +553,16 @@ export default function PrivacyPage() {
           this policy is published (1.2.0), and does not occur in earlier versions.
         </p>
         <p className="text-gray-600">
-          Revision of September 14, 2026: server retention of the freeze frame created by the AI (90
-          days after your last edit; deleted immediately when you delete your account) was added to
-          Articles 1, 3, and 9. The policy effective September 9 stated that the freeze frame was
-          stored only on your device; it is now kept on the server so you can keep editing it and
-          restore it on another device. This retention occurs only when you choose to use an AI
-          template and does not change existing usage, so it takes effect at the same time as its
-          notice and applies from the app version released after this policy is published.
+          Revision of September 16, 2026: server retention of the freeze frame created by the AI (90
+          days after your last edit; deleted together with your account information when you delete
+          your account) was added to the summary and Articles 1, 2, 3, 5, 6, 7, and 9. The policy
+          effective September 9 stated that the freeze frame was stored only on your device; it is
+          now kept on the server so you can keep editing it and restore it on another device. This
+          retention occurs only when you choose to use an AI template, and AI templates first open
+          in the app version released after this policy is published (1.2.0), so existing usage does
+          not change and the revision takes effect at the same time as its notice.
         </p>
-        <p><strong>Date of notice and effective date: September 14, 2026</strong> (AI template provisions first effective September 9, 2026)</p>
+        <p><strong>Date of notice and effective date: September 16, 2026</strong> (AI template provisions first effective September 9, 2026)</p>
       </Section>
     </main>
   );
