@@ -56,7 +56,7 @@ export default function PrivacyPage() {
         <h2 className="font-bold">Key Points (Summary)</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5">
           <li><strong>Account information:</strong> When you sign up with a social login, we collect the login provider, the user identifier issued by that provider, and your email (Article 1). Your nickname is generated and assigned by the service, not collected. Gender and age group are optional; you can skip them and still use every feature (Article 1)</li>
-          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server (GPS routes excluded); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored only on your device. Only when you use an AI template, the single video frame you select is sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Article 5) / Device information and app usage records: registered on the server and sent to analytics tools (Article 5) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5)</li>
+          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server (GPS routes excluded); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored only on your device. Only when you use an AI template, the single video frame you select is sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Article 5) / Device information and app usage records (including the account identifier issued by the server when you are signed in): registered on the server and sent to analytics tools (Article 5) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5)</li>
           <li><strong>Purposes:</strong> Best-shot recommendations, creating record overlays and reels, pose reading and freeze-frame creation in AI templates, account login and record backup and restore, running statistics and personalized recommendations by gender and age group, service quality improvement, ad performance measurement (finding out which ad led to an install)</li>
           <li><strong>Retention:</strong> Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); the video frame sent to AI providers is deleted from the server as soon as the result is received (Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled</li>
           <li><strong>Sharing with third parties:</strong> Not done in principle. While we run ads, install and share-completed events may be provided to Meta (Article 4; not currently provided). App usage analysis, ad performance measurement, converting coordinates to place names, and frame reading and freeze-frame creation for AI templates are outsourced to overseas providers (Article 5)</li>
@@ -121,7 +121,7 @@ export default function PrivacyPage() {
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Usage records (collected automatically)</td>
-                <td className="p-2">The anonymous device identifier issued by the app (a random value created when the app first launches, not a hardware number read from the device), feature usage events, error logs, user experience survey responses (5-point scale), values derived from running records (distance bucket, whether a route exists, and so on; raw figures such as distance and heart rate are excluded)</td>
+                <td className="p-2">The anonymous device identifier issued by the app (a random value created when the app first launches, not a hardware number read from the device), the account identifier issued by the server when you are signed in (a random value, not your email or name, used to keep you as one user when you change devices), feature usage events, error logs, user experience survey responses (5-point scale), values derived from running records (distance bucket, whether a route exists, and so on; raw figures such as distance and heart rate are excluded)</td>
                 <td className="p-2">Generated automatically while you use the service and sent to analytics tools (Article 5)</td>
               </tr>
               <tr className="border-b border-gray-200">
@@ -148,7 +148,10 @@ export default function PrivacyPage() {
           <strong>Signing in is also optional.</strong> You can use the service without signing in
           (as a guest). In that case we do not collect account information, and your records are
           linked only to the anonymous device identifier. Records backed up to the server while you
-          are a guest are merged into your account when you sign in later.
+          are a guest are merged into your account when you sign in later. Once you sign in, your
+          subsequent usage records also carry the account identifier, and usage records collected on
+          the same device before you signed in are linked to that account as well. After you sign
+          out, later records no longer carry it.
           <strong>Gender and age group are also optional.</strong> If you skip the form, we do not
           ask again, and you can change your answers at any time on the My Info screen.
         </p>
@@ -311,7 +314,7 @@ export default function PrivacyPage() {
                   <a className="underline" href="https://amplitude.com/privacy">amplitude.com/privacy</a>
                 </td>
                 <td className="p-2">United States / continuously while you use the app / network (HTTPS encrypted)</td>
-                <td className="p-2">Anonymous device identifier, feature usage events, user experience survey responses, values derived from running records (distance bucket, whether a route exists, whether a place name exists), attribution details (names of the ad channel, campaign, ad group, and creative)</td>
+                <td className="p-2">Anonymous device identifier, account identifier issued by the server (only when signed in), feature usage events, user experience survey responses, values derived from running records (distance bucket, whether a route exists, whether a place name exists), attribution details (names of the ad channel, campaign, ad group, and creative)</td>
                 <td className="p-2">Usage analysis and service quality improvement, comparing attribution performance by ad / until the end of the contract or fulfillment of the purpose</td>
               </tr>
               <tr className="border-b border-gray-200">
@@ -452,8 +455,9 @@ export default function PrivacyPage() {
       <Section title="Article 10 (Automatic Data Collection Tools and How to Refuse Them)">
         <p>
           The Team does not use cookies. Usage records for service quality improvement are generated
-          automatically, keyed to the anonymous device identifier issued by the app, and sent to the
-          providers in Article 5.
+          automatically, keyed to the anonymous device identifier issued by the app (and to the account
+          identifier issued by the server when you are signed in), and sent to the providers in
+          Article 5.
         </p>
         <p>
           <strong>The advertising identifier (IDFA) is collected only if you allow it in App
@@ -553,7 +557,16 @@ export default function PrivacyPage() {
           template and does not change existing usage, so it takes effect at the same time as its
           notice and applies from the app version released after this policy is published.
         </p>
-        <p><strong>Date of notice and effective date: September 14, 2026</strong> (AI template provisions first effective September 9, 2026)</p>
+        <p className="text-gray-600">
+          Revision of September 16, 2026: Articles 1, 5, and 10 now state that the usage records of
+          signed-in users carry the account identifier issued by the server and are sent to the
+          analytics tool (Amplitude). This keeps you as one user when you change devices; the account
+          identifier is a random value created by the server and contains no email or name. This
+          processing begins only once you sign in on the app version released after this policy is
+          published (1.2.0), and does not occur in earlier versions or in guest use, so it takes
+          effect at the same time as its notice.
+        </p>
+        <p><strong>Date of notice and effective date: September 16, 2026</strong> (AI template provisions first effective September 9, 2026)</p>
       </Section>
     </main>
   );
