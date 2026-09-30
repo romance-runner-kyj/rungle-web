@@ -651,9 +651,13 @@ export default function PrivacyPage() {
           result notifications, delivered through Google Firebase) and consent to promotional
           notifications (offers and news) (Articles 1, 2, 3, 5, 7, and 9). Accordingly, server push
           notifications and sending multiple frames to external AI were also removed from the list of
-          planned revisions in Article 13. These two also apply from app version 2.0.0; sending
-          multiple frames happens only when you choose and run such a feature, and promotional
-          notifications only when you separately consent.
+          planned revisions in Article 13. Sending multiple frames happens only when you choose and
+          run such a feature and existing usage does not change, so that part takes effect at the same
+          time as its notice. Of these features, Cut Edit was already included in app version 1.2.0,
+          released after September 17, 2026, while this policy still described a single frame; we
+          apologize for reflecting it late. Web Shooter, Monthly Recap, the Quick Stamp judgment,
+          push notifications, and promotional notifications apply from app version 2.0.0, and
+          promotional notifications are sent only when you separately consent.
         </p>
         <p><strong>Date of notice: October 1, 2026 / Effective date: October 8, 2026</strong> (AI template provisions first effective September 9, 2026)</p>
       </Section>
