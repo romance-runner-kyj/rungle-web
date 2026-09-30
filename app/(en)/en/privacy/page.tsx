@@ -38,9 +38,15 @@ export default function PrivacyPage() {
         photos and videos, and helps you create and share record overlays and reels. This policy
         applies to the version currently available. You can sign up with a social login, or use the
         app without signing in (as a guest). Running records are stored on the Team&rsquo;s server
-        (in Korea) for backup and restore, and <strong>your photos and videos never leave your
-        device. GPS routes are not stored on the server.</strong>{" "}
-        There is one exception: when you choose to use a reel template in which artificial
+        (in Korea) for backup and restore. <strong>Photos and videos are processed on your device
+        by default.</strong> When a signed-in user edits photos or reels, the Team keeps the
+        original photos and videos used in that edit (a &ldquo;project&rdquo;) and its editing
+        information on the Team&rsquo;s server (in Korea) so you can keep editing it and restore it
+        on another device (&ldquo;project backup&rdquo;, Articles 1 and 3). Location information
+        embedded in photos and videos is removed before upload. You can turn off project backup in
+        the app&rsquo;s settings, and nothing is uploaded if you do not sign in (as a guest).{" "}
+        <strong>GPS routes are not stored on the server.</strong>{" "}
+        In addition, when you choose to use a reel template in which artificial
         intelligence (AI) reads a video frame or creates a freeze-frame image (an &ldquo;AI
         template&rdquo;), the single video frame you select is sent through the Team&rsquo;s server
         to overseas AI providers (Google and OpenAI), and the server deletes that frame as soon as it
@@ -58,9 +64,9 @@ export default function PrivacyPage() {
         <h2 className="font-bold">Key Points (Summary)</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5">
           <li><strong>Account information:</strong> When you sign up with a social login, we collect the login provider, the user identifier issued by that provider, and your email (Article 1). Your nickname is generated and assigned by the service, not collected. Gender and age group are optional; you can skip them and still use every feature (Article 1)</li>
-          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server (GPS routes excluded); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored only on your device. Only when you use an AI template, the single video frame you select is sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Article 5), and only the freeze frame the AI creates is also kept on the Team&rsquo;s server (Article 3) / Device information and app usage records (including the account identifier issued by the server when you are signed in): registered on the server and sent to analytics tools (Article 5) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5)</li>
-          <li><strong>Purposes:</strong> Best-shot recommendations, creating record overlays and reels, pose reading and freeze-frame creation in AI templates, account login and record backup and restore, continued editing and cross-device restore of AI-created freeze frames, running statistics and personalized recommendations by gender and age group, service quality improvement, ad performance measurement (finding out which ad led to an install)</li>
-          <li><strong>Retention:</strong> Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); the video frame sent to AI providers is deleted from the server as soon as the result is received, and the freeze frame the AI creates is kept for 90 days after your last edit and then deleted (deleted together with your account information when you delete your account, Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled</li>
+          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server (GPS routes excluded); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored on your device by default. Only when you use an AI template, the single video frame you select is sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Article 5), and the freeze frame the AI creates is also kept on the Team&rsquo;s server (Article 3). For signed-in users, the original photos and videos of edited projects (with location information removed) and their editing information are kept on the Team&rsquo;s server (in Korea) for backup (Articles 1 and 3; can be turned off in settings) / Device information and app usage records (including the account identifier issued by the server when you are signed in): registered on the server and sent to analytics tools (Article 5) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5)</li>
+          <li><strong>Purposes:</strong> Best-shot recommendations, creating record overlays and reels, pose reading and freeze-frame creation in AI templates, account login and record backup and restore, continued editing and cross-device restore of AI-created freeze frames, continued editing and cross-device restore of edited projects (project backup), running statistics and personalized recommendations by gender and age group, service quality improvement, ad performance measurement (finding out which ad led to an install)</li>
+          <li><strong>Retention:</strong> Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); the video frame sent to AI providers is deleted from the server as soon as the result is received, and the freeze frame the AI creates is kept for 90 days after your last edit and then deleted (deleted together with your account information when you delete your account, Article 3); project backups are deleted after a 30-day grace period once you delete the project or request account deletion, and files no longer used by any project are deleted after 24 hours (Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled</li>
           <li><strong>Sharing with third parties:</strong> Not done in principle. While we run ads, install and share-completed events may be provided to Meta (Article 4; not currently provided). App usage analysis, ad performance measurement, converting coordinates to place names, and frame reading and freeze-frame creation for AI templates are outsourced to overseas providers (Article 5)</li>
           <li><strong>Privacy officer:</strong> Dongho Kim (admin@rungle.app)</li>
           <li><strong>Contact:</strong> The Team (admin@rungle.app)</li>
@@ -71,10 +77,11 @@ export default function PrivacyPage() {
         <p>
           You sign up for the service with a social login; the Team does not create or receive its
           own IDs or passwords. We process the following information to provide the service. Photos
-          and videos are processed only on your device (the only exception is the single frame sent
-          when you use an AI template, and the freeze frame the AI creates from it, which the Team
-          keeps on its server for 90 days after your last edit so you can keep editing it), and
-          running record measurements are stored on the server for backup.
+          and videos are processed on your device (exceptions are the single frame sent when you use
+          an AI template, and the freeze frame the AI creates from it, which the Team keeps on its
+          server for 90 days after your last edit so you can keep editing it; project backups of
+          signed-in users are also an exception), and running record measurements are stored on the
+          server for backup.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-left">
@@ -113,8 +120,13 @@ export default function PrivacyPage() {
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Photos and videos</td>
-                <td className="p-2">Photos and videos taken during your run (candidates for best-shot recommendation and editing). Processed only on your device; <strong>only when you use an AI template</strong>, the single frame you select from a video (a still image reduced to 512 pixels wide, which may show a face) is sent through the Team&rsquo;s server to the AI providers in Article 5. The server also receives which template you chose, but only the frame goes to the AI providers. The whole video and other frames are never sent. The freeze frame the AI creates from that frame is kept on the Team&rsquo;s server for 90 days after your last edit (Article 3).</td>
+                <td className="p-2">Photos and videos taken during your run (candidates for best-shot recommendation and editing). Processed on your device; they reach the server in only two cases: the AI template frame and the project backup of signed-in users (next row). <strong>Only when you use an AI template</strong>, the single frame you select from a video (a still image reduced to 512 pixels wide, which may show a face) is sent through the Team&rsquo;s server to the AI providers in Article 5. The server also receives which template you chose, but only the frame goes to the AI providers. The whole video and other frames are never sent. The freeze frame the AI creates from that frame is kept on the Team&rsquo;s server for 90 days after your last edit (Article 3).</td>
                 <td className="p-2">Read from your photo library if you allow it. The frame is created only when you choose a video and a freeze point yourself in an AI template</td>
+              </tr>
+              <tr className="border-b border-gray-200">
+                <td className="p-2 font-semibold">Project backup (when signed in)</td>
+                <td className="p-2">The original photos and videos of projects you edit in the photo and reel editors (copies with location information removed), editing files the app creates (freeze frames and effect files), editing information (trims, order, speed, filters, photo positions, and overlay styles, fonts, colors, positions, and so on), the running record values shown in overlays (distance, duration, pace, and so on, Article 11), a small preview image for the list, the last edit time, and file sizes. The server does not separately receive capture time, location, or photo library file identifiers. However, capture details other than location (such as capture time and device model) may remain inside photo files</td>
+                <td className="p-2">When a signed-in user edits, the app uploads automatically when you leave the editor, when the app goes to the background, when you open the app again, and when you sign in. Nothing is uploaded if you turn off backup in settings. Guests keep edits only on the device, up to the 5 most recent (older ones are removed from the device), and those edits are uploaded to the account when you sign in</td>
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Record screen captures</td>
@@ -167,6 +179,7 @@ export default function PrivacyPage() {
           <li>Pose reading and freeze-frame creation in AI templates. From the single video frame you select, the AI reads the hand position and where the record text can be placed, and, depending on the template, creates a new freeze-frame image with an effect added based on that frame. <strong>When a freeze frame is created, the face and body of the person in the frame may be redrawn by the AI.</strong> The created freeze frame passes through Google once more so the AI can read where the record text can be placed and check the composition, and is then stored on your device and on the Team&rsquo;s server (Article 3); we never process it to identify who someone is (no matching of the same person, no extraction of facial features)</li>
           <li>Creating an account and keeping you signed in; backing up and restoring records when you switch devices or reinstall the app</li>
           <li>Keeping the freeze frame the AI creates on the server so you can keep editing it and restore it on another device</li>
+          <li>Keeping projects edited by signed-in users on the server so you can keep editing them and restore them when you switch devices or reinstall the app (project backup)</li>
           <li>Running statistics and personalized recommendations by gender and age group (only for users who answered the optional questions)</li>
           <li>Delivering announcements and notifications (in-app inbox)</li>
           <li>Analyzing usage records to improve service quality and recommendation features</li>
@@ -176,9 +189,9 @@ export default function PrivacyPage() {
 
       <Section title="Article 3 (Processing and Retention Period)">
         <p>
-          <strong>Photos and videos are stored only on your device</strong>; the Team does not keep
-          them on the server. The one exception is the freeze frame an AI template creates, which is
-          kept as described below. Account information, device information, and running record backups
+          <strong>Photos and videos are stored on your device.</strong> The exceptions are the
+          freeze frame an AI template creates and the project backups of signed-in users, which are
+          kept on the server as described below. Account information, device information, and running record backups
           are stored on the Team&rsquo;s server (in Korea). When you delete the app, the information
           the app stored on your device is deleted with it, with one exception: the anonymous device
           identifier described below. Information on the server remains after you delete the app,
@@ -208,6 +221,18 @@ export default function PrivacyPage() {
             is created on the server while you are a guest. To delete a freeze frame from the server
             before the 90 days are up, contact the Team (admin@rungle.app). The freeze frame is also
             stored on your device and is deleted there together with the draft that uses it.
+          </li>
+          <li>
+            <strong>Project backups are kept on the Team&rsquo;s server (in Korea, encrypted
+            storage).</strong> When you delete a project in the app, it disappears from the list
+            right away, is kept on the server for 30 days so it can be restored, and is then deleted
+            automatically. Photo and video files no longer used by any project (including files whose
+            upload stopped partway) are deleted automatically after 24 hours. If you request account
+            deletion, project backups are deleted together with your account information after the
+            30-day grace period. If you turn off backup in settings, nothing new is uploaded after
+            that, and projects already uploaded are kept until you delete them or delete your
+            account. Each account has a storage limit, and saves that would exceed it are not
+            accepted. Nothing is uploaded while you are a guest.
           </li>
           <li>Usage records (event logs), error logs, and ad attribution information are stored on the servers of the providers listed in Article 5 and deleted once the purposes of service quality improvement and ad performance measurement are fulfilled. After you delete the app, no new records are collected.</li>
           <li>
@@ -284,8 +309,8 @@ export default function PrivacyPage() {
                   <br />
                   <a className="underline" href="https://aws.amazon.com/privacy">aws.amazon.com/privacy</a>
                 </td>
-                <td className="p-2">Server operations: storing account information, device information, running record backups, notifications, and the freeze frames the AI creates</td>
-                <td className="p-2">Republic of Korea (Seoul region) / until account deletion or the end of the contract (AI-created freeze frames: 90 days after your last edit, Article 3)</td>
+                <td className="p-2">Server operations: storing account information, device information, running record backups, notifications, the freeze frames the AI creates, and the project backups of signed-in users (original photos and videos and editing information)</td>
+                <td className="p-2">Republic of Korea (Seoul region) / until account deletion or the end of the contract (AI-created freeze frames: 90 days after your last edit; project backups: 30 days after the project is deleted, Article 3)</td>
               </tr>
             </tbody>
           </table>
@@ -390,7 +415,8 @@ export default function PrivacyPage() {
           freeze frame the AI created from it). The frame is the
           original picture before any record overlay is applied, so it contains no running record
           figures, and no account information, device identifier, or running record is sent with it.
-          If you do not want your information transferred abroad, delete the app; no new records are
+          Original photos and videos kept as project backups stay only on the server in Korea and are
+          not sent to the overseas providers above. If you do not want your information transferred abroad, delete the app; no new records are
           sent after deletion. To block only the advertising identifier, turn off app tracking in
           iOS Settings &gt; Privacy &amp; Security &gt; Tracking (Article 7).
         </p>
@@ -411,6 +437,7 @@ export default function PrivacyPage() {
           <li>Drafts being edited, selected photos, and similar items can be deleted individually in the app.</li>
           <li>Account information, running record backups, notifications, and AI-created freeze frames stored on the server are deleted by an automated process 30 days after you request account deletion, in a way that cannot be recovered.</li>
           <li>AI-created freeze frames stored on the server are also deleted by the storage&rsquo;s automatic expiry rule 90 days after your last edit, even if you do not delete your account (Article 3).</li>
+          <li>Project backups stored on the server are deleted by an automated process, in a way that cannot be recovered, 30 days after you delete the project or 30 days after you request account deletion. Photo and video files not used by any project are deleted by the same process after 24 hours (Article 3).</li>
         </ul>
       </Section>
 
@@ -418,7 +445,7 @@ export default function PrivacyPage() {
         <p>
           You and your legal representative may at any time request access to, correction of,
           deletion of, or suspension of processing of your personal information. Running records,
-          photos, and videos are on your device, so you can exercise these rights directly as
+          photos, and videos are mostly on your device, so you can exercise these rights directly as
           described below. For other requests, including app usage records, contact the Team
           (admin@rungle.app) and we will act without delay.
         </p>
@@ -429,7 +456,9 @@ export default function PrivacyPage() {
           <li><strong>Change gender or age group:</strong> You can change them on the My Info screen in the app. To erase your answers, contact the Team (Article 3)</li>
           <li><strong>Revoke app tracking (advertising identifier):</strong> Turn off Rungle in iOS Settings &gt; Privacy &amp; Security &gt; Tracking, or turn off Allow Tracking in iOS Settings &gt; Rungle. Once off, the advertising identifier is no longer used, and the service is not restricted in any way</li>
           <li><strong>Delete AI-created freeze frames from the server:</strong> To delete them before the 90 days are up, contact the Team. When you delete your account, they are deleted together with your account information (Article 3)</li>
-          <li><strong>Delete your account:</strong> Request it at any time from the My Info screen in the app. 30 days after the request, the account information, running record backups, and AI-created freeze frames on the server are permanently deleted; signing in again before then cancels the deletion</li>
+          <li><strong>Delete a project:</strong> You can delete it from the project list in the app. The backup on the server is deleted 30 days after you delete it; to restore it before then, contact the Team (Article 3)</li>
+          <li><strong>Turn off project backup:</strong> You can turn it off in the app&rsquo;s settings. Once off, new edits are not uploaded to the server, and the edits on your device work as before. Projects already uploaded are kept until you delete them or delete your account (Article 3)</li>
+          <li><strong>Delete your account:</strong> Request it at any time from the My Info screen in the app. 30 days after the request, the account information, running record backups, AI-created freeze frames, and project backups on the server are permanently deleted; signing in again before then cancels the deletion</li>
           <li><strong>Delete everything:</strong> Deleting the app destroys the information the app stored. Information on the server remains after you delete the app, so also request account deletion as above. Only the anonymous device identifier stays on the device; contact the Team to have it erased (Article 3)</li>
         </ul>
       </Section>
@@ -453,10 +482,11 @@ export default function PrivacyPage() {
         <p>The Team takes the following security measures in accordance with Article 29 of Korea&rsquo;s Personal Information Protection Act.</p>
         <ul className="list-disc space-y-1 pl-5">
           <li><strong>On-device processing:</strong> Personal information processing, including photo analysis, face evaluation, and text recognition, is performed on your device, and the iOS app sandbox blocks access from other apps. The only exception is the single video frame for AI templates, which passes through the server to the AI providers; the server deletes the frame as soon as it returns the result and does not store it. The freeze frame the AI creates is kept in encrypted storage that only the Team&rsquo;s server can access, and you download only your own freeze frames through short-lived signed URLs.</li>
+          <li><strong>Project backup:</strong> Location information in photos and videos is removed on your device before upload. The server keeps files in encrypted storage (AES-256), separated by account, and issues the addresses for uploading and downloading files only to the signed-in owner, as signed URLs valid for 1 hour. The storage rejects any request that is not over an encrypted (HTTPS) connection. Photos and videos, including those showing faces, are never used to identify who someone is.</li>
           <li><strong>Minimal storage:</strong> Birth year is stored only as a 10-year age group, and the original value is not kept.</li>
           <li><strong>Administrative measures:</strong> Minimizing the staff who handle personal information and setting internal handling rules</li>
           <li><strong>Technical measures:</strong> TLS encryption on all external connections; the server is placed in a segment not directly reachable from outside, with access limited to the minimum staff; server credentials are kept in a separate secrets management service</li>
-          <li><strong>Access limited to your own data:</strong> Running records stored on the server can be viewed and edited only by the signed-in owner; ownership is checked on every request.</li>
+          <li><strong>Access limited to your own data:</strong> Running records and project backups stored on the server can be viewed and edited only by the signed-in owner; ownership is checked on every request.</li>
         </ul>
       </Section>
 
@@ -490,6 +520,13 @@ export default function PrivacyPage() {
           tool in Article 5 or to Meta in Article 4. The video frame sent to the AI providers in
           Article 5 is the original picture before any record overlay is applied, so it contains no
           health data.
+        </p>
+        <p>
+          The <strong>project backup</strong> of a signed-in user also stores the running record
+          values shown in that edit&rsquo;s overlays (distance, duration, pace, and so on). This is
+          so the edit can be restored exactly on another device, and these values are the same kind
+          as the running measurements already backed up to the server. They too are never used for
+          advertising or marketing and are never provided to third parties.
         </p>
         <p>
           <strong>The running location name</strong> is generated when you open the overlay editor,
@@ -535,8 +572,7 @@ export default function PrivacyPage() {
           any of the following is introduced: storing location data (GPS routes) on the server,
           server push notifications (notifications sent from the Team&rsquo;s server; the run
           detection notification currently offered is a local notification created only on your
-          device), sending a whole video or multiple frames to external AI, or storing your original
-          photos or videos on the server.
+          device), or sending a whole video or multiple frames to external AI.
         </p>
         <p className="text-gray-600">
           This revision reflects the optional gender and age group questions and the use of overseas
@@ -575,7 +611,17 @@ export default function PrivacyPage() {
           published (1.2.0), and does not occur in earlier versions or in guest use, so it takes
           effect at the same time as its notice.
         </p>
-        <p><strong>Date of notice and effective date: September 17, 2026</strong> (AI template provisions first effective September 9, 2026)</p>
+        <p className="text-gray-600">
+          Revision of October 1, 2026: project backup for signed-in users (server retention of the
+          original photos and videos of edits, their editing information, and the running record
+          values shown in overlays) was added to the introduction, the summary, and Articles 1, 2, 3,
+          5, 6, 7, 9, and 11, and storing original photos and videos on the server was removed from
+          the list of planned revisions in Article 13. Project backup applies from app version 2.0.0,
+          released after this policy is published. Because it is on by default for signed-in users
+          and starts when you update the app without any choice on your part, this revision takes
+          effect 7 days after its notice.
+        </p>
+        <p><strong>Date of notice: October 1, 2026 / Effective date: October 8, 2026</strong> (AI template provisions first effective September 9, 2026)</p>
       </Section>
     </main>
   );
