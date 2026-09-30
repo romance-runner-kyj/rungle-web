@@ -49,11 +49,15 @@ export default function PrivacyPage() {
         <strong>GPS routes are not stored on the server.</strong>{" "}
         In addition, when you choose to use a reel template in which artificial
         intelligence (AI) reads a video frame or creates a freeze-frame image (an &ldquo;AI
-        template&rdquo;), the single video frame you select is sent through the Team&rsquo;s server
-        to overseas AI providers (Google and OpenAI), and the server deletes that frame as soon as it
-        returns the result (Article 5). The freeze frame the AI creates is kept on the Team&rsquo;s
+        template&rdquo;) or the best-shot judgment of Quick Stamp, frames taken from the videos and
+        photos you select (one frame or several, depending on the feature, 512 pixels wide) are sent
+        through the Team&rsquo;s server to overseas AI providers (Google and OpenAI), and the server
+        deletes them as soon as it returns the result (Articles 1 and 5). The freeze frame the AI creates is kept on the Team&rsquo;s
         server (in Korea) for 90 days after your last edit so you can keep editing it and restore it
-        on another device (Article 3). Gender and age group are optional and you do not have to
+        on another device (Article 3). When an AI template job finishes, the Team&rsquo;s server
+        notifies you of the result with a push notification (delivered through Google Firebase,
+        Article 5), and promotional notifications (offers and news) are sent only to users who have
+        separately consented (Articles 1 and 7). Gender and age group are optional and you do not have to
         answer (Article 1). App usage records for service improvement are sent to an external
         analytics tool, and install and launch records for ad performance measurement are sent to an
         external measurement tool (Article 5). The advertising identifier (IDFA) is used only if you
@@ -65,10 +69,10 @@ export default function PrivacyPage() {
         <h2 className="font-bold">Key Points (Summary)</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5">
           <li><strong>Account information:</strong> When you sign up with a social login, we collect the login provider, the user identifier issued by that provider, and your email (Article 1). Your nickname is generated and assigned by the service, not collected. Gender and age group are optional; you can skip them and still use every feature (Article 1)</li>
-          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server (GPS routes excluded); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored on your device by default. Only when you use an AI template, the single video frame you select is sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Article 5), and the freeze frame the AI creates is also kept on the Team&rsquo;s server (Article 3). For signed-in users, the original photos and videos of edited projects (with capture details other than orientation removed) and their editing information are kept on the Team&rsquo;s server (in Korea) for backup (Articles 1 and 3; can be turned off in settings) / Device information and app usage records (including the account identifier issued by the server when you are signed in): registered on the server and sent to analytics tools (Article 5) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5)</li>
-          <li><strong>Purposes:</strong> Best-shot recommendations, creating record overlays and reels, pose reading and freeze-frame creation in AI templates, account login and record backup and restore, continued editing and cross-device restore of AI-created freeze frames, continued editing and cross-device restore of edited projects (project backup), running statistics and personalized recommendations by gender and age group, service quality improvement, ad performance measurement (finding out which ad led to an install)</li>
-          <li><strong>Retention:</strong> Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); the video frame sent to AI providers is deleted from the server as soon as the result is received, and the freeze frame the AI creates is kept for 90 days after your last edit and then deleted (deleted together with your account information when you delete your account, Article 3); project backups are deleted after a 30-day grace period once you delete the project or request account deletion, and files no longer used by any project are deleted after 24 hours (Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled</li>
-          <li><strong>Sharing with third parties:</strong> Not done in principle. While we run ads, install and share-completed events may be provided to Meta (Article 4; not currently provided). App usage analysis, ad performance measurement, converting coordinates to place names, and frame reading and freeze-frame creation for AI templates are outsourced to overseas providers (Article 5)</li>
+          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server (GPS routes excluded); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored on your device by default. Only when you use an AI template or the Quick Stamp judgment, frames taken from the videos and photos you select (one or several, 512 pixels wide) are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Articles 1 and 5), and the freeze frame the AI creates is also kept on the Team&rsquo;s server (Article 3). For signed-in users, the original photos and videos of edited projects (with capture details other than orientation removed) and their editing information are kept on the Team&rsquo;s server (in Korea) for backup (Articles 1 and 3; can be turned off in settings) / Device information (including the push notification token when notifications are on, and whether you consented to promotional notifications) and app usage records (including the account identifier issued by the server when you are signed in): registered on the server and sent to analytics tools (Article 5) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5)</li>
+          <li><strong>Purposes:</strong> Best-shot recommendations, creating record overlays and reels, pose and scene reading and freeze-frame creation in AI templates, push notifications for AI job results and promotional notifications (offers and news) for users who consented, account login and record backup and restore, continued editing and cross-device restore of AI-created freeze frames, continued editing and cross-device restore of edited projects (project backup), running statistics and personalized recommendations by gender and age group, service quality improvement, ad performance measurement (finding out which ad led to an install)</li>
+          <li><strong>Retention:</strong> Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); frames and photos sent to AI providers are deleted from the server as soon as the result is received, the push notification token is deleted as soon as you turn notifications off or revoke the permission (Article 3), and the freeze frame the AI creates is kept for 90 days after your last edit and then deleted (deleted together with your account information when you delete your account, Article 3); project backups are deleted after a 30-day grace period once you delete the project or request account deletion, and files no longer used by any project are deleted after 24 hours (Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled</li>
+          <li><strong>Sharing with third parties:</strong> Not done in principle. While we run ads, install and share-completed events may be provided to Meta (Article 4; not currently provided). App usage analysis, ad performance measurement, converting coordinates to place names, frame reading and freeze-frame creation for AI templates and Quick Stamp, and push notification delivery are outsourced to overseas providers (Article 5)</li>
           <li><strong>Privacy officer:</strong> Dongho Kim (admin@rungle.app)</li>
           <li><strong>Contact:</strong> The Team (admin@rungle.app)</li>
         </ul>
@@ -78,8 +82,9 @@ export default function PrivacyPage() {
         <p>
           You sign up for the service with a social login; the Team does not create or receive its
           own IDs or passwords. We process the following information to provide the service. Photos
-          and videos are processed on your device (exceptions are the single frame sent when you use
-          an AI template, and the freeze frame the AI creates from it, which the Team keeps on its
+          and videos are processed on your device (exceptions are the frames and photos sent when you use
+          an AI template or the Quick Stamp judgment, and the freeze frame the AI creates from the
+          freeze-frame template&rsquo;s frame, which the Team keeps on its
           server for 90 days after your last edit so you can keep editing it; project backups of
           signed-in users are also an exception), and running record measurements are stored on the
           server for backup.
@@ -111,8 +116,8 @@ export default function PrivacyPage() {
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Device information</td>
-                <td className="p-2">Anonymous device identifier, device model, OS version, app version, last access time</td>
-                <td className="p-2">Generated automatically when the app registers the device with the Team&rsquo;s server</td>
+                <td className="p-2">Anonymous device identifier, device model, OS version, app version, last access time. If you allow notifications and keep service notifications on in the app&rsquo;s settings, the push notification token (a value Google Firebase issues to the app on this device, Article 5). If you consent to promotional notifications (offers and news), the time of consent, and the time of withdrawal if you withdraw</td>
+                <td className="p-2">Generated automatically when the app registers the device with the Team&rsquo;s server. The app uploads the push notification token after you allow notifications and whenever the value changes, and deletes it when you turn notifications off or revoke the permission. Consent to promotional notifications is recorded only if you tap [Yes, please] in the separate prompt shown after allowing notifications, or turn it on in settings</td>
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Running records</td>
@@ -121,8 +126,8 @@ export default function PrivacyPage() {
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Photos and videos</td>
-                <td className="p-2">Photos and videos taken during your run (candidates for best-shot recommendation and editing). Processed on your device; they reach the server in only two cases: the AI template frame and the project backup of signed-in users (next row). <strong>Only when you use an AI template</strong>, the single frame you select from a video (a still image reduced to 512 pixels wide, which may show a face) is sent through the Team&rsquo;s server to the AI providers in Article 5. The server also receives which template you chose, but only the frame goes to the AI providers. The whole video and other frames are never sent. The freeze frame the AI creates from that frame is kept on the Team&rsquo;s server for 90 days after your last edit (Article 3).</td>
-                <td className="p-2">Read from your photo library if you allow it. The frame is created only when you choose a video and a freeze point yourself in an AI template</td>
+                <td className="p-2">Photos and videos taken during your run (candidates for best-shot recommendation and editing). Processed on your device; they reach the server in only two cases: the frames for AI templates and the Quick Stamp judgment, and the project backup of signed-in users (next row). <strong>Only when you use an AI template or the Quick Stamp judgment</strong>, the frames that feature defines (still images reduced to 512 pixels wide, which may show a face) are sent through the Team&rsquo;s server to the AI providers in Article 5. How much is sent depends on the feature. The freeze-frame template sends the single frame you select from a video; Cut Edit sends frames taken from the videos you select at intervals of about 2 seconds (up to 100 per video and 800 per job); Web Shooter sends up to 60 frames taken from the video you select at 1-second intervals, plus up to 110 frames around the judged moment; Monthly Recap sends frames taken from that month&rsquo;s running videos (up to 90 per run); and the Quick Stamp best-shot judgment sends the photos taken during that run (512-pixel-wide copies). The original video and its audio are never sent. The server also receives which feature you used and the timestamps of the frames, but only the frames go to the AI providers (for Web Shooter, frames with a timestamp label drawn on them). The freeze frame the AI creates from the freeze-frame template&rsquo;s frame is kept on the Team&rsquo;s server for 90 days after your last edit (Article 3).</td>
+                <td className="p-2">Read from your photo library if you allow it. Frames are created only when you choose videos or photos in an AI template or Quick Stamp and run it (available only to signed-in accounts)</td>
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Project backup (when signed in)</td>
@@ -175,14 +180,15 @@ export default function PrivacyPage() {
       <Section title="Article 2 (Purposes of Processing)">
         <ul className="list-disc space-y-1 pl-5">
           <li>Importing running records and automatically collecting photos and videos taken during your run</li>
-          <li>Best-shot recommendation (evaluating photo and video quality, faces, and composition on your device). <strong>Faces are only detected and evaluated, and are never generated, altered, or retouched except in the freeze-frame creation of AI templates below.</strong></li>
+          <li>Best-shot recommendation (evaluating photo and video quality, faces, and composition on your device; for Quick Stamp, when you are signed in, the person/scenery judgment is made by the AI provider in Article 5 from the photos). <strong>Faces are only detected and evaluated, and are never generated, altered, or retouched except in the freeze-frame creation of AI templates below.</strong></li>
           <li>Creating and editing record overlays, reels, and frame content</li>
-          <li>Pose reading and freeze-frame creation in AI templates. From the single video frame you select, the AI reads the hand position and where the record text can be placed, and, depending on the template, creates a new freeze-frame image with an effect added based on that frame. <strong>When a freeze frame is created, the face and body of the person in the frame may be redrawn by the AI.</strong> The created freeze frame passes through Google once more so the AI can read where the record text can be placed and check the composition, and is then stored on your device and on the Team&rsquo;s server (Article 3); we never process it to identify who someone is (no matching of the same person, no extraction of facial features)</li>
+          <li>Pose and scene reading and freeze-frame creation in AI templates. In the freeze-frame template, the AI reads the hand position and where the record text can be placed from the single video frame you select, and creates a new freeze-frame image with an effect added based on that frame. Cut Edit and Monthly Recap pick usable cuts from several frames, and Web Shooter judges from several frames the moment the hand motion changes. <strong>When a freeze frame is created, the face and body of the person in the frame may be redrawn by the AI.</strong> The created freeze frame passes through Google once more so the AI can read where the record text can be placed and check the composition, and is then stored on your device and on the Team&rsquo;s server (Article 3); we never process it to identify who someone is (no matching of the same person, no extraction of facial features)</li>
           <li>Creating an account and keeping you signed in; backing up and restoring records when you switch devices or reinstall the app</li>
           <li>Keeping the freeze frame the AI creates on the server so you can keep editing it and restore it on another device</li>
           <li>Keeping projects edited by signed-in users on the server so you can keep editing them and restore them when you switch devices or reinstall the app (project backup)</li>
           <li>Running statistics and personalized recommendations by gender and age group (only for users who answered the optional questions)</li>
-          <li>Delivering announcements and notifications (in-app inbox)</li>
+          <li>Delivering announcements and notifications (in-app inbox and push notifications; the result notification for a finished AI template job is sent only to the device that started the job)</li>
+          <li>Sending promotional notifications (offers and news) only to users who separately consented (we record the time of consent and withdrawal so that none are sent without consent)</li>
           <li>Analyzing usage records to improve service quality and recommendation features</li>
           <li>Ad performance measurement (finding out which ad led to an install). <strong>The advertising identifier is used only if you allow app tracking, and photos, location, and health records are never used for ad performance measurement.</strong></li>
         </ul>
@@ -205,11 +211,12 @@ export default function PrivacyPage() {
             lets you recover an account deleted by mistake; signing in again during that time cancels
             the deletion.
           </li>
+          <li>The push notification token is deleted from the server as soon as you turn service notifications off in the app&rsquo;s settings or revoke the notification permission in iOS, and a token that can no longer receive notifications (for example, after the app is deleted) is deleted as soon as that is confirmed. It is deleted together with the device information when you delete your account. The times of consent to and withdrawal from promotional notifications (offers and news) are kept with the device information as evidence of consent and deleted when you delete your account.</li>
           <li>Gender and age group are kept with your account information and deleted together when the account is deleted. You can change them on the My Info screen; to erase your answers entirely, contact the Team (admin@rungle.app).</li>
           <li>Records backed up to the server as a guest are linked only to the anonymous device identifier, not to an account. To delete these records without an account, contact the Team (admin@rungle.app).</li>
           <li>Best-shot candidates use only references to your photo library; only the photos and clips you finally select are stored in the app.</li>
           <li>
-            <strong>The video frame sent to the server when you use an AI template is deleted from
+            <strong>The frames and photos sent to the server when you use an AI template or the Quick Stamp judgment are deleted from
             the server as soon as the AI provider&rsquo;s result is returned to the app,</strong> and
             is not kept in any cache, log, or storage. Server records keep only the job number, the
             requesting account, the request time, file size, and processing status; the contents of
@@ -324,8 +331,8 @@ export default function PrivacyPage() {
         <p>
           Separately, the Team outsources the processing of app usage records for service quality
           improvement and error response, ad performance measurement, the conversion of coordinates
-          into place names for displaying the running location, and frame reading and freeze-frame
-          creation for AI templates to the providers below. Their servers are located outside Korea,
+          into place names for displaying the running location, frame reading and freeze-frame
+          creation for AI templates and Quick Stamp, and push notification delivery to the providers below. Their servers are located outside Korea,
           so the following information is transferred abroad.
         </p>
         <div className="overflow-x-auto">
@@ -387,13 +394,25 @@ export default function PrivacyPage() {
                 <td className="p-2 font-semibold">
                   Google LLC
                   <br />
-                  (Gemini API)
+                  (Firebase Cloud Messaging)
                   <br />
                   <a className="underline" href="https://policies.google.com/privacy">policies.google.com/privacy</a>
                 </td>
-                <td className="p-2">United States / when you choose a video and a freeze point in an AI template and run it / sent over the network (HTTPS encrypted) through the Team&rsquo;s server</td>
-                <td className="p-2">The single video frame you select (a still image 512 pixels wide, which may show a face), and the freeze frame the AI created from it (for reading where the record text can be placed and checking the composition)</td>
-                <td className="p-2">Reading the hand position in the frame; reading where the record text can be placed and checking the composition in the AI-created freeze frame; creating the freeze frame instead when OpenAI&rsquo;s freeze-frame creation is blocked by its safety policy / until the result is returned. Under its paid API terms, Google does not use the frame for training or product improvement and keeps it only for a limited period to monitor for prohibited use</td>
+                <td className="p-2">United States / when the app registers with Firebase after you allow notifications, and when the Team&rsquo;s server sends a push notification / network (HTTPS encrypted) from the app and from the Team&rsquo;s server</td>
+                <td className="p-2">Push notification token (issued by Firebase to the app on this device), the kind of notification text (title and body text keys), and the AI job&rsquo;s number, kind, and status. The notification text itself is chosen by the app on your device, and no photos, record figures, or location are included. Promotional notifications (offers and news) are sent to a topic subscribed only by devices that consented</td>
+                <td className="p-2">Push notification delivery / until delivery is complete. The token is deleted from the Team&rsquo;s server when you turn notifications off or revoke the permission</td>
+              </tr>
+              <tr className="border-b border-gray-200">
+                <td className="p-2 font-semibold">
+                  Google LLC
+                  <br />
+                  (Gemini API and Vertex AI)
+                  <br />
+                  <a className="underline" href="https://policies.google.com/privacy">policies.google.com/privacy</a>
+                </td>
+                <td className="p-2">United States (the request goes to Google Cloud&rsquo;s global endpoint, so it may be processed in a data center in another country chosen by Google) / when you choose a video in the freeze-frame template or Web Shooter and run it / sent over the network (HTTPS encrypted) through the Team&rsquo;s server</td>
+                <td className="p-2">Freeze-frame template: the single video frame you select (a still image 512 pixels wide, which may show a face) and the freeze frame the AI created from it (for reading where the record text can be placed and checking the composition). Web Shooter: up to 110 frames around the judged moment (with a timestamp label drawn on them)</td>
+                <td className="p-2">Reading the hand position in the frame; reading where the record text can be placed and checking the composition in the AI-created freeze frame; creating the freeze frame instead when OpenAI&rsquo;s freeze-frame creation is blocked by its safety policy; judging the hand pose and coordinates for Web Shooter / until the result is returned. Under its paid API terms, Google does not use the frame for training or product improvement and keeps it only for a limited period to monitor for prohibited use</td>
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">
@@ -401,9 +420,9 @@ export default function PrivacyPage() {
                   <br />
                   <a className="underline" href="https://openai.com/policies/privacy-policy/">openai.com/policies/privacy-policy</a>
                 </td>
-                <td className="p-2">United States / when you run an AI template that creates a freeze frame / sent over the network (HTTPS encrypted) through the Team&rsquo;s server</td>
-                <td className="p-2">The single video frame you select (a still image 512 pixels wide, which may show a face)</td>
-                <td className="p-2">Creating a freeze-frame image with an effect added based on the frame / until the result is returned. OpenAI does not use data received through its API for training and deletes it after keeping it for up to 30 days for abuse monitoring</td>
+                <td className="p-2">United States / when you run an AI template (freeze frame, Cut Edit, Web Shooter, or Monthly Recap) or the Quick Stamp judgment / sent over the network (HTTPS encrypted) through the Team&rsquo;s server</td>
+                <td className="p-2">The frames and photos described in the photos and videos row of Article 1 (one frame for the freeze-frame template; several for Cut Edit, Web Shooter, Monthly Recap, and Quick Stamp; still images 512 pixels wide, which may show a face)</td>
+                <td className="p-2">Creating the freeze-frame image for the freeze-frame template; picking cuts for Cut Edit and Monthly Recap; judging the moment of the hand motion for Web Shooter; the person/scenery judgment for Quick Stamp / until the result is returned. OpenAI does not use data received through its API for training and deletes it after keeping it for up to 30 days for abuse monitoring</td>
               </tr>
             </tbody>
           </table>
@@ -412,10 +431,13 @@ export default function PrivacyPage() {
           The transferred information <strong>does not include account information that identifies
           you, original photos or videos, or raw running record figures.</strong> There are two
           exceptions: the single starting coordinate sent to Apple for place-name conversion, and the
-          single video frame sent to Google and OpenAI when you use an AI template (along with the
-          freeze frame the AI created from it). The frame is the
-          original picture before any record overlay is applied, so it contains no running record
-          figures, and no account information, device identifier, or running record is sent with it.
+          frames and photos sent to Google and OpenAI when you use an AI template or the Quick Stamp
+          judgment (Article 1, along with the freeze frame the AI created from the freeze-frame
+          template&rsquo;s frame). The frames are the
+          original pictures before any record overlay is applied, so they contain no running record
+          figures, and no account information, device identifier, or running record is sent with them.
+          For push notification delivery, only the notification token and the kind of text go to
+          Google (Firebase).
           Original photos and videos kept as project backups stay only on the server in Korea and are
           not sent to the overseas providers above. If you do not want your information transferred abroad, delete the app; no new records are
           sent after deletion. To block only the advertising identifier, turn off app tracking in
@@ -423,9 +445,10 @@ export default function PrivacyPage() {
         </p>
         <p>
           <strong>If you only want to avoid the transfer to AI providers, simply do not use AI
-          templates.</strong> No frame is sent until you choose a video and a freeze point in such a
-          template and run it yourself, and nothing other than that template is restricted if you do
-          not use it. Google and OpenAI act as processors on the Team&rsquo;s behalf and, under their
+          templates or the Quick Stamp judgment.</strong> No frame is sent until you choose videos or
+          photos in one of these features and run it yourself, and nothing other than that feature is
+          restricted if you do not use it. Guests cannot use these features, so no frames are sent
+          for them. Google and OpenAI act as processors on the Team&rsquo;s behalf and, under their
           paid API terms, may not use the frame for their own purposes or for training. We do not
           send photos or videos to any AI service other than these two, and we will disclose any
           change in scope through this policy.
@@ -453,7 +476,9 @@ export default function PrivacyPage() {
         <ul className="list-disc space-y-1 pl-5">
           <li><strong>Revoke access to running records:</strong> iOS Health app &gt; Profile &gt; Apps &gt; Rungle, turn off read access</li>
           <li><strong>Revoke photo access:</strong> iOS Settings &gt; Rungle &gt; Photos, change or remove the access level</li>
-          <li><strong>Refuse sending a frame to AI providers:</strong> Simply do not choose an AI template. All other templates and features remain available (Article 5)</li>
+          <li><strong>Refuse sending frames to AI providers:</strong> Simply do not use AI templates or the Quick Stamp judgment. All other templates and features remain available (Article 5)</li>
+          <li><strong>Turn off push notifications:</strong> Turn off service notifications in the app&rsquo;s Settings &gt; Notifications, or turn off notifications in iOS Settings &gt; Rungle. Once off, the push notification token is deleted from the Team&rsquo;s server right away, and you can still read the in-app inbox</li>
+          <li><strong>Withdraw consent to promotional notifications (offers and news):</strong> Turn off the offers and news (ads) switch in the app&rsquo;s Settings &gt; Notifications. The app shows you the result and the date it was processed right away, and turning it back on is recorded as a new consent</li>
           <li><strong>Change gender or age group:</strong> You can change them on the My Info screen in the app. To erase your answers, contact the Team (Article 3)</li>
           <li><strong>Revoke app tracking (advertising identifier):</strong> Turn off Rungle in iOS Settings &gt; Privacy &amp; Security &gt; Tracking, or turn off Allow Tracking in iOS Settings &gt; Rungle. Once off, the advertising identifier is no longer used, and the service is not restricted in any way</li>
           <li><strong>Delete AI-created freeze frames from the server:</strong> To delete them before the 90 days are up, contact the Team. When you delete your account, they are deleted together with your account information (Article 3)</li>
@@ -482,8 +507,9 @@ export default function PrivacyPage() {
       <Section title="Article 9 (Security Measures)">
         <p>The Team takes the following security measures in accordance with Article 29 of Korea&rsquo;s Personal Information Protection Act.</p>
         <ul className="list-disc space-y-1 pl-5">
-          <li><strong>On-device processing:</strong> Personal information processing, including photo analysis, face evaluation, and text recognition, is performed on your device, and the iOS app sandbox blocks access from other apps. The only exception is the single video frame for AI templates, which passes through the server to the AI providers; the server deletes the frame as soon as it returns the result and does not store it. The freeze frame the AI creates is kept in encrypted storage that only the Team&rsquo;s server can access, and you download only your own freeze frames through short-lived signed URLs.</li>
+          <li><strong>On-device processing:</strong> Personal information processing, including photo analysis, face evaluation, and text recognition, is performed on your device, and the iOS app sandbox blocks access from other apps. The only exception is the frames and photos for AI templates and the Quick Stamp judgment (Article 1), which pass through the server to the AI providers; the server deletes them as soon as it returns the result and does not store them. The freeze frame the AI creates is kept in encrypted storage that only the Team&rsquo;s server can access, and you download only your own freeze frames through short-lived signed URLs.</li>
           <li><strong>Project backup:</strong> Before upload, capture details in photos and videos, such as capture location, capture time, and device information, are removed on your device, keeping only the orientation value. The server keeps files in encrypted storage (AES-256), separated by account, and issues the addresses for uploading and downloading files only to the signed-in owner, as signed URLs valid for 1 hour. The storage rejects any request that is not over an encrypted (HTTPS) connection. Photos and videos, including those showing faces, are never used to identify who someone is.</li>
+          <li><strong>Push notifications:</strong> Notifications carry only text keys and a job number, so no photos, record figures, or location leave through the notification path, and the push notification token is never written to logs or analytics events.</li>
           <li><strong>Minimal storage:</strong> Birth year is stored only as a 10-year age group, and the original value is not kept.</li>
           <li><strong>Administrative measures:</strong> Minimizing the staff who handle personal information and setting internal handling rules</li>
           <li><strong>Technical measures:</strong> TLS encryption on all external connections; the server is placed in a segment not directly reachable from outside, with access limited to the minimum staff; server credentials are kept in a separate secrets management service</li>
@@ -518,9 +544,9 @@ export default function PrivacyPage() {
           them.</strong> In line with Apple&rsquo;s policies, <strong>health data is never used for
           advertising or marketing, and is never sold or provided to third parties.</strong>{" "}
           Neither health data nor values derived from it are sent to the ad performance measurement
-          tool in Article 5 or to Meta in Article 4. The video frame sent to the AI providers in
-          Article 5 is the original picture before any record overlay is applied, so it contains no
-          health data.
+          tool in Article 5 or to Meta in Article 4. The frames and photos sent to the AI providers in
+          Article 5 are the original pictures before any record overlay is applied, so they contain no
+          health data. Push notifications carry no record figures either.
         </p>
         <p>
           The <strong>project backup</strong> of a signed-in user also stores the running record
@@ -570,10 +596,7 @@ export default function PrivacyPage() {
           at least 7 days before the change takes effect. However, when a newly processed item arises
           only from a feature you choose to use and existing usage does not change, the change may
           take effect at the same time as the notice. In particular, this policy will be revised when
-          any of the following is introduced: storing location data (GPS routes) on the server,
-          server push notifications (notifications sent from the Team&rsquo;s server; the run
-          detection notification currently offered is a local notification created only on your
-          device), or sending a whole video or multiple frames to external AI.
+          storing location data (GPS routes) on the server is introduced.
         </p>
         <p className="text-gray-600">
           This revision reflects the optional gender and age group questions and the use of overseas
@@ -620,7 +643,17 @@ export default function PrivacyPage() {
           the list of planned revisions in Article 13. Project backup applies from app version 2.0.0,
           released after this policy is published. Because it is on by default for signed-in users
           and starts when you update the app without any choice on your part, this revision takes
-          effect 7 days after its notice.
+          effect 7 days after its notice. The same revision adds two more things. First, AI templates
+          now include Cut Edit, Web Shooter, and Monthly Recap in addition to the freeze-frame
+          template, and the Quick Stamp best-shot judgment now uses an AI provider, so the frames sent
+          to AI providers changed from a single frame to several depending on the feature (Articles
+          1, 2, 5, 7, 9, and 11). Second, push notifications sent by the Team&rsquo;s server (AI job
+          result notifications, delivered through Google Firebase) and consent to promotional
+          notifications (offers and news) (Articles 1, 2, 3, 5, 7, and 9). Accordingly, server push
+          notifications and sending multiple frames to external AI were also removed from the list of
+          planned revisions in Article 13. These two also apply from app version 2.0.0; sending
+          multiple frames happens only when you choose and run such a feature, and promotional
+          notifications only when you separately consent.
         </p>
         <p><strong>Date of notice: October 1, 2026 / Effective date: October 8, 2026</strong> (AI template provisions first effective September 9, 2026)</p>
       </Section>
