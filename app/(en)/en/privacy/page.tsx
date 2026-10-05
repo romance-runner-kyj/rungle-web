@@ -69,10 +69,10 @@ export default function PrivacyPage() {
         <h2 className="font-bold">Key Points (Summary)</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5">
           <li><strong>Account information:</strong> When you sign up with a social login, we collect the login provider, the user identifier issued by that provider, and your email (Article 1). Your nickname is generated and assigned by the service, not collected. Gender and age group are optional; you can skip them and still use every feature (Article 1)</li>
-          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server (GPS routes excluded); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored on your device by default. Only when you use an AI template or the Quick Stamp judgment, frames taken from the videos and photos you select (one or several, 512 pixels wide) are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Articles 1 and 5), and the freeze frame the AI creates is also kept on the Team&rsquo;s server (Article 3). For signed-in users, the original photos and videos of edited projects (with capture details other than orientation removed) and their editing information are kept on the Team&rsquo;s server (in Korea) for backup (Articles 1 and 3; can be turned off in settings) / Device information (including the push notification token when notifications are on, and whether you consented to promotional notifications) and app usage records (including the account identifier issued by the server when you are signed in): registered on the server and sent to analytics tools (Article 5) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5)</li>
+          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server (GPS routes excluded); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored on your device by default. Only when you use an AI template or the Quick Stamp judgment, frames taken from the videos and photos you select (one or several, 512 pixels wide) are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Articles 1 and 5), and the freeze frame the AI creates is also kept on the Team&rsquo;s server (Article 3). For signed-in users, the original photos and videos of edited projects (with capture details other than orientation removed) and their editing information are kept on the Team&rsquo;s server (in Korea) for backup (Articles 1 and 3; can be turned off in settings) / Device information (including the push notification token when notifications are on, and whether you consented to promotional notifications) and app usage records (including the account identifier issued by the server when you are signed in): registered on the server and sent to analytics tools (Article 5) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5) / Error records from the Team&rsquo;s server (excluding request contents and personal details): sent to an error tracking tool (Article 5)</li>
           <li><strong>Purposes:</strong> Best-shot recommendations, creating record overlays and reels, pose and scene reading and freeze-frame creation in AI templates, push notifications for AI job results and promotional notifications (offers and news) for users who consented, account login and record backup and restore, continued editing and cross-device restore of AI-created freeze frames, continued editing and cross-device restore of edited projects (project backup), running statistics and personalized recommendations by gender and age group, service quality improvement, ad performance measurement (finding out which ad led to an install)</li>
           <li><strong>Retention:</strong> Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); frames and photos sent to AI providers are deleted from the server as soon as the result is received, the push notification token is deleted as soon as you turn notifications off or revoke the permission (Article 3), and the freeze frame the AI creates is kept for 90 days after your last edit and then deleted (deleted together with your account information when you delete your account, Article 3); project backups are deleted after a 30-day grace period once you delete the project or request account deletion, and files no longer used by any project are deleted after 24 hours (Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled</li>
-          <li><strong>Sharing with third parties:</strong> Not done in principle. While we run ads, install and share-completed events may be provided to Meta (Article 4; not currently provided). App usage analysis, ad performance measurement, converting coordinates to place names, frame reading and freeze-frame creation for AI templates and Quick Stamp, and push notification delivery are outsourced to overseas providers (Article 5)</li>
+          <li><strong>Sharing with third parties:</strong> Not done in principle. While we run ads, install and share-completed events may be provided to Meta (Article 4; not currently provided). App usage analysis, ad performance measurement, converting coordinates to place names, frame reading and freeze-frame creation for AI templates and Quick Stamp, push notification delivery, and server error record analysis are outsourced to overseas providers (Article 5)</li>
           <li><strong>Privacy officer:</strong> Dongho Kim (admin@rungle.app)</li>
           <li><strong>Contact:</strong> The Team (admin@rungle.app)</li>
         </ul>
@@ -150,6 +150,11 @@ export default function PrivacyPage() {
                   Advertising identifier (IDFA, <strong>only if you allow app tracking</strong>, Article 10), identifier for vendors (IDFV), OS version, device type, language, time zone, IP address, screen size, app install and launch events, share-completed events (name of the channel shared to), the anonymous device identifier above (an alias that links the measurement tool&rsquo;s records with the analytics tool&rsquo;s), and attribution details (names of the ad channel, campaign, ad group, and creative)
                 </td>
                 <td className="p-2">Generated automatically when you install and launch the app and sent to the ad performance measurement tool (Article 5). Attribution details are also recorded in the analytics tool when the measurement tool reports them</td>
+              </tr>
+              <tr className="border-b border-gray-200">
+                <td className="p-2 font-semibold">Server error records (collected automatically)</td>
+                <td className="p-2">When an error occurs on the Team&rsquo;s server: the error type and code location, the API path and method where it occurred, the error message written by the server (job, device, and account identifiers and processing status only), the request number, app version, iOS family version, device model name (for example, iPhone16,2), the name of the app screen where the error occurred, the count, reference time, and kind values of list queries, and the server environment and release version. The request body, other headers and query values such as login credentials, IP address, email, photos, running record figures, and location are not included, and error messages produced by third-party software are removed before sending</td>
+                <td className="p-2">Generated automatically when an error occurs on the Team&rsquo;s server and sent to the error tracking tool (Article 5)</td>
               </tr>
             </tbody>
           </table>
@@ -242,7 +247,7 @@ export default function PrivacyPage() {
             account. Each account has a storage limit, and saves that would exceed it are not
             accepted. Nothing is uploaded while you are a guest.
           </li>
-          <li>Usage records (event logs), error logs, and ad attribution information are stored on the servers of the providers listed in Article 5 and deleted once the purposes of service quality improvement and ad performance measurement are fulfilled. After you delete the app, no new records are collected.</li>
+          <li>Usage records (event logs), error logs, and ad attribution information are stored on the servers of the providers listed in Article 5 and deleted once the purposes of service quality improvement and ad performance measurement are fulfilled. After you delete the app, no new records are collected. Error records from the Team&rsquo;s server are kept by the error tracking tool (Sentry) for 30 days (90 days on a paid plan) and then deleted automatically.</li>
           <li>
             <strong>The anonymous device identifier stays on your device even after you delete the
             app.</strong> It is kept in the iOS Keychain (the storage for an app&rsquo;s secret
@@ -332,7 +337,7 @@ export default function PrivacyPage() {
           Separately, the Team outsources the processing of app usage records for service quality
           improvement and error response, ad performance measurement, the conversion of coordinates
           into place names for displaying the running location, frame reading and freeze-frame
-          creation for AI templates and Quick Stamp, and push notification delivery to the providers below. Their servers are located outside Korea,
+          creation for AI templates and Quick Stamp, push notification delivery, and server error record analysis to the providers below. Their servers are located outside Korea,
           so the following information is transferred abroad.
         </p>
         <div className="overflow-x-auto">
@@ -379,6 +384,18 @@ export default function PrivacyPage() {
                 <td className="p-2">United States / when the app crashes / network (HTTPS encrypted)</td>
                 <td className="p-2">Anonymous device identifier, error logs (crash logs), device and OS information</td>
                 <td className="p-2">Diagnosing errors and improving stability / until the end of the contract or fulfillment of the purpose</td>
+              </tr>
+              <tr className="border-b border-gray-200">
+                <td className="p-2 font-semibold">
+                  Functional Software, Inc.
+                  <br />
+                  (Sentry)
+                  <br />
+                  <a className="underline" href="https://sentry.io/privacy/">sentry.io/privacy</a>
+                </td>
+                <td className="p-2">United States / when an error occurs on the Team&rsquo;s server / from the Team&rsquo;s server over the network (HTTPS encrypted)</td>
+                <td className="p-2">Server error records from Article 1 (error type and code location, API path and method, job, device, and account identifiers and processing status, request number, app version, iOS family version, device model name, app screen name, count, reference time, and kind values of list queries, server environment and release version). The request body, login credentials, IP address, email, photos, running record figures, and location are not sent</td>
+                <td className="p-2">Diagnosing server errors and improving stability / deleted automatically after 30 days (90 days on a paid plan)</td>
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">
@@ -437,7 +454,8 @@ export default function PrivacyPage() {
           original pictures before any record overlay is applied, so they contain no running record
           figures, and no account information, device identifier, or running record is sent with them.
           For push notification delivery, only the notification token and the kind of text go to
-          Google (Firebase).
+          Google (Firebase), and for server error tracking, only the error type, code location,
+          identifiers, processing status, and environment details such as app version and device model go to Sentry.
           Original photos and videos kept as project backups stay only on the server in Korea and are
           not sent to the overseas providers above. If you do not want your information transferred abroad, delete the app; no new records are
           sent after deletion. To block only the advertising identifier, turn off app tracking in
@@ -659,7 +677,15 @@ export default function PrivacyPage() {
           push notifications, and promotional notifications apply from app version 2.0.0, and
           promotional notifications are sent only when you separately consent.
         </p>
-        <p><strong>Date of notice: October 1, 2026 / Effective date: October 8, 2026</strong> (AI template provisions first effective September 9, 2026)</p>
+        <p className="text-gray-600">
+          Revision of October 5, 2026: to find the cause of errors on the Team&rsquo;s server quickly,
+          we added to the summary and Articles 1, 3, and 5 that server error records and the environment
+          where they occurred (app version, iOS family version, device model name, app screen name) are
+          sent to an error tracking tool (Sentry, United States). The records sent do not include the
+          request body, login credentials, IP address, email, photos, running record figures, or location. This revision
+          takes effect on October 7, 2026.
+        </p>
+        <p><strong>Date of notice: October 5, 2026 / Effective date: October 7, 2026</strong> (the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
       </Section>
     </main>
   );
