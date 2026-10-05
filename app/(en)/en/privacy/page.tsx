@@ -678,14 +678,14 @@ export default function PrivacyPage() {
           promotional notifications are sent only when you separately consent.
         </p>
         <p className="text-gray-600">
-          Revision of October 5, 2026: to find the cause of errors on the Team&rsquo;s server quickly,
+          Revision of October 7, 2026: to find the cause of errors on the Team&rsquo;s server quickly,
           we added to the summary and Articles 1, 3, and 5 that server error records and the environment
           where they occurred (app version, iOS family version, device model name, app screen name) are
           sent to an error tracking tool (Sentry, United States). The records sent do not include the
           request body, login credentials, IP address, email, photos, running record figures, or location. This revision
           takes effect on the date of notice.
         </p>
-        <p><strong>Date of notice: October 5, 2026 / Effective date: October 5, 2026</strong> (the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
+        <p><strong>Date of notice: October 7, 2026 / Effective date: October 7, 2026</strong> (the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
       </Section>
     </main>
   );
