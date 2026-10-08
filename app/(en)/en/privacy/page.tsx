@@ -37,8 +37,9 @@ export default function PrivacyPage() {
         Rungle is an iOS app that imports your running records, picks the best shots from your
         photos and videos, and helps you create and share record overlays and reels. This policy
         applies to the version currently available. You can sign up with a social login, or use the
-        app without signing in (as a guest). Running records are stored on the Team&rsquo;s server
-        (in Korea) for backup and restore. <strong>Photos and videos are processed on your device
+        app without signing in (as a guest). Running records of signed-in users are stored on the
+        Team&rsquo;s server (in Korea) for backup and restore, and <strong>running records made as a guest
+        are not stored on the server and stay only on your device.</strong> <strong>Photos and videos are processed on your device
         by default.</strong> When a signed-in user edits photos or reels, the Team keeps the
         original photos and videos used in that edit (a &ldquo;project&rdquo;) and its editing
         information on the Team&rsquo;s server (in Korea) so you can keep editing it and restore it
@@ -69,7 +70,7 @@ export default function PrivacyPage() {
         <h2 className="font-bold">Key Points (Summary)</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5">
           <li><strong>Account information:</strong> When you sign up with a social login, we collect the login provider, the user identifier issued by that provider, and your email (Article 1). Your nickname is generated and assigned by the service, not collected. Gender and age group are optional; you can skip them and still use every feature (Article 1)</li>
-          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server (GPS routes excluded); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored on your device by default. Only when you use an AI template or the Quick Stamp judgment, frames taken from the videos and photos you select (one or several, 512 pixels wide) are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Articles 1 and 5), and the freeze frame the AI creates is also kept on the Team&rsquo;s server (Article 3). For signed-in users, the original photos and videos of edited projects (with capture details other than orientation removed) and their editing information are kept on the Team&rsquo;s server (in Korea) for backup (Articles 1 and 3; can be turned off in settings) / Device information (including the push notification token when notifications are on, and whether you consented to promotional notifications) and app usage records (including the account identifier issued by the server when you are signed in): registered on the server and sent to analytics tools (Article 5) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5) / Error records from the Team&rsquo;s server (excluding request contents and personal details): sent to an error tracking tool (Article 5)</li>
+          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server when you are signed in (GPS routes excluded; guest records are not stored on the server); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored on your device by default. Only when you use an AI template or the Quick Stamp judgment, frames taken from the videos and photos you select (one or several, 512 pixels wide) are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Articles 1 and 5), and the freeze frame the AI creates is also kept on the Team&rsquo;s server (Article 3). For signed-in users, the original photos and videos of edited projects (with capture details other than orientation removed) and their editing information are kept on the Team&rsquo;s server (in Korea) for backup (Articles 1 and 3; can be turned off in settings) / Device information (including the push notification token when notifications are on, and whether you consented to promotional notifications) and app usage records (including the account identifier issued by the server when you are signed in): registered on the server and sent to analytics tools (Article 5) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5) / Error records from the Team&rsquo;s server (excluding request contents and personal details): sent to an error tracking tool (Article 5)</li>
           <li><strong>Purposes:</strong> Best-shot recommendations, creating record overlays and reels, pose and scene reading and freeze-frame creation in AI templates, push notifications for AI job results and promotional notifications (offers and news) for users who consented, account login and record backup and restore, continued editing and cross-device restore of AI-created freeze frames, continued editing and cross-device restore of edited projects (project backup), running statistics and personalized recommendations by gender and age group, service quality improvement, ad performance measurement (finding out which ad led to an install)</li>
           <li><strong>Retention:</strong> Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); frames and photos sent to AI providers are deleted from the server as soon as the result is received, the push notification token is deleted as soon as you turn notifications off or revoke the permission (Article 3), and the freeze frame the AI creates is kept for 90 days after your last edit and then deleted (deleted together with your account information when you delete your account, Article 3); project backups are deleted after a 30-day grace period once you delete the project or request account deletion, and files no longer used by any project are deleted after 24 hours (Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled</li>
           <li><strong>Sharing with third parties:</strong> Not done in principle. While we run ads, install and share-completed events may be provided to Meta (Article 4; not currently provided). App usage analysis, ad performance measurement, converting coordinates to place names, frame reading and freeze-frame creation for AI templates and Quick Stamp, push notification delivery, and server error record analysis are outsourced to overseas providers (Article 5)</li>
@@ -86,8 +87,8 @@ export default function PrivacyPage() {
           an AI template or the Quick Stamp judgment, and the freeze frame the AI creates from the
           freeze-frame template&rsquo;s frame, which the Team keeps on its
           server for 90 days after your last edit so you can keep editing it; project backups of
-          signed-in users are also an exception), and running record measurements are stored on the
-          server for backup.
+          signed-in users are also an exception), and running record measurements of signed-in users are
+          stored on the server for backup. Running records made as a guest are not stored on the server.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-left">
@@ -121,7 +122,7 @@ export default function PrivacyPage() {
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Running records</td>
-                <td className="p-2">Running workout data such as distance, duration, pace, calories, heart rate, cadence, and GPS route (including the running location name). Of these, the measurements (distance, duration, pace, calories, heart rate, cadence, and splits) are stored on the Team&rsquo;s server for backup and restore. <strong>GPS routes are not sent to the Team&rsquo;s server, and the server rejects them even if it receives one.</strong> However, to display the running location name, one starting coordinate of the route is sent to Apple&rsquo;s reverse geocoding server (a service that converts coordinates into place names) (Articles 5 and 11).</td>
+                <td className="p-2">Running workout data such as distance, duration, pace, calories, heart rate, cadence, and GPS route (including the running location name). Of these, the measurements (distance, duration, pace, calories, heart rate, cadence, and splits) are stored on the Team&rsquo;s server when you are signed in, for backup and restore. <strong>GPS routes are not sent to the Team&rsquo;s server, and the server rejects them even if it receives one.</strong> However, to display the running location name, one starting coordinate of the route is sent to Apple&rsquo;s reverse geocoding server (a service that converts coordinates into place names) (Articles 5 and 11).</td>
                 <td className="p-2">Read from Apple HealthKit if you allow it. The place name is generated by converting the route&rsquo;s first coordinate with Apple reverse geocoding</td>
               </tr>
               <tr className="border-b border-gray-200">
@@ -172,8 +173,8 @@ export default function PrivacyPage() {
         <p>
           <strong>Signing in is also optional.</strong> You can use the service without signing in
           (as a guest). In that case we do not collect account information, and your records are
-          linked only to the anonymous device identifier. Records backed up to the server while you
-          are a guest are merged into your account when you sign in later. Once you sign in, your
+          linked only to the anonymous device identifier. Running records made as a guest are not
+          stored on the server and stay on your device; they are backed up to your account when you sign in later. Once you sign in, your
           subsequent usage records also carry the account identifier, and usage records collected on
           the same device before you signed in are linked to that account as well. After you sign
           out, later records no longer carry it.
@@ -218,7 +219,7 @@ export default function PrivacyPage() {
           </li>
           <li>The push notification token is deleted from the server as soon as you turn service notifications off in the app&rsquo;s settings or revoke the notification permission in iOS, and a token that can no longer receive notifications (for example, after the app is deleted) is deleted as soon as that is confirmed. It is deleted together with the device information when you delete your account. The times of consent to and withdrawal from promotional notifications (offers and news) are kept with the device information as evidence of consent and deleted when you delete your account.</li>
           <li>Gender and age group are kept with your account information and deleted together when the account is deleted. You can change them on the My Info screen; to erase your answers entirely, contact the Team (admin@rungle.app).</li>
-          <li>Records backed up to the server as a guest are linked only to the anonymous device identifier, not to an account. To delete these records without an account, contact the Team (admin@rungle.app).</li>
+          <li>We no longer store running records made as a guest on the server. Records that earlier versions of the app uploaded as a guest are linked only to the anonymous device identifier, not to an account, and the Team plans to delete them. To delete them sooner, contact the Team (admin@rungle.app).</li>
           <li>Best-shot candidates use only references to your photo library; only the photos and clips you finally select are stored in the app.</li>
           <li>
             <strong>The frames and photos sent to the server when you use an AI template or the Quick Stamp judgment are deleted from
@@ -556,8 +557,8 @@ export default function PrivacyPage() {
       <Section title="Article 11 (Handling of Health Data)">
         <p>
           Running records read from Apple HealthKit are used only to create content and to back up
-          and restore your own records. Measurements (distance, duration, pace, heart rate, cadence,
-          and so on) are stored on the Team&rsquo;s server (in Korea) for backup, and <strong>GPS
+          and restore your own records. Measurements of signed-in users (distance, duration, pace, heart rate, cadence,
+          and so on) are stored on the Team&rsquo;s server (in Korea) for backup (records made as a guest are not stored on the server), and <strong>GPS
           routes are not sent to the Team&rsquo;s server, and the server is built not to accept
           them.</strong> In line with Apple&rsquo;s policies, <strong>health data is never used for
           advertising or marketing, and is never sold or provided to third parties.</strong>{" "}
@@ -685,7 +686,13 @@ export default function PrivacyPage() {
           request body, login credentials, IP address, email, photos, running record figures, or location. This revision
           takes effect on October 7, 2026.
         </p>
-        <p><strong>Date of notice: October 5, 2026 / Effective date: October 7, 2026</strong> (the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
+        <p className="text-gray-600">
+          Revision of October 8, 2026: the introduction, the summary, and Articles 1, 3, and 11 now state that running records made as a guest
+          are not stored on the server but stay on your device, and are backed up to your account after you sign in. Records that
+          earlier versions of the app uploaded as a guest will be deleted by the Team. Because this revision reduces the information
+          we process, it takes effect at the same time as its notice.
+        </p>
+        <p><strong>Date of notice: October 8, 2026 / Effective date: October 8, 2026</strong> (the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
       </Section>
     </main>
   );
