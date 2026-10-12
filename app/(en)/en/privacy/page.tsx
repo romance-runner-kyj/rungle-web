@@ -60,7 +60,7 @@ export default function PrivacyPage() {
         Article 5), and promotional notifications (offers and news) are sent only to users who have
         separately consented (Articles 1 and 7). Gender and age group are optional and you do not have to
         answer (Article 1). App usage records for service improvement are sent to an external
-        analytics tool, and install and launch records for ad performance measurement are sent to an
+        analytics tool and to the Team&rsquo;s server (in Korea, kept for 90 days, Article 3), and install and launch records for ad performance measurement are sent to an
         external measurement tool (Article 5). The advertising identifier (IDFA) is used only if you
         allow app tracking (Article 10).
       </p>
@@ -70,9 +70,9 @@ export default function PrivacyPage() {
         <h2 className="font-bold">Key Points (Summary)</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5">
           <li><strong>Account information:</strong> When you sign up with a social login, we collect the login provider, the user identifier issued by that provider, and your email (Article 1). Your nickname is generated and assigned by the service, not collected. Gender and age group are optional; you can skip them and still use every feature (Article 1)</li>
-          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server when you are signed in (GPS routes excluded; guest records are not stored on the server); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored on your device by default. Only when you use an AI template or the Quick Stamp judgment, frames taken from the videos and photos you select (one or several, 512 pixels wide) are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Articles 1 and 5), and the freeze frame the AI creates is also kept on the Team&rsquo;s server (Article 3). For signed-in users, the original photos and videos of edited projects (with capture details other than orientation removed) and their editing information are kept on the Team&rsquo;s server (in Korea) for backup (Articles 1 and 3; can be turned off in settings) / Device information (including the push notification token when notifications are on, and whether you consented to promotional notifications) and app usage records (including the account identifier issued by the server when you are signed in): registered on the server and sent to analytics tools (Article 5) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5) / Error records from the Team&rsquo;s server (excluding request contents and personal details): sent to an error tracking tool (Article 5)</li>
+          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server when you are signed in (GPS routes excluded; guest records are not stored on the server); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored on your device by default. Only when you use an AI template or the Quick Stamp judgment, frames taken from the videos and photos you select (one or several, 512 pixels wide) are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Articles 1 and 5), and the freeze frame the AI creates is also kept on the Team&rsquo;s server (Article 3). For signed-in users, the original photos and videos of edited projects (with capture details other than orientation removed) and their editing information are kept on the Team&rsquo;s server (in Korea) for backup (Articles 1 and 3; can be turned off in settings) / Device information (including the push notification token when notifications are on, and whether you consented to promotional notifications) and app usage records (including the account identifier issued by the server when you are signed in): registered on the server and sent to analytics tools (Article 5), with app usage records also kept on the Team&rsquo;s server (in Korea) (Article 3) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5) / Error records from the Team&rsquo;s server (excluding request contents and personal details): sent to an error tracking tool (Article 5)</li>
           <li><strong>Purposes:</strong> Best-shot recommendations, creating record overlays and reels, pose and scene reading and freeze-frame creation in AI templates, push notifications for AI job results and promotional notifications (offers and news) for users who consented, account login and record backup and restore, continued editing and cross-device restore of AI-created freeze frames, continued editing and cross-device restore of edited projects (project backup), running statistics and personalized recommendations by gender and age group, service quality improvement, ad performance measurement (finding out which ad led to an install)</li>
-          <li><strong>Retention:</strong> Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); frames and photos sent to AI providers are deleted from the server as soon as the result is received, the push notification token is deleted as soon as you turn notifications off or revoke the permission (Article 3), and the freeze frame the AI creates is kept for 90 days after your last edit and then deleted (deleted together with your account information when you delete your account, Article 3); project backups are deleted after a 30-day grace period once you delete the project or request account deletion, and files no longer used by any project are deleted after 24 hours (Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled</li>
+          <li><strong>Retention:</strong> Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); frames and photos sent to AI providers are deleted from the server as soon as the result is received, the push notification token is deleted as soon as you turn notifications off or revoke the permission (Article 3), and the freeze frame the AI creates is kept for 90 days after your last edit and then deleted (deleted together with your account information when you delete your account, Article 3); project backups are deleted after a 30-day grace period once you delete the project or request account deletion, and files no longer used by any project are deleted after 24 hours (Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled, and kept on the Team&rsquo;s server (in Korea) for 90 days and then deleted (when you delete your account, the account and device identifiers are removed after the 30-day grace period, Article 3)</li>
           <li><strong>Sharing with third parties:</strong> Not done in principle. While we run ads, install and share-completed events may be provided to Meta (Article 4; not currently provided). App usage analysis, ad performance measurement, converting coordinates to place names, frame reading and freeze-frame creation for AI templates and Quick Stamp, push notification delivery, and server error record analysis are outsourced to overseas providers (Article 5)</li>
           <li><strong>Privacy officer:</strong> Dongho Kim (admin@rungle.app)</li>
           <li><strong>Contact:</strong> The Team (admin@rungle.app)</li>
@@ -143,7 +143,7 @@ export default function PrivacyPage() {
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Usage records (collected automatically)</td>
                 <td className="p-2">The anonymous device identifier issued by the app (a random value created when the app first launches, not a hardware number read from the device), the account identifier issued by the server when you are signed in (a random value, not your email or name, used to keep you as one user when you change devices), feature usage events, error logs, user experience survey responses (5-point scale), values derived from running records (distance bucket, whether a route exists, and so on; raw figures such as distance and heart rate are excluded)</td>
-                <td className="p-2">Generated automatically while you use the service and sent to analytics tools (Article 5)</td>
+                <td className="p-2">Generated automatically while you use the service and sent to analytics tools (Article 5) and to the Team&rsquo;s server (in Korea, Article 3)</td>
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Ad attribution information (collected automatically)</td>
@@ -248,7 +248,7 @@ export default function PrivacyPage() {
             account. Each account has a storage limit, and saves that would exceed it are not
             accepted. Nothing is uploaded while you are a guest.
           </li>
-          <li>Usage records (event logs), error logs, and ad attribution information are stored on the servers of the providers listed in Article 5 and deleted once the purposes of service quality improvement and ad performance measurement are fulfilled. After you delete the app, no new records are collected. Error records from the Team&rsquo;s server are kept by the error tracking tool (Sentry) for 30 days (90 days on a paid plan) and then deleted automatically.</li>
+          <li>Usage records (event logs), error logs, and ad attribution information are stored on the servers of the providers listed in Article 5 and deleted once the purposes of service quality improvement and ad performance measurement are fulfilled. After you delete the app, no new records are collected. <strong>App usage records (the usage records row in Article 1, the same records sent to the analytics tool) are also kept on the Team&rsquo;s server (in Korea) for service quality improvement and are deleted automatically 90 days after they are recorded.</strong> If you request account deletion, after the 30-day grace period we remove the account identifier and anonymous device identifier attached to those records so that no one can tell whose records they are. Daily statistics that only count usage records (with no identifiers) are kept without a time limit. Error records from the Team&rsquo;s server are kept by the error tracking tool (Sentry) for 30 days (90 days on a paid plan) and then deleted automatically.</li>
           <li>
             <strong>The anonymous device identifier stays on your device even after you delete the
             app.</strong> It is kept in the iOS Keychain (the storage for an app&rsquo;s secret
@@ -256,7 +256,7 @@ export default function PrivacyPage() {
             so that it is not copied off the device, so it does not carry over in device backups or
             when you move to a new device. The current version has no in-app way to erase this
             value; contact the Team (admin@rungle.app) and we will delete the records tied to it at
-            our service providers.
+            our service providers and on the Team&rsquo;s server.
           </li>
         </ul>
       </Section>
@@ -323,8 +323,8 @@ export default function PrivacyPage() {
                   <br />
                   <a className="underline" href="https://aws.amazon.com/privacy">aws.amazon.com/privacy</a>
                 </td>
-                <td className="p-2">Server operations: storing account information, device information, running record backups, notifications, the freeze frames the AI creates, and the project backups of signed-in users (original photos and videos and editing information)</td>
-                <td className="p-2">Republic of Korea (Seoul region) / until account deletion or the end of the contract (AI-created freeze frames: 90 days after your last edit; project backups: 30 days after the project is deleted, Article 3)</td>
+                <td className="p-2">Server operations: storing account information, device information, running record backups, notifications, the freeze frames the AI creates, the project backups of signed-in users (original photos and videos and editing information), and app usage records</td>
+                <td className="p-2">Republic of Korea (Seoul region) / until account deletion or the end of the contract (AI-created freeze frames: 90 days after your last edit; project backups: 30 days after the project is deleted; app usage records: 90 days, Article 3)</td>
               </tr>
             </tbody>
           </table>
@@ -480,6 +480,7 @@ export default function PrivacyPage() {
           <li>Drafts being edited, selected photos, and similar items can be deleted individually in the app.</li>
           <li>Account information, running record backups, notifications, and AI-created freeze frames stored on the server are deleted by an automated process 30 days after you request account deletion, in a way that cannot be recovered.</li>
           <li>AI-created freeze frames stored on the server are also deleted by the storage&rsquo;s automatic expiry rule 90 days after your last edit, even if you do not delete your account (Article 3).</li>
+          <li>App usage records stored on the server are deleted by an automated process 90 days after they are recorded. Thirty days after you request account deletion, the account identifier and anonymous device identifier attached to those records are removed (Article 3).</li>
           <li>Project backups stored on the server are deleted by an automated process, in a way that cannot be recovered, 30 days after you delete the project or 30 days after you request account deletion. Photo and video files not used by any project are deleted by the same process after 24 hours (Article 3).</li>
         </ul>
       </Section>
@@ -541,7 +542,7 @@ export default function PrivacyPage() {
           The Team does not use cookies. Usage records for service quality improvement are generated
           automatically, keyed to the anonymous device identifier issued by the app (and to the account
           identifier issued by the server when you are signed in), and sent to the providers in
-          Article 5.
+          Article 5 and to the Team&rsquo;s server (in Korea, Article 3).
         </p>
         <p>
           <strong>The advertising identifier (IDFA) is collected only if you allow it in App
@@ -584,7 +585,7 @@ export default function PrivacyPage() {
         </p>
         <p>
           However, for service improvement analysis, <strong>values derived from running
-          records</strong> are sent to the providers in Article 5. The derived values are the
+          records</strong> are sent to the providers in Article 5 and to the Team&rsquo;s server (in Korea). The derived values are the
           following three, and the raw figures cannot be recovered from them.
         </p>
         <ul className="list-disc space-y-1 pl-5">
@@ -692,7 +693,20 @@ export default function PrivacyPage() {
           earlier versions of the app uploaded as a guest will be deleted by the Team. Because this revision reduces the information
           we process, it takes effect at the same time as its notice.
         </p>
-        <p><strong>Date of notice: October 8, 2026 / Effective date: October 8, 2026</strong> (the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
+        <p className="text-gray-600">
+          Revision of October 12, 2026: we added to the introduction, the summary, and Articles 1, 3, 5,
+          6, 10, and 11 that app usage records (the same feature usage events, error logs, and values
+          derived from running records sent to the analytics tool, together with the anonymous device
+          identifier and, when you are signed in, the account identifier issued by the server) are also
+          sent to the Team&rsquo;s server (in Korea) and kept for 90 days. This lets the Team review
+          usage records directly to improve service quality; the records do not include raw health
+          figures, GPS coordinates, or photo contents. If you request account deletion, after the
+          30-day grace period we remove the account identifier and anonymous device identifier from
+          those records and keep only daily count statistics. Because this processing starts without
+          any choice on your part in the app version released after the effective date, this revision
+          takes effect on October 19, 2026, seven days after notice.
+        </p>
+        <p><strong>Date of notice: October 12, 2026 / Effective date: October 19, 2026</strong> (the revision announced on October 8, 2026 takes effect on October 8, 2026; the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
       </Section>
     </main>
   );
