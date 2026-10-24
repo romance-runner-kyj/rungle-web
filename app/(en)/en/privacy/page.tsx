@@ -55,7 +55,15 @@ export default function PrivacyPage() {
         through the Team&rsquo;s server to overseas AI providers (Google and OpenAI), and the server
         deletes them as soon as it returns the result (Articles 1 and 5). The freeze frame the AI creates is kept on the Team&rsquo;s
         server (in Korea) for 90 days after your last edit so you can keep editing it and restore it
-        on another device (Article 3). When an AI template job finishes, the Team&rsquo;s server
+        on another device (Article 3). When a signed-in user turns on <strong>Auto Edit</strong>, a
+        subscription feature (&ldquo;Auto Edit&rdquo;), and starts it after a run, the app picks
+        candidates from the photos and videos taken during that run and sends reduced copies of them,
+        together with values calculated from your running records (such as distance, pace changes, and
+        running streaks), through the Team&rsquo;s server to overseas AI providers (Google and OpenAI);
+        the AI creates and evaluates candidates and recommends photos, reels, and caption text. The
+        copies and values sent are deleted as soon as the job ends (Articles 1, 3, 5, and 11).
+        Subscription payments are handled by Apple, and the Team receives only the transaction
+        information needed to confirm your subscription status (Article 1). When an AI template job finishes, the Team&rsquo;s server
         notifies you of the result with a push notification (delivered through Google Firebase,
         Article 5), and promotional notifications (offers and news) are sent only to users who have
         separately consented (Articles 1 and 7). Gender and age group are optional and you do not have to
@@ -70,10 +78,10 @@ export default function PrivacyPage() {
         <h2 className="font-bold">Key Points (Summary)</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5">
           <li><strong>Account information:</strong> When you sign up with a social login, we collect the login provider, the user identifier issued by that provider, and your email (Article 1). Your nickname is generated and assigned by the service, not collected. Gender and age group are optional; you can skip them and still use every feature (Article 1)</li>
-          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server when you are signed in (GPS routes excluded; guest records are not stored on the server); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored on your device by default. Only when you use an AI template or the Quick Stamp judgment, frames taken from the videos and photos you select (one or several, 512 pixels wide) are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Articles 1 and 5), and the freeze frame the AI creates is also kept on the Team&rsquo;s server (Article 3). For signed-in users, the original photos and videos of edited projects (with capture details other than orientation removed) and their editing information are kept on the Team&rsquo;s server (in Korea) for backup (Articles 1 and 3; can be turned off in settings) / Device information (including the push notification token when notifications are on, and whether you consented to promotional notifications) and app usage records (including the account identifier issued by the server when you are signed in): registered on the server and sent to analytics tools (Article 5), with app usage records also kept on the Team&rsquo;s server (in Korea) (Article 3) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5) / Error records from the Team&rsquo;s server (excluding request contents and personal details): sent to an error tracking tool (Article 5)</li>
-          <li><strong>Purposes:</strong> Best-shot recommendations, creating record overlays and reels, pose and scene reading and freeze-frame creation in AI templates, push notifications for AI job results and promotional notifications (offers and news) for users who consented, account login and record backup and restore, continued editing and cross-device restore of AI-created freeze frames, continued editing and cross-device restore of edited projects (project backup), running statistics and personalized recommendations by gender and age group, service quality improvement, ad performance measurement (finding out which ad led to an install)</li>
-          <li><strong>Retention:</strong> Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); frames and photos sent to AI providers are deleted from the server as soon as the result is received, the push notification token is deleted as soon as you turn notifications off or revoke the permission (Article 3), and the freeze frame the AI creates is kept for 90 days after your last edit and then deleted (deleted together with your account information when you delete your account, Article 3); project backups are deleted after a 30-day grace period once you delete the project or request account deletion, and files no longer used by any project are deleted after 24 hours (Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled, and kept on the Team&rsquo;s server (in Korea) for 90 days and then deleted (when you delete your account, the account and device identifiers are removed after the 30-day grace period, Article 3)</li>
-          <li><strong>Sharing with third parties:</strong> Not done in principle. While we run ads, install and share-completed events may be provided to Meta (Article 4; not currently provided). App usage analysis, ad performance measurement, converting coordinates to place names, frame reading and freeze-frame creation for AI templates and Quick Stamp, push notification delivery, and server error record analysis are outsourced to overseas providers (Article 5)</li>
+          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server when you are signed in (GPS routes excluded; guest records are not stored on the server); one starting coordinate of the route is sent to Apple to display the running location name (Articles 5 and 11) / Photos and videos: processed and stored on your device by default. Only when you use an AI template or the Quick Stamp judgment, frames taken from the videos and photos you select (one or several, 512 pixels wide) are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Articles 1 and 5), and the freeze frame the AI creates is also kept on the Team&rsquo;s server (Article 3). For signed-in users, the original photos and videos of edited projects (with capture details other than orientation removed) and their editing information are kept on the Team&rsquo;s server (in Korea) for backup (Articles 1 and 3; can be turned off in settings) / Device information (including the push notification token when notifications are on, and whether you consented to promotional notifications) and app usage records (including the account identifier issued by the server when you are signed in): registered on the server and sent to analytics tools (Article 5), with app usage records also kept on the Team&rsquo;s server (in Korea) (Article 3) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5) / Error records from the Team&rsquo;s server (excluding request contents and personal details): sent to an error tracking tool (Article 5) / Auto Edit (when turned on): reduced copies of candidates the app picks from the photos and videos taken during your run (including copies with a record overlay applied) and values calculated from your running records are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI), and the result (editing instructions and caption text) is kept on the Team&rsquo;s server (Articles 1, 3, 5, and 11) / Subscription transaction information: received from Apple and used to confirm your subscription status (Article 1)</li>
+          <li><strong>Purposes:</strong> Best-shot recommendations, creating record overlays and reels, pose and scene reading and freeze-frame creation in AI templates, push notifications for AI job results and promotional notifications (offers and news) for users who consented, account login and record backup and restore, continued editing and cross-device restore of AI-created freeze frames, continued editing and cross-device restore of edited projects (project backup), running statistics and personalized recommendations by gender and age group, service quality improvement, ad performance measurement (finding out which ad led to an install), creating candidates, AI evaluation, caption recommendations, and result notifications for Auto Edit, and confirming subscription status and free trial and usage counts</li>
+          <li><strong>Retention:</strong> Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); frames and photos sent to AI providers are deleted from the server as soon as the result is received, the push notification token is deleted as soon as you turn notifications off or revoke the permission (Article 3), and the freeze frame the AI creates is kept for 90 days after your last edit and then deleted (deleted together with your account information when you delete your account, Article 3); project backups are deleted after a 30-day grace period once you delete the project or request account deletion, and files no longer used by any project are deleted after 24 hours (Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled, and kept on the Team&rsquo;s server (in Korea) for 90 days and then deleted (when you delete your account, the account and device identifiers are removed after the 30-day grace period, Article 3); the photo and video copies and record values sent for Auto Edit are deleted as soon as the job ends, and Auto Edit results and subscription transaction information are deleted after a 30-day grace period once you request account deletion (Article 3)</li>
+          <li><strong>Sharing with third parties:</strong> Not done in principle. While we run ads, install and share-completed events may be provided to Meta (Article 4; not currently provided). App usage analysis, ad performance measurement, converting coordinates to place names, frame reading and freeze-frame creation for AI templates and Quick Stamp, candidate evaluation and caption generation for Auto Edit, push notification delivery, and server error record analysis are outsourced to overseas providers (Article 5)</li>
           <li><strong>Privacy officer:</strong> Dongho Kim (admin@rungle.app)</li>
           <li><strong>Contact:</strong> The Team (admin@rungle.app)</li>
         </ul>
@@ -83,8 +91,8 @@ export default function PrivacyPage() {
         <p>
           You sign up for the service with a social login; the Team does not create or receive its
           own IDs or passwords. We process the following information to provide the service. Photos
-          and videos are processed on your device (exceptions are the frames and photos sent when you use
-          an AI template or the Quick Stamp judgment, and the freeze frame the AI creates from the
+          and videos are processed on your device (exceptions are the frames, photos, and copies sent when you use
+          an AI template, the Quick Stamp judgment, or Auto Edit, and the freeze frame the AI creates from the
           freeze-frame template&rsquo;s frame, which the Team keeps on its
           server for 90 days after your last edit so you can keep editing it; project backups of
           signed-in users are also an exception), and running record measurements of signed-in users are
@@ -127,8 +135,18 @@ export default function PrivacyPage() {
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Photos and videos</td>
-                <td className="p-2">Photos and videos taken during your run (candidates for best-shot recommendation and editing). Processed on your device; they reach the server in only two cases: the frames for AI templates and the Quick Stamp judgment, and the project backup of signed-in users (next row). <strong>Only when you use an AI template or the Quick Stamp judgment</strong>, the frames that feature defines (still images reduced to 512 pixels wide, which may show a face) are sent through the Team&rsquo;s server to the AI providers in Article 5. How much is sent depends on the feature. The freeze-frame template sends the single frame you select from a video; Cut Edit sends frames taken from the videos you select at intervals of about 2 seconds (up to 100 per video and 800 per job); Web Shooter sends up to 60 frames taken from the video you select at 1-second intervals, plus up to 110 frames around the judged moment; Monthly Recap sends frames taken from that month&rsquo;s running videos (up to 90 per run); and the Quick Stamp best-shot judgment sends the photos taken during that run (512-pixel-wide copies). The original video and its audio are never sent. The server also receives which feature you used and the timestamps of the frames, but only the frames go to the AI providers (for Web Shooter, frames with a timestamp label drawn on them). The freeze frame the AI creates from the freeze-frame template&rsquo;s frame is kept on the Team&rsquo;s server for 90 days after your last edit (Article 3).</td>
-                <td className="p-2">Read from your photo library if you allow it. Frames are created only when you choose videos or photos in an AI template or Quick Stamp and run it (available only to signed-in accounts)</td>
+                <td className="p-2">Photos and videos taken during your run (candidates for best-shot recommendation and editing). Processed on your device; they reach the server in only three cases: the frames for AI templates and the Quick Stamp judgment, the candidate copies for Auto Edit (Auto Edit row below), and the project backup of signed-in users (row below). <strong>Only when you use an AI template or the Quick Stamp judgment</strong>, the frames that feature defines (still images reduced to 512 pixels wide, which may show a face) are sent through the Team&rsquo;s server to the AI providers in Article 5. How much is sent depends on the feature. The freeze-frame template sends the single frame you select from a video; Cut Edit sends frames taken from the videos you select at intervals of about 2 seconds (up to 100 per video and 800 per job); Web Shooter sends up to 60 frames taken from the video you select at 1-second intervals, plus up to 110 frames around the judged moment; Monthly Recap sends frames taken from that month&rsquo;s running videos (up to 90 per run); and the Quick Stamp best-shot judgment sends the photos taken during that run (512-pixel-wide copies). The original video and its audio are never sent. The server also receives which feature you used and the timestamps of the frames, but only the frames go to the AI providers (for Web Shooter, frames with a timestamp label drawn on them). The freeze frame the AI creates from the freeze-frame template&rsquo;s frame is kept on the Team&rsquo;s server for 90 days after your last edit (Article 3).</td>
+                <td className="p-2">Read from your photo library if you allow it. Frames are created only when you choose videos or photos in an AI template or Quick Stamp and run it (available only to signed-in accounts). For Auto Edit, see the next row</td>
+              </tr>
+              <tr className="border-b border-gray-200">
+                <td className="p-2 font-semibold">Auto Edit (when signed in and turned on)</td>
+                <td className="p-2">Copies made from candidates the app picks among the photos and videos taken during your run: frames, reduced photos (including copies with a record overlay applied), and, depending on the feature, short video copies at reduced resolution (which may show a face). Overlays may show your running record values (distance, duration, pace, and so on) and the shape of your route (only the line shape, without a map or coordinates). Values the app calculates from your running records (this run&rsquo;s distance, duration, and pace, the difference from earlier runs, running streaks, cumulative distance over a period, whether it is a personal best or a first achievement, and so on, Article 11). Your Auto Edit settings answers (for example, the share of runners among your followers; optional). Candidate composition information (candidate type, overlay style, cut lengths and order). Results produced by AI processing (editing instructions describing which candidates to use and how to edit them, caption text, and an evaluation summary). <strong>Original photos and videos, GPS routes and coordinates, and raw running records (the full measurement data) are not sent.</strong></td>
+                <td className="p-2">Created by the app and uploaded to the Team&rsquo;s server when a user who turned on Auto Edit starts it after a run (for example, by tapping the run-finished notification). The app picks candidates from the run&rsquo;s time window without you choosing each photo or video. Settings answers are entered by you when you first turn on Auto Edit and in the settings screen. Results are created by the Team&rsquo;s server after AI processing</td>
+              </tr>
+              <tr className="border-b border-gray-200">
+                <td className="p-2 font-semibold">Subscription information (when you subscribe or use the trial)</td>
+                <td className="p-2">Transaction information for the Auto Edit subscription: transaction identifiers issued by Apple (including the original transaction identifier), the subscription product, purchase, renewal, and expiration times, auto-renewal status, cancellation, refund, and billing failure status, transaction country, currency, and amount, and whether it is a test purchase. Whether you used the free trial and how many times you used Auto Edit. <strong>We do not receive payment method information such as card numbers, or your Apple Account information.</strong></td>
+                <td className="p-2">When you subscribe or restore purchases in the app, the app sends the signed transaction information it received from Apple to the Team&rsquo;s server. When a renewal, cancellation, or refund occurs, Apple notifies the Team&rsquo;s server. Trial and usage counts are recorded by the Team&rsquo;s server when it processes an Auto Edit job</td>
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Project backup (when signed in)</td>
@@ -189,6 +207,8 @@ export default function PrivacyPage() {
           <li>Best-shot recommendation (evaluating photo and video quality, faces, and composition on your device; for Quick Stamp, when you are signed in, the person/scenery judgment is made by the AI provider in Article 5 from the photos). <strong>Faces are only detected and evaluated, and are never generated, altered, or retouched except in the freeze-frame creation of AI templates below.</strong></li>
           <li>Creating and editing record overlays, reels, and frame content</li>
           <li>Pose and scene reading and freeze-frame creation in AI templates. In the freeze-frame template, the AI reads the hand position and where the record text can be placed from the single video frame you select, and creates a new freeze-frame image with an effect added based on that frame. Cut Edit and Monthly Recap pick usable cuts from several frames, and Web Shooter judges from several frames the moment the hand motion changes. <strong>When a freeze frame is created, the face and body of the person in the frame may be redrawn by the AI.</strong> The created freeze frame passes through Google once more so the AI can read where the record text can be placed and check the composition, and is then stored on your device and on the Team&rsquo;s server (Article 3); we never process it to identify who someone is (no matching of the same person, no extraction of facial features)</li>
+          <li>Auto Edit: creating candidates from the photos and videos taken during your run, having the AI evaluate and pick candidates from the perspective of virtual viewers (followers), and recommending caption text using values calculated from your running records. When the result is ready, we notify you with a push notification. Faces are used only for evaluation, and we never process them to identify who someone is. If Auto Edit also uses an AI template, that processing follows the AI template item above</li>
+          <li>Confirming subscription status, managing free trial and usage counts, and preventing payment circumvention and misuse</li>
           <li>Creating an account and keeping you signed in; backing up and restoring records when you switch devices or reinstall the app</li>
           <li>Keeping the freeze frame the AI creates on the server so you can keep editing it and restore it on another device</li>
           <li>Keeping projects edited by signed-in users on the server so you can keep editing them and restore them when you switch devices or reinstall the app (project backup)</li>
@@ -218,15 +238,20 @@ export default function PrivacyPage() {
             the deletion.
           </li>
           <li>The push notification token is deleted from the server as soon as you turn service notifications off in the app&rsquo;s settings or revoke the notification permission in iOS, and a token that can no longer receive notifications (for example, after the app is deleted) is deleted as soon as that is confirmed. It is deleted together with the device information when you delete your account. The times of consent to and withdrawal from promotional notifications (offers and news) are kept with the device information as evidence of consent and deleted when you delete your account.</li>
+          <li>Subscription transaction information and free trial and usage counts are kept with your account information to confirm your subscription status, and are deleted after a 30-day grace period once you request account deletion. Where the law requires us to keep them, we keep them separately for that period. Deleting your account does not cancel your Apple subscription automatically, so please cancel it in the App Store (Article 7).</li>
           <li>Gender and age group are kept with your account information and deleted together when the account is deleted. You can change them on the My Info screen; to erase your answers entirely, contact the Team (admin@rungle.app).</li>
           <li>We no longer store running records made as a guest on the server. Records that earlier versions of the app uploaded as a guest are linked only to the anonymous device identifier, not to an account, and the Team plans to delete them. To delete them sooner, contact the Team (admin@rungle.app).</li>
           <li>Best-shot candidates use only references to your photo library; only the photos and clips you finally select are stored in the app.</li>
           <li>
-            <strong>The frames and photos sent to the server when you use an AI template or the Quick Stamp judgment are deleted from
-            the server as soon as the AI provider&rsquo;s result is returned to the app,</strong> and
-            is not kept in any cache, log, or storage. Server records keep only the job number, the
+            <strong>The frames, photos, video copies, and record values sent to the server when you use an AI template, the Quick Stamp judgment, or Auto Edit are deleted from
+            the server as soon as the job ends (whether it succeeds or fails),</strong> and
+            are not kept in any cache, log, or storage. Anything that could not be deleted is removed
+            within a day by the storage&rsquo;s automatic deletion rule. Server records keep only the job number, the
             requesting account, the request time, file size, and processing status; the contents of
-            the frame and the result are not kept. <strong>The freeze frame created by the AI is kept
+            the frame and the result are not kept. Auto Edit is an exception: its result (editing
+            instructions, caption text, and an evaluation summary) is kept on the Team&rsquo;s server
+            (in Korea) so you can open it again, and is deleted after a 30-day grace period once you
+            request account deletion. The AI&rsquo;s raw answers used for evaluation are not stored. <strong>The freeze frame created by the AI is kept
             on the Team&rsquo;s server (in Korea, encrypted storage) for 90 days after your last
             edit (or after it was created, if you never edit it)</strong> so you can keep editing it
             and restore it on another device, and is then deleted automatically. If you request
@@ -323,7 +348,7 @@ export default function PrivacyPage() {
                   <br />
                   <a className="underline" href="https://aws.amazon.com/privacy">aws.amazon.com/privacy</a>
                 </td>
-                <td className="p-2">Server operations: storing account information, device information, running record backups, notifications, the freeze frames the AI creates, the project backups of signed-in users (original photos and videos and editing information), and app usage records</td>
+                <td className="p-2">Server operations: storing account information, device information, running record backups, notifications, the freeze frames the AI creates, the project backups of signed-in users (original photos and videos and editing information), app usage records, Auto Edit results, and subscription information</td>
                 <td className="p-2">Republic of Korea (Seoul region) / until account deletion or the end of the contract (AI-created freeze frames: 90 days after your last edit; project backups: 30 days after the project is deleted; app usage records: 90 days, Article 3)</td>
               </tr>
             </tbody>
@@ -338,7 +363,7 @@ export default function PrivacyPage() {
           Separately, the Team outsources the processing of app usage records for service quality
           improvement and error response, ad performance measurement, the conversion of coordinates
           into place names for displaying the running location, frame reading and freeze-frame
-          creation for AI templates and Quick Stamp, push notification delivery, and server error record analysis to the providers below. Their servers are located outside Korea,
+          creation for AI templates and Quick Stamp, candidate evaluation and caption generation for Auto Edit, push notification delivery, and server error record analysis to the providers below. Their servers are located outside Korea,
           so the following information is transferred abroad.
         </p>
         <div className="overflow-x-auto">
@@ -428,9 +453,9 @@ export default function PrivacyPage() {
                   <br />
                   <a className="underline" href="https://policies.google.com/privacy">policies.google.com/privacy</a>
                 </td>
-                <td className="p-2">United States (the request goes to Google Cloud&rsquo;s global endpoint, so it may be processed in a data center in another country chosen by Google) / when you choose a video in the freeze-frame template or Web Shooter and run it / sent over the network (HTTPS encrypted) through the Team&rsquo;s server</td>
-                <td className="p-2">Freeze-frame template: the single video frame you select (a still image 512 pixels wide, which may show a face) and the freeze frame the AI created from it (for reading where the record text can be placed and checking the composition). Web Shooter: up to 110 frames around the judged moment (with a timestamp label drawn on them)</td>
-                <td className="p-2">Reading the hand position in the frame; reading where the record text can be placed and checking the composition in the AI-created freeze frame; creating the freeze frame instead when OpenAI&rsquo;s freeze-frame creation is blocked by its safety policy; judging the hand pose and coordinates for Web Shooter / until the result is returned. Under its paid API terms, Google does not use the frame for training or product improvement and keeps it only for a limited period to monitor for prohibited use</td>
+                <td className="p-2">United States (the request goes to Google Cloud&rsquo;s global endpoint, so it may be processed in a data center in another country chosen by Google) / when you choose a video in the freeze-frame template or Web Shooter and run it, or when you start Auto Edit / sent over the network (HTTPS encrypted) through the Team&rsquo;s server</td>
+                <td className="p-2">Freeze-frame template: the single video frame you select (a still image 512 pixels wide, which may show a face) and the freeze frame the AI created from it (for reading where the record text can be placed and checking the composition). Web Shooter: up to 110 frames around the judged moment (with a timestamp label drawn on them). Auto Edit: the copies in the Auto Edit row of Article 1, values calculated from your running records, settings answers, and candidate composition information</td>
+                <td className="p-2">Reading the hand position in the frame; reading where the record text can be placed and checking the composition in the AI-created freeze frame; creating the freeze frame instead when OpenAI&rsquo;s freeze-frame creation is blocked by its safety policy; judging the hand pose and coordinates for Web Shooter; candidate evaluation and caption generation for Auto Edit / until the result is returned. Under its paid API terms, Google does not use the frame for training or product improvement and keeps it only for a limited period to monitor for prohibited use</td>
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">
@@ -438,22 +463,25 @@ export default function PrivacyPage() {
                   <br />
                   <a className="underline" href="https://openai.com/policies/privacy-policy/">openai.com/policies/privacy-policy</a>
                 </td>
-                <td className="p-2">United States / when you run an AI template (freeze frame, Cut Edit, Web Shooter, or Monthly Recap) or the Quick Stamp judgment / sent over the network (HTTPS encrypted) through the Team&rsquo;s server</td>
-                <td className="p-2">The frames and photos described in the photos and videos row of Article 1 (one frame for the freeze-frame template; several for Cut Edit, Web Shooter, Monthly Recap, and Quick Stamp; still images 512 pixels wide, which may show a face)</td>
-                <td className="p-2">Creating the freeze-frame image for the freeze-frame template; picking cuts for Cut Edit and Monthly Recap; judging the moment of the hand motion for Web Shooter; the person/scenery judgment for Quick Stamp / until the result is returned. OpenAI does not use data received through its API for training and deletes it after keeping it for up to 30 days for abuse monitoring</td>
+                <td className="p-2">United States / when you run an AI template (freeze frame, Cut Edit, Web Shooter, or Monthly Recap) or the Quick Stamp judgment, or when you start Auto Edit / sent over the network (HTTPS encrypted) through the Team&rsquo;s server</td>
+                <td className="p-2">The frames and photos described in the photos and videos row of Article 1 (one frame for the freeze-frame template; several for Cut Edit, Web Shooter, Monthly Recap, and Quick Stamp; still images 512 pixels wide, which may show a face). Auto Edit: the copies in the Auto Edit row of Article 1, values calculated from your running records, settings answers, and candidate composition information</td>
+                <td className="p-2">Creating the freeze-frame image for the freeze-frame template; picking cuts for Cut Edit and Monthly Recap; judging the moment of the hand motion for Web Shooter; the person/scenery judgment for Quick Stamp; creating and evaluating candidates and generating caption text for Auto Edit / until the result is returned. OpenAI does not use data received through its API for training and deletes it after keeping it for up to 30 days for abuse monitoring</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p>
           The transferred information <strong>does not include account information that identifies
-          you, original photos or videos, or raw running record figures.</strong> There are two
-          exceptions: the single starting coordinate sent to Apple for place-name conversion, and the
+          you, original photos or videos, or raw running record figures.</strong> There are three
+          exceptions: the single starting coordinate sent to Apple for place-name conversion; the
           frames and photos sent to Google and OpenAI when you use an AI template or the Quick Stamp
           judgment (Article 1, along with the freeze frame the AI created from the freeze-frame
-          template&rsquo;s frame). The frames are the
-          original pictures before any record overlay is applied, so they contain no running record
-          figures, and no account information, device identifier, or running record is sent with them.
+          template&rsquo;s frame); and the photo and video copies and values calculated from your
+          running records sent to Google and OpenAI when you use Auto Edit (Articles 1 and 11). The
+          frames for AI templates and Quick Stamp are the original pictures before any record overlay
+          is applied, so they contain no running record figures. In no case is account information or
+          a device identifier sent to the AI providers, and no running record is sent other than the
+          values calculated for Auto Edit.
           For push notification delivery, only the notification token and the kind of text go to
           Google (Firebase), and for server error tracking, only the error type, code location,
           identifiers, processing status, and environment details such as app version and device model go to Sentry.
@@ -464,8 +492,9 @@ export default function PrivacyPage() {
         </p>
         <p>
           <strong>If you only want to avoid the transfer to AI providers, simply do not use AI
-          templates or the Quick Stamp judgment.</strong> No frame is sent until you choose videos or
-          photos in one of these features and run it yourself, and nothing other than that feature is
+          templates or the Quick Stamp judgment, and do not turn on Auto Edit.</strong> For AI templates
+          and Quick Stamp, no frame is sent until you choose videos or photos and run the feature
+          yourself; for Auto Edit, no frame or copy is sent until you start it with the feature turned on; and nothing other than that feature is
           restricted if you do not use it. Guests cannot use these features, so no frames are sent
           for them. Google and OpenAI act as processors on the Team&rsquo;s behalf and, under their
           paid API terms, may not use the frame for their own purposes or for training. We do not
@@ -496,7 +525,9 @@ export default function PrivacyPage() {
         <ul className="list-disc space-y-1 pl-5">
           <li><strong>Revoke access to running records:</strong> iOS Health app &gt; Profile &gt; Apps &gt; Rungle, turn off read access</li>
           <li><strong>Revoke photo access:</strong> iOS Settings &gt; Rungle &gt; Photos, change or remove the access level</li>
-          <li><strong>Refuse sending frames to AI providers:</strong> Simply do not use AI templates or the Quick Stamp judgment. All other templates and features remain available (Article 5)</li>
+          <li><strong>Refuse sending frames to AI providers:</strong> Simply do not use AI templates or the Quick Stamp judgment, and leave Auto Edit off or turn it off in the app&rsquo;s settings. All other templates and features remain available (Article 5)</li>
+          <li><strong>Change your Auto Edit settings answers:</strong> You can change them in the app&rsquo;s settings</li>
+          <li><strong>Cancel your subscription:</strong> Cancel it in iOS Settings &gt; Apple Account &gt; Subscriptions (you can also get there from subscription management in the app&rsquo;s settings). Refunds are requested from Apple under Apple&rsquo;s policies. Deleting your account does not cancel the subscription automatically</li>
           <li><strong>Turn off push notifications:</strong> Turn off service notifications in the app&rsquo;s Settings &gt; Notifications, or turn off notifications in iOS Settings &gt; Rungle. Once off, the push notification token is deleted from the Team&rsquo;s server right away, and you can still read the in-app inbox</li>
           <li><strong>Withdraw consent to promotional notifications (offers and news):</strong> Turn off the offers and news (ads) switch in the app&rsquo;s Settings &gt; Notifications. The app shows you the result and the date it was processed right away, and turning it back on is recorded as a new consent</li>
           <li><strong>Change gender or age group:</strong> You can change them on the My Info screen in the app. To erase your answers, contact the Team (Article 3)</li>
@@ -527,9 +558,10 @@ export default function PrivacyPage() {
       <Section title="Article 9 (Security Measures)">
         <p>The Team takes the following security measures in accordance with Article 29 of Korea&rsquo;s Personal Information Protection Act.</p>
         <ul className="list-disc space-y-1 pl-5">
-          <li><strong>On-device processing:</strong> Personal information processing, including photo analysis, face evaluation, and text recognition, is performed on your device, and the iOS app sandbox blocks access from other apps. The only exception is the frames and photos for AI templates and the Quick Stamp judgment (Article 1), which pass through the server to the AI providers; the server deletes them as soon as it returns the result and does not store them. The freeze frame the AI creates is kept in encrypted storage that only the Team&rsquo;s server can access, and you download only your own freeze frames through short-lived signed URLs.</li>
+          <li><strong>On-device processing:</strong> Personal information processing, including photo analysis, face evaluation, and text recognition, is performed on your device, and the iOS app sandbox blocks access from other apps. The only exceptions are the frames and photos for AI templates and the Quick Stamp judgment and the copies and record values for Auto Edit (Article 1), which pass through the server to the AI providers; the server deletes them as soon as the job ends and does not store them. The freeze frame the AI creates is kept in encrypted storage that only the Team&rsquo;s server can access, and you download only your own freeze frames through short-lived signed URLs.</li>
           <li><strong>Project backup:</strong> Before upload, capture details in photos and videos, such as capture location, capture time, and device information, are removed on your device, keeping only the orientation value. The server keeps files in encrypted storage (AES-256), separated by account, and issues the addresses for uploading and downloading files only to the signed-in owner, as signed URLs valid for 1 hour. The storage rejects any request that is not over an encrypted (HTTPS) connection. Photos and videos, including those showing faces, are never used to identify who someone is.</li>
           <li><strong>Push notifications:</strong> Notifications carry only text keys and a job number, so no photos, record figures, or location leave through the notification path, and the push notification token is never written to logs or analytics events.</li>
+          <li><strong>Subscription confirmation:</strong> Transaction information sent by the app is accepted only after Apple&rsquo;s signature is verified, and payment method information is never received.</li>
           <li><strong>Minimal storage:</strong> Birth year is stored only as a 10-year age group, and the original value is not kept.</li>
           <li><strong>Administrative measures:</strong> Minimizing the staff who handle personal information and setting internal handling rules</li>
           <li><strong>Technical measures:</strong> TLS encryption on all external connections; the server is placed in a segment not directly reachable from outside, with access limited to the minimum staff; server credentials are kept in a separate secrets management service</li>
@@ -565,8 +597,9 @@ export default function PrivacyPage() {
           advertising or marketing, and is never sold or provided to third parties.</strong>{" "}
           Neither health data nor values derived from it are sent to the ad performance measurement
           tool in Article 5 or to Meta in Article 4. The frames and photos sent to the AI providers in
-          Article 5 are the original pictures before any record overlay is applied, so they contain no
-          health data. Push notifications carry no record figures either.
+          Article 5 for AI templates and the Quick Stamp judgment are the original pictures before any
+          record overlay is applied, so they contain no health data. Auto Edit is an exception,
+          described below. Push notifications carry no record figures either.
         </p>
         <p>
           The <strong>project backup</strong> of a signed-in user also stores the running record
@@ -574,6 +607,20 @@ export default function PrivacyPage() {
           so the edit can be restored exactly on another device, and these values are the same kind
           as the running measurements already backed up to the server. They too are never used for
           advertising or marketing and are never provided to third parties.
+        </p>
+        <p>
+          When you turn on and start <strong>Auto Edit</strong>, values the app calculates from your
+          running records (this run&rsquo;s distance, duration, and pace, the difference from earlier
+          runs, running streaks, cumulative distance over a period, whether it is a personal best or a
+          first achievement, and so on) and photo and video copies with a record overlay applied are
+          sent to the AI providers in Article 5 (Google and OpenAI) to generate caption text and
+          evaluate candidates. Overlays may show the values you see on your record screen and the
+          shape of your route (only the line shape, without a map or coordinates). <strong>Raw running
+          records (the full measurement data) and GPS routes and coordinates are not sent.</strong>{" "}
+          These values are used only to create your result; the AI providers, as processors, may not
+          use them for training or their own purposes, and the Team never uses them for advertising or
+          marketing or sells or provides them to third parties. Nothing is sent if you do not turn on
+          Auto Edit.
         </p>
         <p>
           <strong>The running location name</strong> is generated when you open the overlay editor,
@@ -706,7 +753,19 @@ export default function PrivacyPage() {
           any choice on your part in the app version released after the effective date, this revision
           takes effect on October 19, 2026, seven days after notice.
         </p>
-        <p><strong>Date of notice: October 12, 2026 / Effective date: October 19, 2026</strong> (the revision announced on October 8, 2026 takes effect on October 8, 2026; the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
+        <p className="text-gray-600">
+          Revision of October 25, 2026: we added to the introduction, the summary, and Articles 1, 2,
+          3, 5, 7, 9, and 11 Auto Edit, a subscription feature that signed-in users turn on (a feature
+          that sends copies of candidates the app picks from the photos and videos taken during your
+          run, together with values calculated from your running records, through the Team&rsquo;s
+          server to Google and OpenAI, so the AI can create and evaluate candidates and recommend
+          photos, reels, and caption text), and the processing of subscription transaction
+          information. The photo and video copies and record values sent for Auto Edit are deleted as
+          soon as the job ends, and the result (editing instructions, caption text, and an evaluation
+          summary) is kept until account deletion. Auto Edit starts only when you turn it on, and this
+          revision takes effect on November 1, 2026, seven days after notice.
+        </p>
+        <p><strong>Date of notice: October 25, 2026 / Effective date: November 1, 2026</strong> (the revision announced on October 12, 2026 takes effect on October 19, 2026; the revision announced on October 8, 2026 takes effect on October 8, 2026; the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
       </Section>
     </main>
   );
