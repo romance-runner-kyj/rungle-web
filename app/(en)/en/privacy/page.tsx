@@ -817,7 +817,7 @@ export default function PrivacyPage() {
           policy said this forwarding was turned off. We apologize for reflecting it late.
         </p>
         <p className="text-gray-600">
-          Revision of October 28, 2026: we added to the introduction, the summary, and Articles 1, 2,
+          Revision of October 27, 2026: we added to the introduction, the summary, and Articles 1, 2,
           3, 5, 7, 9, and 11 AI edit requests, a feature in which a signed-in user writes the edit they
           want as a sentence in the photo or reel editor and sends it, and the AI interprets the request,
           decides which of the app&rsquo;s editing functions to use with which values, and finds the
@@ -834,7 +834,7 @@ export default function PrivacyPage() {
           it begins only in the app version released after this policy is published, so this revision
           takes effect on November 1, 2026, without waiting seven days after notice.
         </p>
-        <p><strong>Date of notice: October 28, 2026 / Effective date: November 1, 2026</strong> (the revision announced on October 26, 2026 takes effect on October 26, 2026; the revision announced on October 25, 2026 takes effect on November 1, 2026; the revision announced on October 12, 2026 takes effect on October 19, 2026; the revision announced on October 8, 2026 takes effect on October 8, 2026; the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
+        <p><strong>Date of notice: October 27, 2026 / Effective date: November 1, 2026</strong> (the revision announced on October 26, 2026 takes effect on October 26, 2026; the revision announced on October 25, 2026 takes effect on November 1, 2026; the revision announced on October 12, 2026 takes effect on October 19, 2026; the revision announced on October 8, 2026 takes effect on October 8, 2026; the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
       </Section>
     </main>
   );
