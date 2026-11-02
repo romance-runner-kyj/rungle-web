@@ -181,7 +181,7 @@ export default function PrivacyPage() {
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">IP address and approximate location (collected automatically)</td>
-                <td className="p-2">The IP address used when the app sends records to the analytics tool, and the country, region, city, and US broadcast market that the analytics tool looks up from it. The IP address of records passed from the measurement tool (Airbridge) to the analytics tool is also stored. GPS location is not used, and latitude and longitude are not sent</td>
+                <td className="p-2">The IP address used when the app sends records to the analytics tool, and the country, region, city, and US broadcast market that the analytics tool looks up from it. The IP address of records passed from the measurement tool (Airbridge) to the analytics tool is also stored, and the IP address of records passed before this revision remains stored. GPS location is not used, and latitude and longitude are not sent</td>
                 <td className="p-2">Generated automatically when records are sent and kept in the analytics tool (Article 5)</td>
               </tr>
               <tr className="border-b border-gray-200">
@@ -881,7 +881,9 @@ export default function PrivacyPage() {
           Revision of November 2, 2026: We added to the summary and Articles 1, 2, and 5 that the analytics tool
           (Amplitude, United States) stores the IP address used when the app sends records and the approximate location
           (country, region, city, US broadcast market) looked up from it. We do this to check actual installs from countries
-          where we run ads and to decide which cities to add running courses for. GPS location is not used. For app
+          where we run ads and to decide which cities to add running courses for. GPS location is not used. The IP
+          address of records passed from the measurement tool (Airbridge) to the analytics tool was already being stored
+          before this revision and remains stored. For app
           records, this processing begins without any choice on your part once you update to an app version
           released after this policy is published, and it takes effect on the date of notice to match the release schedule
           of the next app version.
