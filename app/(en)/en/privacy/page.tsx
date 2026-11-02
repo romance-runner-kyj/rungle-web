@@ -80,7 +80,7 @@ export default function PrivacyPage() {
         separately consented (Articles 1 and 7). Gender and age group are optional and you do not have to
         answer (Article 1). App usage records for service improvement are sent to an external
         analytics tool and to the Team&rsquo;s server (in Korea, kept for 90 days, Article 3), and install and launch records for ad performance measurement are sent to an
-        external measurement tool (Article 5). The analytics tool looks up your approximate location (country, region, city) from the IP address of the records the app sends (Article 1). The advertising identifier (IDFA) is used only if you
+        external measurement tool (Article 5). The analytics tool stores the IP address of the records the app sends and the approximate location (country, region, city) looked up from it (Article 1). The advertising identifier (IDFA) is used only if you
         allow app tracking (Article 10).
       </p>
 
@@ -180,8 +180,8 @@ export default function PrivacyPage() {
                 <td className="p-2">Generated automatically while you use the service and sent to analytics tools (Article 5) and to the Team&rsquo;s server (in Korea, Article 3)</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Approximate location (collected automatically)</td>
-                <td className="p-2">The country, region, city, and US broadcast market that the analytics tool looks up from the IP address used when the app sends records. GPS location is not used, and latitude and longitude are not sent. The IP address is used only for this lookup and is not stored in the analytics tool</td>
+                <td className="p-2 font-semibold">IP address and approximate location (collected automatically)</td>
+                <td className="p-2">The IP address used when the app sends records to the analytics tool, and the country, region, city, and US broadcast market that the analytics tool looks up from it. The IP address of records passed from the measurement tool (Airbridge) to the analytics tool is also stored. GPS location is not used, and latitude and longitude are not sent</td>
                 <td className="p-2">Generated automatically when records are sent and kept in the analytics tool (Article 5)</td>
               </tr>
               <tr className="border-b border-gray-200">
@@ -423,7 +423,7 @@ export default function PrivacyPage() {
                   <a className="underline" href="https://amplitude.com/privacy">amplitude.com/privacy</a>
                 </td>
                 <td className="p-2">United States / continuously while you use the app / network (HTTPS encrypted)</td>
-                <td className="p-2">Anonymous device identifier, account identifier issued by the server (only when signed in), feature usage events, user experience survey responses, values derived from running records (distance bucket, whether a route exists, whether a place name exists), attribution details (names of the ad channel, campaign, ad group, and creative), IP address (used only for location lookup and not stored), approximate location looked up from the IP address (country, region, city, US broadcast market)</td>
+                <td className="p-2">Anonymous device identifier, account identifier issued by the server (only when signed in), feature usage events, user experience survey responses, values derived from running records (distance bucket, whether a route exists, whether a place name exists), attribution details (names of the ad channel, campaign, ad group, and creative), IP address, approximate location looked up from the IP address (country, region, city, US broadcast market)</td>
                 <td className="p-2">Usage analysis and service quality improvement, comparing attribution performance by ad, understanding usage by country and city / until the end of the contract or fulfillment of the purpose</td>
               </tr>
               <tr className="border-b border-gray-200">
@@ -879,10 +879,10 @@ export default function PrivacyPage() {
         </p>
         <p className="text-gray-600">
           Revision of November 2, 2026: We added to the summary and Articles 1, 2, and 5 that the analytics tool
-          (Amplitude, United States) looks up and records your approximate location (country, region, city, US broadcast
-          market) from the IP address used when the app sends records. We do this to check actual installs from countries
-          where we run ads and to decide which cities to add running courses for. GPS location is not used and the IP
-          address is not stored. This processing begins without any choice on your part once you update to an app version
+          (Amplitude, United States) stores the IP address used when the app sends records and the approximate location
+          (country, region, city, US broadcast market) looked up from it. We do this to check actual installs from countries
+          where we run ads and to decide which cities to add running courses for. GPS location is not used. For app
+          records, this processing begins without any choice on your part once you update to an app version
           released after this policy is published, and it takes effect on the date of notice to match the release schedule
           of the next app version.
         </p>
