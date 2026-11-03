@@ -878,7 +878,7 @@ export default function PrivacyPage() {
           &ldquo;the first app version with subscription payments.&rdquo;
         </p>
         <p className="text-gray-600">
-          Revision of November 2, 2026: We added to the summary and Articles 1, 2, and 5 that the analytics tool
+          Revision of November 3, 2026: We added to the summary and Articles 1, 2, and 5 that the analytics tool
           (Amplitude, United States) stores the IP address used when the app sends records and the approximate location
           (country, region, city, US broadcast market) looked up from it. We do this to check actual installs from countries
           where we run ads and to decide which cities to add running courses for. GPS location is not used. The IP
@@ -888,7 +888,7 @@ export default function PrivacyPage() {
           released after this policy is published, and it takes effect on the date of notice to match the release schedule
           of the next app version.
         </p>
-        <p><strong>Date of notice: November 2, 2026 / Effective date: November 2, 2026</strong> (the RevenueCat revision announced on October 28, 2026 takes effect on November 4, 2026; the place search revision announced the same day takes effect on October 28, 2026; the revision announced on October 27, 2026 takes effect on November 1, 2026; the revision announced on October 26, 2026 takes effect on October 26, 2026; the revision announced on October 25, 2026 takes effect on November 1, 2026; the revision announced on October 12, 2026 takes effect on October 19, 2026; the revision announced on October 8, 2026 takes effect on October 8, 2026; the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
+        <p><strong>Date of notice: November 3, 2026 / Effective date: November 3, 2026</strong> (the RevenueCat revision announced on October 28, 2026 takes effect on November 4, 2026; the place search revision announced the same day takes effect on October 28, 2026; the revision announced on October 27, 2026 takes effect on November 1, 2026; the revision announced on October 26, 2026 takes effect on October 26, 2026; the revision announced on October 25, 2026 takes effect on November 1, 2026; the revision announced on October 12, 2026 takes effect on October 19, 2026; the revision announced on October 8, 2026 takes effect on October 8, 2026; the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
       </Section>
     </main>
   );
