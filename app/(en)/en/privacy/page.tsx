@@ -80,7 +80,7 @@ export default function PrivacyPage() {
         separately consented (Articles 1 and 7). Gender and age group are optional and you do not have to
         answer (Article 1). App usage records for service improvement are sent to an external
         analytics tool and to the Team&rsquo;s server (in Korea, kept for 90 days, Article 3), and install and launch records for ad performance measurement are sent to an
-        external measurement tool (Article 5). The advertising identifier (IDFA) is used only if you
+        external measurement tool (Article 5). The analytics tool stores the IP address of the records the app sends and the approximate location (country, region, city) looked up from it (Article 1). The advertising identifier (IDFA) is used only if you
         allow app tracking (Article 10).
       </p>
 
@@ -180,6 +180,11 @@ export default function PrivacyPage() {
                 <td className="p-2">Generated automatically while you use the service and sent to analytics tools (Article 5) and to the Team&rsquo;s server (in Korea, Article 3)</td>
               </tr>
               <tr className="border-b border-gray-200">
+                <td className="p-2 font-semibold">IP address and approximate location (collected automatically)</td>
+                <td className="p-2">The IP address used when the app sends records to the analytics tool, and the country, region, city, and US broadcast market that the analytics tool looks up from it. The IP address of records passed from the measurement tool (Airbridge) to the analytics tool is also stored, and the IP address of records passed before this revision remains stored. GPS location is not used, and latitude and longitude are not sent</td>
+                <td className="p-2">Generated automatically when records are sent and kept in the analytics tool (Article 5)</td>
+              </tr>
+              <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Ad attribution information (collected automatically)</td>
                 <td className="p-2">
                   Advertising identifier (IDFA, <strong>only if you allow app tracking</strong>, Article 10), identifier for vendors (IDFV), OS version, device type, language, time zone, IP address, screen size, app install and launch events, share-completed events (name of the channel shared to), the anonymous device identifier above (an alias that links the measurement tool&rsquo;s records with the analytics tool&rsquo;s), and attribution details (names of the ad channel, campaign, ad group, and creative)
@@ -234,6 +239,7 @@ export default function PrivacyPage() {
           <li>Delivering announcements and notifications (in-app inbox and push notifications; the result notification for a finished AI template job is sent only to the device that started the job)</li>
           <li>Sending promotional notifications (offers and news) only to users who separately consented (we record the time of consent and withdrawal so that none are sent without consent)</li>
           <li>Analyzing usage records to improve service quality and recommendation features</li>
+          <li>Understanding usage by country and city (checking actual installs from countries where we run ads, deciding which cities to add running courses for)</li>
           <li>Ad performance measurement (finding out which ad led to an install and a sign-up). <strong>The advertising identifier is used only if you allow app tracking, and photos, location, and health records are never used for ad performance measurement.</strong></li>
         </ul>
       </Section>
@@ -417,8 +423,8 @@ export default function PrivacyPage() {
                   <a className="underline" href="https://amplitude.com/privacy">amplitude.com/privacy</a>
                 </td>
                 <td className="p-2">United States / continuously while you use the app / network (HTTPS encrypted)</td>
-                <td className="p-2">Anonymous device identifier, account identifier issued by the server (only when signed in), feature usage events, user experience survey responses, values derived from running records (distance bucket, whether a route exists, whether a place name exists), attribution details (names of the ad channel, campaign, ad group, and creative)</td>
-                <td className="p-2">Usage analysis and service quality improvement, comparing attribution performance by ad / until the end of the contract or fulfillment of the purpose</td>
+                <td className="p-2">Anonymous device identifier, account identifier issued by the server (only when signed in), feature usage events, user experience survey responses, values derived from running records (distance bucket, whether a route exists, whether a place name exists), attribution details (names of the ad channel, campaign, ad group, and creative), IP address, approximate location looked up from the IP address (country, region, city, US broadcast market)</td>
+                <td className="p-2">Usage analysis and service quality improvement, comparing attribution performance by ad, understanding usage by country and city / until the end of the contract or fulfillment of the purpose</td>
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">
@@ -871,7 +877,18 @@ export default function PrivacyPage() {
           revision we corrected the starting version of the RevenueCat revision announced the same day to
           &ldquo;the first app version with subscription payments.&rdquo;
         </p>
-        <p><strong>Date of notice: October 28, 2026 / Effective date: November 4, 2026</strong> (the place search revision announced the same day takes effect on October 28, 2026; the revision announced on October 27, 2026 takes effect on November 1, 2026; the revision announced on October 26, 2026 takes effect on October 26, 2026; the revision announced on October 25, 2026 takes effect on November 1, 2026; the revision announced on October 12, 2026 takes effect on October 19, 2026; the revision announced on October 8, 2026 takes effect on October 8, 2026; the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
+        <p className="text-gray-600">
+          Revision of November 3, 2026: We added to the summary and Articles 1, 2, and 5 that the analytics tool
+          (Amplitude, United States) stores the IP address used when the app sends records and the approximate location
+          (country, region, city, US broadcast market) looked up from it. We do this to check actual installs from countries
+          where we run ads and to decide which cities to add running courses for. GPS location is not used. The IP
+          address of records passed from the measurement tool (Airbridge) to the analytics tool was already being stored
+          before this revision and remains stored. For app
+          records, this processing begins without any choice on your part once you update to an app version
+          released after this policy is published, and it takes effect on the date of notice to match the release schedule
+          of the next app version.
+        </p>
+        <p><strong>Date of notice: November 3, 2026 / Effective date: November 3, 2026</strong> (the RevenueCat revision announced on October 28, 2026 takes effect on November 4, 2026; the place search revision announced the same day takes effect on October 28, 2026; the revision announced on October 27, 2026 takes effect on November 1, 2026; the revision announced on October 26, 2026 takes effect on October 26, 2026; the revision announced on October 25, 2026 takes effect on November 1, 2026; the revision announced on October 12, 2026 takes effect on October 19, 2026; the revision announced on October 8, 2026 takes effect on October 8, 2026; the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
       </Section>
     </main>
   );
