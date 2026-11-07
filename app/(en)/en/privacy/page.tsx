@@ -92,7 +92,7 @@ export default function PrivacyPage() {
           <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server when you are signed in (GPS routes excluded; guest records are not stored on the server); one starting coordinate of the route is sent to Apple to display the running location name and to search for places, together with the search text when you search (Articles 5 and 11) / Photos and videos: processed and stored on your device by default. Only when you use an AI template or the Quick Stamp judgment, frames taken from the videos and photos you select (one or several, 512 pixels wide) are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Articles 1 and 5), and the freeze frame the AI creates is also kept on the Team&rsquo;s server (Article 3). When an AI edit request needs to find a scene, frames taken from that clip are also sent (see AI edit requests below). For signed-in users, the original photos and videos of edited projects (with capture details other than orientation removed) and their editing information are kept on the Team&rsquo;s server (in Korea) for backup (Articles 1 and 3; can be turned off in settings) / Device information (including the push notification token when notifications are on, and whether you consented to promotional notifications) and app usage records (including the account identifier issued by the server when you are signed in): registered on the server and sent to analytics tools (Article 5), with app usage records also kept on the Team&rsquo;s server (in Korea) (Article 3) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5) / Error records from the Team&rsquo;s server (excluding request contents and personal details): sent to an error tracking tool (Article 5) / Auto Edit (when turned on): reduced copies of candidates the app picks from the photos and videos taken during your run (including copies with a record overlay applied) and values calculated from your running records are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI), and the result (editing instructions and caption text) is kept on the Team&rsquo;s server (Articles 1, 3, 5, and 11) / Auto Edit survey answers (account type, follower count, main posting format, and so on): used to set up the virtual viewers, and also used for marketing and analytics only if you separately consent (Articles 1 and 2) / Subscription transaction information: received from Apple through the subscription management service (RevenueCat) and used to confirm your subscription status (Articles 1 and 5) / AI edit requests (when you send one): the request sentence you wrote, a text summary of the current edit (including text you typed into text layers, but excluding running record values, place names, and GPS), earlier requests and results in the same edit, and, if the request needs to find a scene, frames taken from that clip at 4 per second (at most 512 pixels wide) are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI); the request record is kept on the Team&rsquo;s server (in Korea) for 1 day, and the conversation history is saved on your device with the project (Articles 1, 3, 5, and 11) / Running course favorites and export records (when signed in) — kept on the Team&rsquo;s server (in Korea) (Articles 1 and 3) / Server access records (connecting IP address, request path, response code, and time) — recorded automatically when the app sends a request to the Team&rsquo;s server and kept on the Team&rsquo;s server (in Korea) for 90 days (Articles 1 and 3)</li>
           <li><strong>Purposes:</strong> Best-shot recommendations, creating record overlays and reels, pose and scene reading and freeze-frame creation in AI templates, push notifications for AI job results and promotional notifications (offers and news) for users who consented, account login and record backup and restore, continued editing and cross-device restore of AI-created freeze frames, continued editing and cross-device restore of edited projects (project backup), running statistics and personalized recommendations by gender and age group, service quality improvement, ad performance measurement (finding out which ad led to an install and a sign-up), creating candidates, AI evaluation, caption recommendations, and result notifications for Auto Edit, marketing and analytics using the Auto Edit survey answers of users who consented, confirming subscription status and free trial and usage counts, and interpreting requests (deciding which editing functions to use with which values) and finding scenes for AI edit requests, keeping running course favorites and ranking popular courses by region, and finding the cause of server failures and slowdowns</li>
           <li><strong>Retention:</strong> Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); frames and photos sent to AI providers are deleted from the server as soon as the result is received, the push notification token is deleted as soon as you turn notifications off or revoke the permission (Article 3), and the freeze frame the AI creates is kept for 90 days after your last edit and then deleted (deleted together with your account information when you delete your account, Article 3); project backups are deleted after a 30-day grace period once you delete the project or request account deletion, and files no longer used by any project are deleted after 24 hours (Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled, and kept on the Team&rsquo;s server (in Korea) for 90 days and then deleted (when you delete your account, the account and device identifiers are removed after the 30-day grace period, Article 3); the photo and video copies and record values sent for Auto Edit are deleted as soon as the job ends, and Auto Edit results and subscription transaction information are deleted after a 30-day grace period once you request account deletion, and the record that you used the free trial is kept, as an irreversibly transformed value, for as long as the free trial is offered so the trial cannot be repeated by signing up again with the same social account (Article 3); the request sentence, edit summary, conversation history, and frames sent for AI edit requests are not stored on the server and are gone as soon as the result is returned, the request record is kept on the Team&rsquo;s server (in Korea) for 1 day after the request and then deleted, and the conversation history is saved on your device with the project and, when project backup is on, follows the retention of project backups (Article 3), and running course favorites and export records are deleted after a 30-day grace period once you request account deletion (Article 3); server access records are deleted after 90 days (Article 3)</li>
-          <li><strong>Sharing with third parties:</strong> Not done in principle. While we run ads, install and share-completed events are provided to Meta (Article 4). App usage analysis, ad performance measurement, converting coordinates to place names and place search, frame reading and freeze-frame creation for AI templates and Quick Stamp, candidate evaluation and caption generation for Auto Edit, request interpretation and scene finding for AI edit requests, push notification delivery, server error record analysis, and subscription payment confirmation are outsourced to overseas providers (Article 5)</li>
+          <li><strong>Sharing with third parties:</strong> Not done in principle. While we run ads, install, deep link open, and share-completed events and device information such as the IP address are provided to Meta (Article 4). App usage analysis, ad performance measurement, converting coordinates to place names and place search, frame reading and freeze-frame creation for AI templates and Quick Stamp, candidate evaluation and caption generation for Auto Edit, request interpretation and scene finding for AI edit requests, push notification delivery, server error record analysis, and subscription payment confirmation are outsourced to overseas providers (Article 5)</li>
           <li><strong>Privacy officer:</strong> Dongho Kim (admin@rungle.app)</li>
           <li><strong>Contact:</strong> The Team (admin@rungle.app)</li>
         </ul>
@@ -363,9 +363,11 @@ export default function PrivacyPage() {
                   Meta Platforms, Inc.
                   <br />
                   <a className="underline" href="https://www.facebook.com/privacy/policy/">facebook.com/privacy/policy</a>
+                  <br />
+                  Contact (Korean local agent): korealocalagent@support.facebook.com
                 </td>
-                <td className="p-2">App install events, share-completed events (name of the channel shared to), advertising identifier (IDFA, only if you allow app tracking)</td>
-                <td className="p-2">Counting installs driven by Meta ads and optimizing ad delivery</td>
+                <td className="p-2">App install events, events of opening the app through a deep link, share-completed events (name of the channel shared to), advertising identifier (IDFA, only if you allow app tracking), the device information in the Airbridge row of Article 5 (IP address, device type, OS version, and so on, regardless of whether you allow app tracking)</td>
+                <td className="p-2">Counting installs driven by Meta ads and optimizing ad delivery, and aggregating ad performance including iOS users who do not allow app tracking (Aggregated Event Measurement)</td>
                 <td className="p-2">Per Meta&rsquo;s privacy policy</td>
               </tr>
             </tbody>
@@ -374,9 +376,11 @@ export default function PrivacyPage() {
         <p>
           This provision happens while the Team runs ads on Meta, with the ad performance
           measurement tool in Article 5 (Airbridge) forwarding events from its server to Meta. The
-          app sends nothing to Meta directly. This forwarding has been on since October 5, 2026. You can block
-          the provision of the advertising identifier at any time by turning off app tracking in
-          iOS Settings &gt; Privacy &amp; Security &gt; Tracking (Article 7).
+          app sends nothing to Meta directly. This forwarding has been on since October 5, 2026. Because Airbridge&rsquo;s
+          Aggregated Event Measurement (AEM) setting is on, the events above and device information such as the IP address are
+          forwarded to Meta even if you do not allow app tracking. You can block the provision of the advertising identifier at
+          any time by turning off app tracking in iOS Settings &gt; Privacy &amp; Security &gt; Tracking, and the other
+          provision stops once you delete the app (Article 7).
         </p>
       </Section>
 
@@ -435,6 +439,8 @@ export default function PrivacyPage() {
                   Amplitude, Inc.
                   <br />
                   <a className="underline" href="https://amplitude.com/privacy">amplitude.com/privacy</a>
+                  <br />
+                  Contact: privacy@amplitude.com
                 </td>
                 <td className="p-2">United States / continuously while you use the app / network (HTTPS encrypted)</td>
                 <td className="p-2">Anonymous device identifier, account identifier issued by the server (only when signed in), feature usage events, user experience survey responses, values derived from running records (distance bucket, whether a route exists, whether a place name exists), attribution details (names of the ad channel, campaign, ad group, and creative), IP address (used only to look up approximate location and not stored), approximate location looked up from the IP address (country, region, city, US broadcast market)</td>
@@ -447,6 +453,8 @@ export default function PrivacyPage() {
                   (Airbridge)
                   <br />
                   <a className="underline" href="https://www.airbridge.io/en/privacy-policy">airbridge.io/en/privacy-policy</a>
+                  <br />
+                  Contact: compliance@ab180.co
                 </td>
                 <td className="p-2">Japan (AWS Tokyo region) / when you install and launch the app, when a share is completed, and when you sign up / network (HTTPS encrypted)</td>
                 <td className="p-2">Advertising identifier (IDFA, only if you allow app tracking), identifier for vendors (IDFV), OS version, device type, language, time zone, IP address, screen size, app install and launch events, share-completed events (name of the channel shared to), sign-up events (only the fact that you signed up; no account identifier or email is sent), anonymous device identifier (alias)</td>
@@ -459,6 +467,8 @@ export default function PrivacyPage() {
                   (Firebase Crashlytics)
                   <br />
                   <a className="underline" href="https://policies.google.com/privacy">policies.google.com/privacy</a>
+                  <br />
+                  Contact: googlekrsupport@google.com
                 </td>
                 <td className="p-2">United States / when the app crashes / network (HTTPS encrypted)</td>
                 <td className="p-2">Anonymous device identifier, error logs (crash logs), device and OS information</td>
@@ -471,6 +481,8 @@ export default function PrivacyPage() {
                   (Sentry)
                   <br />
                   <a className="underline" href="https://sentry.io/privacy/">sentry.io/privacy</a>
+                  <br />
+                  Contact: compliance@sentry.io
                 </td>
                 <td className="p-2">United States / when an error occurs on the Team&rsquo;s server / from the Team&rsquo;s server over the network (HTTPS encrypted)</td>
                 <td className="p-2">Server error records from Article 1 (error type and code location, API path and method, job, device, and account identifiers and processing status, request number, app version, iOS family version, device model name, app screen name, count, reference time, and kind values of list queries, server environment and release version). The request body, login credentials, IP address, email, photos, running record figures, and location are not sent</td>
@@ -481,6 +493,8 @@ export default function PrivacyPage() {
                   Apple Inc.
                   <br />
                   <a className="underline" href="https://www.apple.com/legal/privacy/en-ww/">apple.com/legal/privacy/en-ww</a>
+                  <br />
+                  Contact: apple.com/legal/privacy/contact (contact form)
                 </td>
                 <td className="p-2">United States / when you open the overlay editor and a running location name is generated, and when you search for a place in a place sticker / network (HTTPS encrypted)</td>
                 <td className="p-2">One starting coordinate of the running route (latitude and longitude). When you search for a place, the search text you type is also sent, and the coordinate is used to find nearby places first</td>
@@ -493,6 +507,8 @@ export default function PrivacyPage() {
                   (Firebase Cloud Messaging)
                   <br />
                   <a className="underline" href="https://policies.google.com/privacy">policies.google.com/privacy</a>
+                  <br />
+                  Contact: googlekrsupport@google.com
                 </td>
                 <td className="p-2">United States / when the app registers with Firebase after you allow notifications, and when the Team&rsquo;s server sends a push notification / network (HTTPS encrypted) from the app and from the Team&rsquo;s server</td>
                 <td className="p-2">Push notification token (issued by Firebase to the app on this device), the kind of notification text (title and body text keys), and the AI job&rsquo;s number, kind, and status. The notification text itself is chosen by the app on your device, and no photos, record figures, or location are included. Promotional notifications (offers and news) are sent to a topic subscribed only by devices that consented</td>
@@ -505,6 +521,8 @@ export default function PrivacyPage() {
                   (Gemini API and Vertex AI)
                   <br />
                   <a className="underline" href="https://policies.google.com/privacy">policies.google.com/privacy</a>
+                  <br />
+                  Contact: googlekrsupport@google.com
                 </td>
                 <td className="p-2">United States (the request goes to Google Cloud&rsquo;s global endpoint, so it may be processed in a data center in another country chosen by Google) / when you choose a video in the freeze-frame template or Web Shooter and run it, when you start Auto Edit, or when you send an AI edit request / sent over the network (HTTPS encrypted) through the Team&rsquo;s server</td>
                 <td className="p-2">Freeze-frame template: the single video frame you select (a still image 512 pixels wide, which may show a face) and the freeze frame the AI created from it (for reading where the record text can be placed and checking the composition). Web Shooter: up to 110 frames around the judged moment (with a timestamp label drawn on them). Auto Edit: the copies in the Auto Edit row of Article 1, values calculated from your running records, survey answers, and candidate composition information. AI edit requests: the request sentence, the edit summary (including text typed into text layers), and the conversation history in the AI edit requests row of Article 1, and, if the request needs to find a scene, frames taken from that clip at 4 per second (still images at most 512 pixels wide, which may show a face)</td>
@@ -515,6 +533,8 @@ export default function PrivacyPage() {
                   OpenAI, L.L.C.
                   <br />
                   <a className="underline" href="https://openai.com/policies/privacy-policy/">openai.com/policies/privacy-policy</a>
+                  <br />
+                  Contact: dpo@openai.com
                 </td>
                 <td className="p-2">United States / when you run an AI template (freeze frame, Cut Edit, Web Shooter, or Monthly Recap) or the Quick Stamp judgment, when you start Auto Edit, or when you send an AI edit request / sent over the network (HTTPS encrypted) through the Team&rsquo;s server</td>
                 <td className="p-2">The frames and photos described in the photos and videos row of Article 1 (one frame for the freeze-frame template; several for Cut Edit, Web Shooter, Monthly Recap, and Quick Stamp; still images 512 pixels wide, which may show a face). Auto Edit: the copies in the Auto Edit row of Article 1, values calculated from your running records, survey answers, and candidate composition information. AI edit requests: the request sentence, the edit summary (including text typed into text layers), and the conversation history in the AI edit requests row of Article 1, and, if the request needs to find a scene, frames taken from that clip at 4 per second (still images at most 512 pixels wide, which may show a face)</td>
@@ -525,6 +545,8 @@ export default function PrivacyPage() {
                   RevenueCat, Inc.
                   <br />
                   <a className="underline" href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>
+                  <br />
+                  Contact: compliance@revenuecat.com
                 </td>
                 <td className="p-2">United States (AWS US regions) / when a signed-in user opens the app, when you subscribe or restore purchases, and when a subscription is renewed, canceled, or refunded / sent over the network (HTTPS encrypted) from the app and Apple to RevenueCat, and from RevenueCat to the Team&rsquo;s server</td>
                 <td className="p-2">Server account identifier (a random value created by the server), device type, OS version, app version, the time you last used the app, and, if you subscribe or restore purchases, the transaction information in the subscription information row of Article 1. Email, name, and payment method information are not sent</td>
@@ -924,6 +946,15 @@ export default function PrivacyPage() {
           does not store the IP address, and updated the summary and Articles 1 and 5. The same applies to records passed from
           the measurement tool (Airbridge) to the analytics tool. This revision reduces the information processed, so it takes
           effect on the date of notice.
+        </p>
+        <p className="text-gray-600">
+          Revision of November 7, 2026 (items provided to Meta and contacts for overseas transfers): We corrected the items
+          provided to Meta in Article 4 to match what is actually forwarded, and updated the summary. Since October 5, 2026, the
+          ad performance measurement tool (Airbridge) has also been forwarding events of opening the app through a deep link to
+          Meta and, under the Aggregated Event Measurement (AEM) setting, device information such as the IP address of users who
+          do not allow app tracking, but the previous policy did not state this. We also added a privacy contact for each overseas
+          recipient in Article 5 and for Meta in Article 4. This revision describes processing already in place as it actually
+          is, so it takes effect on the date of notice.
         </p>
         <p><strong>Date of notice: November 7, 2026 / Effective date: November 7, 2026</strong> (the revision announced on November 6, 2026 takes effect on November 6, 2026; the revision announced on November 5, 2026 takes effect on November 5, 2026; the revision announced on November 3, 2026 takes effect on November 3, 2026; the RevenueCat revision announced on October 28, 2026 takes effect on November 4, 2026; the place search revision announced the same day takes effect on October 28, 2026; the revision announced on October 27, 2026 takes effect on November 1, 2026; the revision announced on October 26, 2026 takes effect on October 26, 2026; the revision announced on October 25, 2026 takes effect on November 1, 2026; the revision announced on October 12, 2026 takes effect on October 19, 2026; the revision announced on October 8, 2026 takes effect on October 8, 2026; the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
       </Section>
