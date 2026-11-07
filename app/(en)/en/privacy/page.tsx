@@ -80,7 +80,7 @@ export default function PrivacyPage() {
         separately consented (Articles 1 and 7). Gender and age group are optional and you do not have to
         answer (Article 1). App usage records for service improvement are sent to an external
         analytics tool and to the Team&rsquo;s server (in Korea, kept for 90 days, Article 3), and install and launch records for ad performance measurement are sent to an
-        external measurement tool (Article 5). The analytics tool stores the IP address of the records the app sends and the approximate location (country, region, city) looked up from it (Article 1). The advertising identifier (IDFA) is used only if you
+        external measurement tool (Article 5). The analytics tool looks up the approximate location (country, region, city) from the IP address of the records the app sends and stores that location, but does not store the IP address (Article 1). The advertising identifier (IDFA) is used only if you
         allow app tracking (Article 10).
       </p>
 
@@ -185,8 +185,8 @@ export default function PrivacyPage() {
                 <td className="p-2">Generated automatically while you use the service and sent to analytics tools (Article 5) and to the Team&rsquo;s server (in Korea, Article 3)</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">IP address and approximate location (collected automatically)</td>
-                <td className="p-2">The IP address used when the app sends records to the analytics tool, and the country, region, city, and US broadcast market that the analytics tool looks up from it. The IP address of records passed from the measurement tool (Airbridge) to the analytics tool is also stored, and the IP address of records passed before this revision remains stored. GPS location is not used, and latitude and longitude are not sent</td>
+                <td className="p-2 font-semibold">Approximate location (collected automatically)</td>
+                <td className="p-2">The country, region, city, and US broadcast market that the analytics tool looks up from the IP address used when the app sends records to it. The analytics tool uses the IP address only for this lookup and does not store it, and the same applies to records passed from the measurement tool (Airbridge) to the analytics tool. GPS location is not used, and latitude and longitude are not sent</td>
                 <td className="p-2">Generated automatically when records are sent and kept in the analytics tool (Article 5)</td>
               </tr>
               <tr className="border-b border-gray-200">
@@ -437,7 +437,7 @@ export default function PrivacyPage() {
                   <a className="underline" href="https://amplitude.com/privacy">amplitude.com/privacy</a>
                 </td>
                 <td className="p-2">United States / continuously while you use the app / network (HTTPS encrypted)</td>
-                <td className="p-2">Anonymous device identifier, account identifier issued by the server (only when signed in), feature usage events, user experience survey responses, values derived from running records (distance bucket, whether a route exists, whether a place name exists), attribution details (names of the ad channel, campaign, ad group, and creative), IP address, approximate location looked up from the IP address (country, region, city, US broadcast market)</td>
+                <td className="p-2">Anonymous device identifier, account identifier issued by the server (only when signed in), feature usage events, user experience survey responses, values derived from running records (distance bucket, whether a route exists, whether a place name exists), attribution details (names of the ad channel, campaign, ad group, and creative), IP address (used only to look up approximate location and not stored), approximate location looked up from the IP address (country, region, city, US broadcast market)</td>
                 <td className="p-2">Usage analysis and service quality improvement, comparing attribution performance by ad, understanding usage by country and city / until the end of the contract or fulfillment of the purpose</td>
               </tr>
               <tr className="border-b border-gray-200">
@@ -918,7 +918,14 @@ export default function PrivacyPage() {
           included. These records are created automatically to operate the server and existing usage does not change, so this
           revision takes effect on the date of notice.
         </p>
-        <p><strong>Date of notice: November 6, 2026 / Effective date: November 6, 2026</strong> (the revision announced on November 5, 2026 takes effect on November 5, 2026; the revision announced on November 3, 2026 takes effect on November 3, 2026; the RevenueCat revision announced on October 28, 2026 takes effect on November 4, 2026; the place search revision announced the same day takes effect on October 28, 2026; the revision announced on October 27, 2026 takes effect on November 1, 2026; the revision announced on October 26, 2026 takes effect on October 26, 2026; the revision announced on October 25, 2026 takes effect on November 1, 2026; the revision announced on October 12, 2026 takes effect on October 19, 2026; the revision announced on October 8, 2026 takes effect on October 8, 2026; the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
+        <p className="text-gray-600">
+          Revision of November 7, 2026: We changed the analytics tool (Amplitude, United States) so that it uses
+          the IP address of app records only to look up approximate location (country, region, city, US broadcast market) and
+          does not store the IP address, and updated the summary and Articles 1 and 5. The same applies to records passed from
+          the measurement tool (Airbridge) to the analytics tool. This revision reduces the information processed, so it takes
+          effect on the date of notice.
+        </p>
+        <p><strong>Date of notice: November 7, 2026 / Effective date: November 7, 2026</strong> (the revision announced on November 6, 2026 takes effect on November 6, 2026; the revision announced on November 5, 2026 takes effect on November 5, 2026; the revision announced on November 3, 2026 takes effect on November 3, 2026; the RevenueCat revision announced on October 28, 2026 takes effect on November 4, 2026; the place search revision announced the same day takes effect on October 28, 2026; the revision announced on October 27, 2026 takes effect on November 1, 2026; the revision announced on October 26, 2026 takes effect on October 26, 2026; the revision announced on October 25, 2026 takes effect on November 1, 2026; the revision announced on October 12, 2026 takes effect on October 19, 2026; the revision announced on October 8, 2026 takes effect on October 8, 2026; the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
       </Section>
     </main>
   );
