@@ -121,7 +121,7 @@ export default function PrivacyPage() {
             <tbody>
               <tr className="border-b border-gray-200">
                 <td className="p-2 font-semibold">Account information</td>
-                <td className="p-2">Login provider (Google, Apple, Kakao, or Naver), the user identifier issued by the provider, and email. If you use Apple&rsquo;s &lsquo;Hide My Email&rsquo;, the relay address Apple creates is collected. We do not receive your name or profile photo</td>
+                <td className="p-2">Login provider (Google, Apple, Kakao, or Naver), the user identifier issued by the provider, and email. If you use Apple&rsquo;s &lsquo;Hide My Email&rsquo;, the relay address Apple creates is collected. We do not receive your name or profile photo. We also store the version and time of your Terms of Service agreement, the time you confirmed you are 14 or older, and whether and when you consented to keeping health records on the server, all collected when you sign in</td>
                 <td className="p-2">Received from the provider when you sign in with a social login</td>
               </tr>
               <tr className="border-b border-gray-200">
@@ -679,9 +679,18 @@ export default function PrivacyPage() {
 
       <Section title="Article 11 (Handling of Health Data)">
         <p>
+          <strong>Heart rate, cadence, and calories are health information (sensitive information), so they are stored on
+          the Team&rsquo;s server (in Korea) only if you give the optional &lsquo;keep health records on the server&rsquo;
+          consent, which is asked separately from the Terms of Service agreement when you sign in.</strong> They are kept to
+          restore your running records on another device, until you withdraw consent, and are deleted 30 days after you
+          delete your account. You can use the app without agreeing; if you change devices, values you entered yourself are
+          not restored. You can turn this consent off at any time in Settings &gt; Keep health records on server, which
+          deletes the heart rate, cadence, and calories of your account from the server.
+        </p>
+        <p>
           Running records read from Apple HealthKit are used only to create content and to back up
-          and restore your own records. Measurements of signed-in users (distance, duration, pace, heart rate, cadence,
-          and so on) are stored on the Team&rsquo;s server (in Korea) for backup (records made as a guest are not stored on the server), and <strong>GPS
+          and restore your own records. Measurements of signed-in users (distance, duration, pace,
+          and so on; heart rate, cadence, and calories only with the separate consent below) are stored on the Team&rsquo;s server (in Korea) for backup (records made as a guest are not stored on the server), and <strong>GPS
           routes are not sent to the Team&rsquo;s server, and the server is built not to accept
           them.</strong> In line with Apple&rsquo;s policies, <strong>health data is never used for
           advertising or marketing, and is never sold or provided to third parties.</strong>{" "}
@@ -955,6 +964,16 @@ export default function PrivacyPage() {
           do not allow app tracking, but the previous policy did not state this. We also added a privacy contact for each overseas
           recipient in Article 5 and for Meta in Article 4. This revision describes processing already in place as it actually
           is, so it takes effect on the date of notice.
+        </p>
+        <p className="text-gray-600">
+          Revision of November 7, 2026 (sign-in consent and separate health record consent): We removed the notice that
+          signing in &lsquo;counts as agreeing&rsquo;, and now ask you to check the Terms of Service agreement and confirm you
+          are 14 or older, with keeping health records on the server asked as a separate choice. We added the consent records
+          (terms version and time, the time you confirmed your age, and whether and when you consented to health records) to
+          account information (Article 1), and stated in Article 11 that heart rate, cadence, and calories are stored only with
+          the health record consent. Accounts without that consent no longer have heart rate, cadence, and calories stored on
+          the server from the effective date, so this revision reduces the information processed and takes effect on the date
+          of notice.
         </p>
         <p><strong>Date of notice: November 7, 2026 / Effective date: November 7, 2026</strong> (the revision announced on November 6, 2026 takes effect on November 6, 2026; the revision announced on November 5, 2026 takes effect on November 5, 2026; the revision announced on November 3, 2026 takes effect on November 3, 2026; the RevenueCat revision announced on October 28, 2026 takes effect on November 4, 2026; the place search revision announced the same day takes effect on October 28, 2026; the revision announced on October 27, 2026 takes effect on November 1, 2026; the revision announced on October 26, 2026 takes effect on October 26, 2026; the revision announced on October 25, 2026 takes effect on November 1, 2026; the revision announced on October 12, 2026 takes effect on October 19, 2026; the revision announced on October 8, 2026 takes effect on October 8, 2026; the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
       </Section>
