@@ -107,11 +107,19 @@ export default function SupportPage() {
 
         <Faq question="Are my photos uploaded to a server?">
           <p>
-            No. Your original photos and videos never leave your device. Judging which shots came
-            out well also happens on your device.
+            Judging which shots came out well happens on your device. Your photos and videos are
+            uploaded to the Team&rsquo;s server only in the cases below.
           </p>
           <p>
-            The one exception is AI templates. The single video frame you select is sent through
+            Signing in turns on project backup. So you can keep editing a project on another device,
+            the original photos and videos used in the project are kept on the Team&rsquo;s server
+            (in Korea) together with the editing information. Capture details such as the capture
+            location, capture time, and device information are removed before upload. You can turn
+            off project backup in My Info &gt; Settings &gt; Project backup. When you delete a
+            project in the app, it is deleted from the server 30 days later.
+          </p>
+          <p>
+            AI templates also upload. The single video frame you select is sent through
             the Team&rsquo;s server to the AI providers, and the server deletes that frame as soon as
             it returns the result. The freeze frame the AI creates is kept on the Team&rsquo;s
             server for 90 days after your last edit so you can keep editing it and restore it on
@@ -130,13 +138,14 @@ export default function SupportPage() {
 
         <Faq question="What happens to my data if I delete the app?">
           <p>
-            What was on your device is deleted with the app. Drafts you were editing and your
-            settings live only on your device, so iOS removes them when you delete the app. Results
+            What was on your device is deleted with the app. The projects and settings on your
+            device are removed by iOS when you delete the app. Results
             you already saved to your library remain.
           </p>
           <p>
             What was on the server remains. If you used the app signed in, your account
-            information, running record backups, and the freeze frames made with AI templates are
+            information, running record backups, project backups, and the freeze frames made with
+            AI templates are
             on the Team&rsquo;s server. To delete those as well, request account deletion from the
             My Info screen before deleting the app. They are permanently deleted 30 days after the
             request, and signing in again before then cancels it. Running record backups made as a
