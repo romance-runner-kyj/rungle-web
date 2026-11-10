@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="mt-10">
-      <h2 className="text-xl font-bold border-b border-gray-200 pb-2">{title}</h2>
+      <h2 className="text-xl border-b border-gray-200 pb-2">{title}</h2>
       <div className="mt-4 space-y-3 leading-7 text-gray-800">{children}</div>
     </section>
   );
@@ -21,7 +21,7 @@ export default function TermsPage() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 text-[15px]">
       <LangSwitch path="/terms" current="ko" />
-      <h1 className="text-3xl font-extrabold">이용약관</h1>
+      <h1 className="text-3xl">이용약관</h1>
       <p className="mt-4 leading-7 text-gray-800">
         본 약관은 Rungle 운영팀(이하 &ldquo;운영팀&rdquo;)이 제공하는 Rungle 서비스의 이용과
         관련하여 운영팀과 이용자 간의 권리·의무 및 책임 사항을
@@ -31,16 +31,16 @@ export default function TermsPage() {
       <Section title="제1조 (정의)">
         <ul className="list-disc space-y-1 pl-5">
           <li>
-            <strong>&ldquo;서비스&rdquo;</strong>란 러닝 기록을 불러와 사진·영상에서 베스트컷을
+            &ldquo;서비스&rdquo;란 러닝 기록을 불러와 사진·영상에서 베스트컷을
             골라주고 기록 오버레이·릴스를 만들어 공유할 수 있도록 하는 iOS 앱 및 이에 부수하는
             제반 기능을 말합니다.
           </li>
           <li>
-            <strong>&ldquo;이용자&rdquo;</strong>란 본 약관에 따라 서비스를 이용하는 사람을
+            &ldquo;이용자&rdquo;란 본 약관에 따라 서비스를 이용하는 사람을
             말합니다.
           </li>
           <li>
-            <strong>&ldquo;콘텐츠&rdquo;</strong>란 이용자가 서비스를 이용하는 과정에서
+            &ldquo;콘텐츠&rdquo;란 이용자가 서비스를 이용하는 과정에서
             불러오거나 만들어 내는 사진·영상·기록 오버레이·릴스 등 일체의 결과물을 말합니다.
           </li>
         </ul>
@@ -80,10 +80,10 @@ export default function TermsPage() {
           이용자가 선택할 수 있습니다.
         </p>
         <p>
-          <strong>
+          
             서비스는 계속 개선 중인 초기 버전으로, 기능이 예고 없이 추가·변경될 수 있으며
             일부 기능이 불완전하게 동작할 수 있습니다.
-          </strong>
+          
         </p>
       </Section>
 
@@ -111,7 +111,7 @@ export default function TermsPage() {
       <Section title="제5조 (콘텐츠에 대한 권리)">
         <ul className="list-disc space-y-1 pl-5">
           <li>
-            이용자가 불러오거나 만든 콘텐츠에 대한 권리는 <strong>이용자 본인에게</strong>{" "}
+            이용자가 불러오거나 만든 콘텐츠에 대한 권리는 이용자 본인에게{" "}
             있으며, 운영팀은 이용자의 콘텐츠에 대해 어떠한 권리도 주장하지 않습니다.
             콘텐츠는 원칙적으로 이용자의 기기 안에서 처리·보관되며, 일부 기능의 외부 처리
             여부는 개인정보 처리방침에서 정한 범위에 따릅니다.
@@ -128,7 +128,7 @@ export default function TermsPage() {
         <p>
           운영팀은 관련 법령이 정하는 바에 따라 이용자의 개인정보를 보호하기 위해 노력합니다.
           개인정보의 처리에 관한 사항은{" "}
-          <Link href="/privacy" className="font-semibold underline underline-offset-2">
+          <Link href="/privacy" className="underline underline-offset-2">
             개인정보 처리방침
           </Link>
           에 따릅니다.
@@ -185,7 +185,7 @@ export default function TermsPage() {
       </Section>
 
       <Section title="부칙">
-        <p><strong>시행일: 2026년 8월 4일</strong></p>
+        <p>시행일: 2026년 8월 4일</p>
       </Section>
     </main>
   );

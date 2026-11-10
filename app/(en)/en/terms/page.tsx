@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="mt-10">
-      <h2 className="text-xl font-bold border-b border-gray-200 pb-2">{title}</h2>
+      <h2 className="text-xl border-b border-gray-200 pb-2">{title}</h2>
       <div className="mt-4 space-y-3 leading-7 text-gray-800">{children}</div>
     </section>
   );
@@ -23,7 +23,7 @@ export default function TermsPage() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 text-[15px]">
       <LangSwitch path="/terms" current="en" />
-      <h1 className="text-3xl font-extrabold">Terms of Service</h1>
+      <h1 className="text-3xl">Terms of Service</h1>
       <p className="mt-2 text-sm text-gray-600">
         This is an English translation of the Korean Terms of Service. If the two versions differ,
         the Korean version prevails.
@@ -37,16 +37,16 @@ export default function TermsPage() {
       <Section title="Article 1 (Definitions)">
         <ul className="list-disc space-y-1 pl-5">
           <li>
-            <strong>&ldquo;Service&rdquo;</strong> means the iOS app that imports your running
+            &ldquo;Service&rdquo; means the iOS app that imports your running
             records, picks the best shots from your photos and videos, and lets you create and
             share record overlays and reels, together with all related features.
           </li>
           <li>
-            <strong>&ldquo;User&rdquo;</strong> means a person who uses the Service under these
+            &ldquo;User&rdquo; means a person who uses the Service under these
             Terms.
           </li>
           <li>
-            <strong>&ldquo;Content&rdquo;</strong> means everything a User imports or creates while
+            &ldquo;Content&rdquo; means everything a User imports or creates while
             using the Service, including photos, videos, record overlays, and reels.
           </li>
         </ul>
@@ -87,10 +87,10 @@ export default function TermsPage() {
           grant each permission, such as HealthKit and Photos.
         </p>
         <p>
-          <strong>
+          
             The Service is an early version under continuous improvement. Features may be added or
             changed without notice, and some features may not work perfectly.
-          </strong>
+          
         </p>
       </Section>
 
@@ -117,7 +117,7 @@ export default function TermsPage() {
       <Section title="Article 5 (Rights to Content)">
         <ul className="list-disc space-y-1 pl-5">
           <li>
-            Rights to the Content you import or create belong to <strong>you</strong>, and the Team
+            Rights to the Content you import or create belong to you, and the Team
             claims no rights to your Content. Content is in principle processed and stored on your
             device; whether some features process data externally is governed by the Privacy
             Policy.
@@ -134,7 +134,7 @@ export default function TermsPage() {
         <p>
           The Team strives to protect Users&rsquo; personal information as required by applicable
           law. Matters concerning the processing of personal information are governed by the{" "}
-          <Link href="/en/privacy" className="font-semibold underline underline-offset-2">
+          <Link href="/en/privacy" className="underline underline-offset-2">
             Privacy Policy
           </Link>
           .
@@ -193,7 +193,7 @@ export default function TermsPage() {
       </Section>
 
       <Section title="Addendum">
-        <p><strong>Effective date: August 4, 2026</strong></p>
+        <p>Effective date: August 4, 2026</p>
       </Section>
     </main>
   );

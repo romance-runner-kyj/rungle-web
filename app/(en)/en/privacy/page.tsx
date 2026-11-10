@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="mt-10">
-      <h2 className="text-xl font-bold border-b border-gray-200 pb-2">{title}</h2>
+      <h2 className="text-xl border-b border-gray-200 pb-2">{title}</h2>
       <div className="mt-4 space-y-3 leading-7 text-gray-800">{children}</div>
     </section>
   );
@@ -22,7 +22,7 @@ export default function PrivacyPage() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 text-[15px]">
       <LangSwitch path="/privacy" current="en" />
-      <h1 className="text-3xl font-extrabold">Privacy Policy</h1>
+      <h1 className="text-3xl">Privacy Policy</h1>
       <p className="mt-2 text-sm text-gray-600">
         This is an English translation of the Korean Privacy Policy. If the two versions differ, the
         Korean version prevails.
@@ -38,16 +38,16 @@ export default function PrivacyPage() {
         photos and videos, and helps you create and share record overlays and reels. This policy
         applies to the version currently available. You can sign up with a social login, or use the
         app without signing in (as a guest). Running records of signed-in users are stored on the
-        Team&rsquo;s server (in Korea) for backup and restore, and <strong>running records made as a guest
-        are not stored on the server and stay only on your device.</strong> <strong>Photos and videos are processed on your device
-        by default.</strong> When a signed-in user edits photos or reels, the Team keeps the
+        Team&rsquo;s server (in Korea) for backup and restore, and running records made as a guest
+        are not stored on the server and stay only on your device. Photos and videos are processed on your device
+        by default. When a signed-in user edits photos or reels, the Team keeps the
         original photos and videos used in that edit (a &ldquo;project&rdquo;) and its editing
         information on the Team&rsquo;s server (in Korea) so you can keep editing it and restore it
         on another device (&ldquo;project backup&rdquo;, Articles 1 and 3). Capture details
         embedded in photos and videos, such as capture location, capture time, and device
         information, are removed before upload, keeping only the orientation value. You can turn off project backup in
         the app&rsquo;s settings, and nothing is uploaded if you do not sign in (as a guest).{" "}
-        <strong>GPS routes are not stored on the server.</strong>{" "}
+        GPS routes are not stored on the server.{" "}
         In addition, when you choose to use a reel template in which artificial
         intelligence (AI) reads a video frame or creates a freeze-frame image (an &ldquo;AI
         template&rdquo;) or the best-shot judgment of Quick Stamp, frames taken from the videos and
@@ -55,7 +55,7 @@ export default function PrivacyPage() {
         through the Team&rsquo;s server to overseas AI providers (Google and OpenAI), and the server
         deletes them as soon as it returns the result (Articles 1 and 5). The freeze frame the AI creates is kept on the Team&rsquo;s
         server (in Korea) for 90 days after your last edit so you can keep editing it and restore it
-        on another device (Article 3). When a signed-in user turns on <strong>Auto Edit</strong>, a
+        on another device (Article 3). When a signed-in user turns on Auto Edit, a
         subscription feature (&ldquo;Auto Edit&rdquo;), and starts it after a run, the app picks
         candidates from the photos and videos taken during that run and sends reduced copies of them,
         together with values calculated from your running records (such as distance, pace changes, and
@@ -64,7 +64,7 @@ export default function PrivacyPage() {
         copies and values sent are deleted as soon as the job ends (Articles 1, 3, 5, and 11).
         Subscription payments are handled by Apple, and the Team receives only the transaction
         information needed to confirm your subscription status, through the subscription management
-        service RevenueCat (United States) (Articles 1 and 5). When a signed-in user uses <strong>AI edit requests</strong>,
+        service RevenueCat (United States) (Articles 1 and 5). When a signed-in user uses AI edit requests,
         a feature for writing the edit you want as a sentence in the photo or reel editor and sending it (&ldquo;AI edit requests&rdquo;), that sentence, a text
         summary of the current edit (including text you typed into text layers, but excluding running
         record values, place names, and GPS), and earlier requests and results in the same edit go
@@ -86,15 +86,15 @@ export default function PrivacyPage() {
 
       {/* 중요 사항 요약 표시 (개인정보 처리방침 주요 내용) */}
       <div className="mt-8 rounded-lg border border-gray-300 bg-gray-50 p-5">
-        <h2 className="font-bold">Key Points (Summary)</h2>
+        <h2>Key Points (Summary)</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5">
-          <li><strong>Account information:</strong> When you sign up with a social login, we collect the login provider, the user identifier issued by that provider, and your email (Article 1). Your nickname is generated and assigned by the service, not collected. Gender and age group are optional; you can skip them and still use every feature (Article 1)</li>
-          <li><strong>What we process:</strong> Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server when you are signed in (GPS routes excluded; guest records are not stored on the server); one starting coordinate of the route is sent to Apple to display the running location name and to search for places, together with the search text when you search (Articles 5 and 11) / Photos and videos: processed and stored on your device by default. Only when you use an AI template or the Quick Stamp judgment, frames taken from the videos and photos you select (one or several, 512 pixels wide) are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Articles 1 and 5), and the freeze frame the AI creates is also kept on the Team&rsquo;s server (Article 3). When an AI edit request needs to find a scene, frames taken from that clip are also sent (see AI edit requests below). For signed-in users, the original photos and videos of edited projects (with capture details other than orientation removed) and their editing information are kept on the Team&rsquo;s server (in Korea) for backup (Articles 1 and 3; can be turned off in settings) / Device information (including the push notification token when notifications are on, and whether you consented to promotional notifications) and app usage records (including the account identifier issued by the server when you are signed in): registered on the server and sent to analytics tools (Article 5), with app usage records also kept on the Team&rsquo;s server (in Korea) (Article 3) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5) / Error records from the Team&rsquo;s server (excluding request contents and personal details): sent to an error tracking tool (Article 5) / Auto Edit (when turned on): reduced copies of candidates the app picks from the photos and videos taken during your run (including copies with a record overlay applied) and values calculated from your running records are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI), and the result (editing instructions and caption text) is kept on the Team&rsquo;s server (Articles 1, 3, 5, and 11) / Auto Edit survey answers (account type, follower count, main posting format, and so on): used to set up the virtual viewers, and also used for marketing and analytics only if you separately consent (Articles 1 and 2) / Subscription transaction information: received from Apple through the subscription management service (RevenueCat) and used to confirm your subscription status (Articles 1 and 5) / AI edit requests (when you send one): the request sentence you wrote, a text summary of the current edit (including text you typed into text layers, but excluding running record values, place names, and GPS), earlier requests and results in the same edit, and, if the request needs to find a scene, frames taken from that clip at 4 per second (at most 512 pixels wide) are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI); the request record is kept on the Team&rsquo;s server (in Korea) for 1 day, and the conversation history is saved on your device with the project (Articles 1, 3, 5, and 11) / Running course favorites and export records (when signed in) — kept on the Team&rsquo;s server (in Korea) (Articles 1 and 3) / Server access records (connecting IP address, request path, response code, and time) — recorded automatically when the app sends a request to the Team&rsquo;s server and kept on the Team&rsquo;s server (in Korea) for 90 days (Articles 1 and 3)</li>
-          <li><strong>Purposes:</strong> Best-shot recommendations, creating record overlays and reels, pose and scene reading and freeze-frame creation in AI templates, push notifications for AI job results and promotional notifications (offers and news) for users who consented, account login and record backup and restore, continued editing and cross-device restore of AI-created freeze frames, continued editing and cross-device restore of edited projects (project backup), running statistics and personalized recommendations by gender and age group, service quality improvement, ad performance measurement (finding out which ad led to an install and a sign-up), creating candidates, AI evaluation, caption recommendations, and result notifications for Auto Edit, marketing and analytics using the Auto Edit survey answers of users who consented, confirming subscription status and free trial and usage counts, and interpreting requests (deciding which editing functions to use with which values) and finding scenes for AI edit requests, keeping running course favorites and ranking popular courses by region, and finding the cause of server failures and slowdowns</li>
-          <li><strong>Retention:</strong> Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); frames and photos sent to AI providers are deleted from the server as soon as the result is received, the push notification token is deleted as soon as you turn notifications off or revoke the permission (Article 3), and the freeze frame the AI creates is kept for 90 days after your last edit and then deleted (deleted together with your account information when you delete your account, Article 3); project backups are deleted after a 30-day grace period once you delete the project or request account deletion, and files no longer used by any project are deleted after 24 hours (Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled, and kept on the Team&rsquo;s server (in Korea) for 90 days and then deleted (when you delete your account, the account and device identifiers are removed after the 30-day grace period, Article 3); the photo and video copies and record values sent for Auto Edit are deleted as soon as the job ends, and Auto Edit results and subscription transaction information are deleted after a 30-day grace period once you request account deletion, and the record that you used the free trial is kept, as an irreversibly transformed value, for as long as the free trial is offered so the trial cannot be repeated by signing up again with the same social account (Article 3); the request sentence, edit summary, conversation history, and frames sent for AI edit requests are not stored on the server and are gone as soon as the result is returned, the request record is kept on the Team&rsquo;s server (in Korea) for 1 day after the request and then deleted, and the conversation history is saved on your device with the project and, when project backup is on, follows the retention of project backups (Article 3), and running course favorites and export records are deleted after a 30-day grace period once you request account deletion (Article 3); server access records are deleted after 90 days (Article 3)</li>
-          <li><strong>Sharing with third parties:</strong> Not done in principle. While we run ads, install, deep link open, and share-completed events and device information such as the IP address are provided to Meta (Article 4). App usage analysis, ad performance measurement, converting coordinates to place names and place search, frame reading and freeze-frame creation for AI templates and Quick Stamp, candidate evaluation and caption generation for Auto Edit, request interpretation and scene finding for AI edit requests, push notification delivery, server error record analysis, and subscription payment confirmation are outsourced to overseas providers (Article 5)</li>
-          <li><strong>Privacy officer:</strong> Dongho Kim (admin@rungle.app)</li>
-          <li><strong>Contact:</strong> The Team (admin@rungle.app)</li>
+          <li>Account information: When you sign up with a social login, we collect the login provider, the user identifier issued by that provider, and your email (Article 1). Your nickname is generated and assigned by the service, not collected. Gender and age group are optional; you can skip them and still use every feature (Article 1)</li>
+          <li>What we process: Running records (HealthKit, screenshots of record screens): processed on your device, with measurements backed up to the server when you are signed in (GPS routes excluded; guest records are not stored on the server; heart rate, cadence, and calories only if you consent to keeping health records on the server, Article 11); one starting coordinate of the route is sent to Apple to display the running location name and to search for places, together with the search text when you search (Articles 5 and 11) / Photos and videos: processed and stored on your device by default. Only when you use an AI template or the Quick Stamp judgment, frames taken from the videos and photos you select (one or several, 512 pixels wide) are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI) (Articles 1 and 5), and the freeze frame the AI creates is also kept on the Team&rsquo;s server (Article 3). When an AI edit request needs to find a scene, frames taken from that clip are also sent (see AI edit requests below). For signed-in users, the original photos and videos of edited projects (with capture details other than orientation removed) and their editing information are kept on the Team&rsquo;s server (in Korea) for backup (Articles 1 and 3; can be turned off in settings) / Device information (including the push notification token when notifications are on, and whether you consented to promotional notifications) and app usage records (including the account identifier issued by the server when you are signed in): registered on the server and sent to analytics tools (Article 5), with app usage records also kept on the Team&rsquo;s server (in Korea) (Article 3) / Ad attribution information (the advertising identifier only if tracking is allowed): sent to an ad performance measurement tool (Article 5) / Error records from the Team&rsquo;s server (excluding request contents and personal details): sent to an error tracking tool (Article 5) / Auto Edit (when turned on): reduced copies of candidates the app picks from the photos and videos taken during your run (including copies with a record overlay applied) and values calculated from your running records are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI), and the result (editing instructions and caption text) is kept on the Team&rsquo;s server (Articles 1, 3, 5, and 11) / Auto Edit survey answers (account type, follower count, main posting format, and so on): used to set up the virtual viewers, and also used for marketing and analytics only if you separately consent (Articles 1 and 2) / Subscription transaction information: received from Apple through the subscription management service (RevenueCat) and used to confirm your subscription status (Articles 1 and 5) / AI edit requests (when you send one): the request sentence you wrote, a text summary of the current edit (including text you typed into text layers, but excluding running record values, place names, and GPS), earlier requests and results in the same edit, and, if the request needs to find a scene, frames taken from that clip at 4 per second (at most 512 pixels wide) are sent through the Team&rsquo;s server to overseas AI providers (Google and OpenAI); the request record is kept on the Team&rsquo;s server (in Korea) for 1 day, and the conversation history is saved on your device with the project (Articles 1, 3, 5, and 11) / Running course favorites and export records (when signed in) — kept on the Team&rsquo;s server (in Korea) (Articles 1 and 3) / Server access records (connecting IP address, request path, response code, and time) — recorded automatically when the app sends a request to the Team&rsquo;s server and kept on the Team&rsquo;s server (in Korea) for 90 days (Articles 1 and 3)</li>
+          <li>Purposes: Best-shot recommendations, creating record overlays and reels, pose and scene reading and freeze-frame creation in AI templates, push notifications for AI job results and promotional notifications (offers and news) for users who consented, account login and record backup and restore, continued editing and cross-device restore of AI-created freeze frames, continued editing and cross-device restore of edited projects (project backup), running statistics and personalized recommendations by gender and age group, service quality improvement, ad performance measurement (finding out which ad led to an install and a sign-up), creating candidates, AI evaluation, caption recommendations, and result notifications for Auto Edit, marketing and analytics using the Auto Edit survey answers of users who consented, confirming subscription status and free trial and usage counts, and interpreting requests (deciding which editing functions to use with which values) and finding scenes for AI edit requests, keeping running course favorites and ranking popular courses by region, and finding the cause of server failures and slowdowns</li>
+          <li>Retention: Account information (including gender and age group) and server backups are deleted after a 30-day grace period once you request account deletion (Article 3); health records (heart rate, cadence, and calories) on the server are kept until you withdraw your consent to keeping health records on the server (Articles 3 and 11); frames and photos sent to AI providers are deleted from the server as soon as the result is received, the push notification token is deleted as soon as you turn notifications off or revoke the permission (Article 3), and the freeze frame the AI creates is kept for 90 days after your last edit and then deleted (deleted together with your account information when you delete your account, Article 3); project backups are deleted after a 30-day grace period once you delete the project or request account deletion, and files no longer used by any project are deleted after 24 hours (Article 3); on-device information is deleted when you delete the app (the only exception is the anonymous device identifier, which stays on the device, Article 3); app usage records are kept by our service providers and deleted once their purpose is fulfilled, and kept on the Team&rsquo;s server (in Korea) for 90 days and then deleted (when you delete your account, the account and device identifiers are removed after the 30-day grace period, Article 3); the photo and video copies and record values sent for Auto Edit are deleted as soon as the job ends, and Auto Edit results and subscription transaction information are deleted after a 30-day grace period once you request account deletion, and the record that you used the free trial is kept, as an irreversibly transformed value, for as long as the free trial is offered so the trial cannot be repeated by signing up again with the same social account (Article 3); the request sentence, edit summary, conversation history, and frames sent for AI edit requests are not stored on the server and are gone as soon as the result is returned, the request record is kept on the Team&rsquo;s server (in Korea) for 1 day after the request and then deleted, and the conversation history is saved on your device with the project and, when project backup is on, follows the retention of project backups (Article 3), and running course favorites and export records are deleted after a 30-day grace period once you request account deletion (Article 3); server access records are deleted after 90 days (Article 3)</li>
+          <li>Sharing with third parties: Not done in principle. While we run ads, install, deep link open, and share-completed events and device information such as the IP address are provided to Meta (Article 4). App usage analysis, ad performance measurement, converting coordinates to place names and place search, frame reading and freeze-frame creation for AI templates and Quick Stamp, candidate evaluation and caption generation for Auto Edit, request interpretation and scene finding for AI edit requests, push notification delivery, server error record analysis, and subscription payment confirmation are outsourced to overseas providers (Article 5)</li>
+          <li>Privacy officer: Dongho Kim (admin@rungle.app)</li>
+          <li>Contact: The Team (admin@rungle.app)</li>
         </ul>
       </div>
 
@@ -113,96 +113,96 @@ export default function PrivacyPage() {
           <table className="w-full border-collapse text-left">
             <thead>
               <tr className="border-b border-gray-300 bg-gray-50">
-                <th className="p-2 font-bold">Item</th>
-                <th className="p-2 font-bold">Details</th>
-                <th className="p-2 font-bold">How it is collected</th>
+                <th className="p-2 font-normal">Item</th>
+                <th className="p-2 font-normal">Details</th>
+                <th className="p-2 font-normal">How it is collected</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Account information</td>
-                <td className="p-2">Login provider (Google, Apple, Kakao, or Naver), the user identifier issued by the provider, and email. If you use Apple&rsquo;s &lsquo;Hide My Email&rsquo;, the relay address Apple creates is collected. We do not receive your name or profile photo. We also store the version and time of your Terms of Service agreement, the time you confirmed you are 14 or older, and whether and when you consented to keeping health records on the server, all collected when you sign in</td>
-                <td className="p-2">Received from the provider when you sign in with a social login</td>
+                <td className="p-2">Account information</td>
+                <td className="p-2">Login provider (Google, Apple, Kakao, or Naver), the user identifier issued by the provider, and email. If you use Apple&rsquo;s &lsquo;Hide My Email&rsquo;, the relay address Apple creates is collected. We do not receive your name or profile photo. Consent records: the version of the Terms of Service you agreed to and when you agreed, when you confirmed you are 14 or older, and whether you consent to keeping health records on the server and when that choice last changed. If two accounts are merged into one, these records carry over to the merged account</td>
+                <td className="p-2">Received from the provider when you sign in with a social login. Consent records are recorded by the server as you choose on the consent screen after sign-in and in the app&rsquo;s settings</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Profile information (optional)</td>
-                <td className="p-2">Gender (female or male) and age group. <strong>Both are optional, and every feature works the same if you do not answer.</strong> You enter a birth year, but the server stores only a 10-year age group (for example, 20s) and does not keep the birth year itself. We do not collect your name, birthday (month and day), or phone number</td>
+                <td className="p-2">Profile information (optional)</td>
+                <td className="p-2">Gender (female or male) and age group. Both are optional, and every feature works the same if you do not answer. You enter a birth year, but the server stores only a 10-year age group (for example, 20s) and does not keep the birth year itself. We do not collect your name, birthday (month and day), or phone number</td>
                 <td className="p-2">Entered by you in a form shown once after signing in (you can skip it) and on the My Info screen. For Naver login, received from Naver only if you opt in on Naver&rsquo;s consent screen</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Nickname</td>
+                <td className="p-2">Nickname</td>
                 <td className="p-2">A display name the service creates by combining an adjective and an animal name. You can change it in the app</td>
                 <td className="p-2">Generated by the service, not collected</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Device information</td>
+                <td className="p-2">Device information</td>
                 <td className="p-2">Anonymous device identifier, device model, OS version, app version, last access time. If you allow notifications and keep service notifications on in the app&rsquo;s settings, the push notification token (a value Google Firebase issues to the app on this device, Article 5). If you consent to promotional notifications (offers and news), the time of consent, and the time of withdrawal if you withdraw</td>
                 <td className="p-2">Generated automatically when the app registers the device with the Team&rsquo;s server. The app uploads the push notification token after you allow notifications and whenever the value changes, and deletes it when you turn notifications off or revoke the permission. Consent to promotional notifications is recorded only if you tap [Yes, please] in the separate prompt shown after allowing notifications, or turn it on in settings</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Running records</td>
-                <td className="p-2">Running workout data such as distance, duration, pace, calories, heart rate, cadence, and GPS route (including the running location name). Of these, the measurements (distance, duration, pace, calories, heart rate, cadence, and splits) are stored on the Team&rsquo;s server when you are signed in, for backup and restore. <strong>GPS routes are not sent to the Team&rsquo;s server, and the server rejects them even if it receives one.</strong> However, to display the running location name, one starting coordinate of the route is sent to Apple&rsquo;s reverse geocoding server (a service that converts coordinates into place names) (Articles 5 and 11). When you search for a place in a place sticker, the search text and the route&rsquo;s starting coordinate are sent to Apple&rsquo;s place search to get candidate place names.</td>
+                <td className="p-2">Running records</td>
+                <td className="p-2">Running workout data such as distance, duration, pace, calories, heart rate, cadence, and GPS route (including the running location name). Of these, the measurements (distance, duration, pace, and splits, plus calories, heart rate, and cadence if you consent to keeping health records on the server) are stored on the Team&rsquo;s server when you are signed in, for backup and restore (Article 11). GPS routes are not sent to the Team&rsquo;s server, and the server rejects them even if it receives one. However, to display the running location name, one starting coordinate of the route is sent to Apple&rsquo;s reverse geocoding server (a service that converts coordinates into place names) (Articles 5 and 11). When you search for a place in a place sticker, the search text and the route&rsquo;s starting coordinate are sent to Apple&rsquo;s place search to get candidate place names.</td>
                 <td className="p-2">Read from Apple HealthKit if you allow it. The place name is generated by converting the route&rsquo;s first coordinate with Apple reverse geocoding</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Running course favorites and export records (when signed in)</td>
+                <td className="p-2">Running course favorites and export records (when signed in)</td>
                 <td className="p-2">Account identifier, the number of each running course you favorite and when you favorited it, and the number of each running course you export and the date you exported it. Exporting the same course several times on the same day is kept as one record. Your location and GPS route are not included. Popular course rankings by region are built only from per-course counts of these records and of app usage records (the usage records row in Article 1); who favorited or exported a course is never shown</td>
                 <td className="p-2">Sent by the app to the Team&rsquo;s server when a signed-in user favorites a running course or exports it to another app</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Photos and videos</td>
-                <td className="p-2">Photos and videos taken during your run (candidates for best-shot recommendation and editing). Processed on your device; they reach the server in only four cases: the frames for AI templates and the Quick Stamp judgment, the candidate copies for Auto Edit (Auto Edit row below), the frames sent when an AI edit request finds a scene (AI edit requests row below), and the project backup of signed-in users (row below). <strong>Only when you use an AI template or the Quick Stamp judgment</strong>, the frames that feature defines (still images reduced to 512 pixels wide, which may show a face) are sent through the Team&rsquo;s server to the AI providers in Article 5. How much is sent depends on the feature. The freeze-frame template sends the single frame you select from a video; Cut Edit sends frames taken from the videos you select at intervals of about 2 seconds (up to 100 per video and 800 per job); Web Shooter sends up to 60 frames taken from the video you select at 1-second intervals, plus up to 110 frames around the judged moment; Monthly Recap sends frames taken from that month&rsquo;s running videos (up to 90 per run); and the Quick Stamp best-shot judgment sends the photos taken during that run (512-pixel-wide copies). The original video and its audio are never sent. The server also receives which feature you used and the timestamps of the frames, but only the frames go to the AI providers (for Web Shooter, frames with a timestamp label drawn on them). The freeze frame the AI creates from the freeze-frame template&rsquo;s frame is kept on the Team&rsquo;s server for 90 days after your last edit (Article 3).</td>
+                <td className="p-2">Photos and videos</td>
+                <td className="p-2">Photos and videos taken during your run (candidates for best-shot recommendation and editing). Processed on your device; they reach the server in only four cases: the frames for AI templates and the Quick Stamp judgment, the candidate copies for Auto Edit (Auto Edit row below), the frames sent when an AI edit request finds a scene (AI edit requests row below), and the project backup of signed-in users (row below). Only when you use an AI template or the Quick Stamp judgment, the frames that feature defines (still images reduced to 512 pixels wide, which may show a face) are sent through the Team&rsquo;s server to the AI providers in Article 5. How much is sent depends on the feature. The freeze-frame template sends the single frame you select from a video; Cut Edit sends frames taken from the videos you select at intervals of about 2 seconds (up to 100 per video and 800 per job); Web Shooter sends up to 60 frames taken from the video you select at 1-second intervals, plus up to 110 frames around the judged moment; Monthly Recap sends frames taken from that month&rsquo;s running videos (up to 90 per run); and the Quick Stamp best-shot judgment sends the photos taken during that run (512-pixel-wide copies). The original video and its audio are never sent. The server also receives which feature you used and the timestamps of the frames, but only the frames go to the AI providers (for Web Shooter, frames with a timestamp label drawn on them). The freeze frame the AI creates from the freeze-frame template&rsquo;s frame is kept on the Team&rsquo;s server for 90 days after your last edit (Article 3).</td>
                 <td className="p-2">Read from your photo library if you allow it. Frames for AI templates and Quick Stamp are created only when you choose videos or photos in an AI template or Quick Stamp and run it (available only to signed-in accounts). For Auto Edit and AI edit requests, see the rows below</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Auto Edit (when signed in and turned on)</td>
-                <td className="p-2">Copies made from candidates the app picks among the photos and videos taken during your run: frames, reduced photos (including copies with a record overlay applied), and, depending on the feature, short video copies at reduced resolution (which may show a face). Overlays may show your running record values (distance, duration, pace, and so on) and the shape of your route (only the line shape, without a map or coordinates). Values the app calculates from your running records (this run&rsquo;s distance, duration, and pace, the difference from earlier runs, running streaks, cumulative distance over a period, whether it is a personal best or a first achievement, and so on, Article 11). Your Auto Edit survey answers (multiple-choice answers such as account type, follower count, and main posting format, and when you last saved them), and whether you consented to their use for marketing and analytics (and when, if you did). Candidate composition information (candidate type, overlay style, cut lengths and order). Results produced by AI processing (editing instructions describing which candidates to use and how to edit them, caption text, and an evaluation summary). <strong>Original photos and videos, GPS routes and coordinates, and raw running records (the full measurement data) are not sent.</strong></td>
+                <td className="p-2">Auto Edit (when signed in and turned on)</td>
+                <td className="p-2">Copies made from candidates the app picks among the photos and videos taken during your run: frames, reduced photos (including copies with a record overlay applied), and, depending on the feature, short video copies at reduced resolution (which may show a face). Overlays may show your running record values (distance, duration, pace, and so on) and the shape of your route (only the line shape, without a map or coordinates). Values the app calculates from your running records (this run&rsquo;s distance, duration, and pace, the difference from earlier runs, running streaks, cumulative distance over a period, whether it is a personal best or a first achievement, and so on, Article 11). Your Auto Edit survey answers (multiple-choice answers such as account type, follower count, and main posting format, and when you last saved them), and whether you consented to their use for marketing and analytics (and when, if you did). Candidate composition information (candidate type, overlay style, cut lengths and order). Results produced by AI processing (editing instructions describing which candidates to use and how to edit them, caption text, and an evaluation summary). Original photos and videos, GPS routes and coordinates, and raw running records (the full measurement data) are not sent.</td>
                 <td className="p-2">Created by the app and uploaded to the Team&rsquo;s server when a user who turned on Auto Edit starts it after a run (for example, by tapping the run-finished notification). The app picks candidates from the run&rsquo;s time window without you choosing each photo or video. You answer the survey on one screen when you first turn on Auto Edit (it is required to use Auto Edit and is not collected if you do not use it), and you can change your answers in settings. Answers are saved to your account, so you are not asked again when you change devices. Consent to marketing and analytics is a separate optional question on the same screen; you can use Auto Edit the same way if you decline. Results are created by the Team&rsquo;s server after AI processing</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Subscription information (when you subscribe or use the trial)</td>
-                <td className="p-2">Transaction information for the Auto Edit subscription: transaction identifiers issued by Apple (including the original transaction identifier), the subscription product, purchase, renewal, and expiration times, auto-renewal status, cancellation, refund, and billing failure status, transaction country, currency, and amount, and whether it is a test purchase. Whether you used the free trial and how many times you used Auto Edit. <strong>We do not receive payment method information such as card numbers, or your Apple Account information.</strong></td>
+                <td className="p-2">Subscription information (when you subscribe or use the trial)</td>
+                <td className="p-2">Transaction information for the Auto Edit subscription: transaction identifiers issued by Apple (including the original transaction identifier), the subscription product, purchase, renewal, and expiration times, auto-renewal status, cancellation, refund, and billing failure status, transaction country, currency, and amount, and whether it is a test purchase. Whether you used the free trial and how many times you used Auto Edit. We do not receive payment method information such as card numbers, or your Apple Account information.</td>
                 <td className="p-2">When you subscribe or restore purchases in the app, the app sends the transaction information it received from Apple to the subscription management service (RevenueCat), and RevenueCat notifies the Team&rsquo;s server of the result it confirmed with Apple. When a renewal, cancellation, or refund occurs, Apple notifies RevenueCat, and RevenueCat notifies the Team&rsquo;s server (Article 5). Trial and usage counts are recorded by the Team&rsquo;s server when it processes an Auto Edit job</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Project backup (when signed in)</td>
-                <td className="p-2">The original photos and videos of projects you edit in the photo and reel editors (copies with capture details such as capture location, capture time, and device information removed, keeping only the orientation value), editing files the app creates (freeze frames and effect files), editing information (trims, order, speed, filters, photo positions, and overlay styles, fonts, colors, positions, and so on), the running record values shown in overlays (distance, duration, pace, and so on, Article 11), a small preview image for the list, the last edit time, file sizes, and the conversation history of AI edit requests used in that project (request sentences and result messages, text only, row below). The server does not separately receive capture time, location, or photo library file identifiers</td>
+                <td className="p-2">Project backup (when signed in)</td>
+                <td className="p-2">The original photos and videos of projects you edit in the photo and reel editors (copies with capture details such as capture location, capture time, and device information removed, keeping only the orientation value), editing files the app creates (freeze frames and effect files), editing information (trims, order, speed, filters, photo positions, and overlay styles, fonts, colors, positions, and so on), the running record values shown in overlays (distance, duration, pace, and so on; heart rate, cadence, and calories only if you consent to keeping health records on the server, Article 11), a small preview image for the list (for photo projects that show heart rate, cadence, or calorie elements, only if you consent to keeping health records on the server), the last edit time, file sizes, and the conversation history of AI edit requests used in that project (request sentences and result messages, text only, row below). The server does not separately receive capture time, location, or photo library file identifiers</td>
                 <td className="p-2">When a signed-in user edits, the app uploads automatically when you leave the editor, when the app goes to the background, when you open the app again, and when you sign in. Nothing is uploaded if you turn off backup in settings. Guests keep edits only on the device, up to the 5 most recent (older ones are removed from the device), and those edits are uploaded to the account when you sign in</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">AI edit requests (when signed in and you send one)</td>
-                <td className="p-2">The request sentence you write in the photo or reel editor. A text summary of the current edit: the composition of clips and layers (order, length, speed, volume, clip type, and whether a clip was shot before, during, or after the run), each layer&rsquo;s type, time, position, size, and style, <strong>the text you typed into text layers</strong>, and the names of record overlay fields (for example, &lsquo;distance&rsquo;). Earlier requests and results in the same edit (conversation history, text only). Only when the request needs to find a scene, still images taken from that one clip at 4 per second and reduced to at most 512 pixels wide (which may show a face). The frames are taken from the source clip before any record overlay is applied, so they contain no health data (Article 11). The request record on the Team&rsquo;s server: the request number, account, processing status, retry count, and the edit plan and commands the AI produced (which may contain the text you want to insert). <strong>Running record values (figures such as distance, pace, and heart rate), place names, GPS, and the original video and its audio are not sent.</strong></td>
+                <td className="p-2">AI edit requests (when signed in and you send one)</td>
+                <td className="p-2">The request sentence you write in the photo or reel editor. A text summary of the current edit: the composition of clips and layers (order, length, speed, volume, clip type, and whether a clip was shot before, during, or after the run), each layer&rsquo;s type, time, position, size, and style, the text you typed into text layers, and the names of record overlay fields (for example, &lsquo;distance&rsquo;). Earlier requests and results in the same edit (conversation history, text only). Only when the request needs to find a scene, still images taken from that one clip at 4 per second and reduced to at most 512 pixels wide (which may show a face). The frames are taken from the source clip before any record overlay is applied, so they contain no health data (Article 11). The request record on the Team&rsquo;s server: the request number, account, processing status, retry count, and the edit plan and commands the AI produced (which may contain the text you want to insert). Running record values (figures such as distance, pace, and heart rate), place names, GPS, and the original video and its audio are not sent.</td>
                 <td className="p-2">Created by the app and uploaded to the Team&rsquo;s server when a signed-in user writes a request in the photo or reel editor and sends it. The first time you use it, a consent screen tells you what is sent and to whom, and nothing is sent before you agree. Nothing is sent if you do not use this feature. The request record is created by the Team&rsquo;s server when it processes the request. The conversation history is saved on your device with the project and, when project backup is on, backed up with the project to the Team&rsquo;s server (in Korea) (Article 3)</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Record screen captures</td>
+                <td className="p-2">Record screen captures</td>
                 <td className="p-2">Screenshots of other running apps&rsquo; record screens, and the distance, duration, and pace extracted from them by text recognition (OCR)</td>
                 <td className="p-2">Screenshots you select yourself, analyzed on your device</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Usage records (collected automatically)</td>
+                <td className="p-2">Usage records (collected automatically)</td>
                 <td className="p-2">The anonymous device identifier issued by the app (a random value created when the app first launches, not a hardware number read from the device), the account identifier issued by the server when you are signed in (a random value, not your email or name, used to keep you as one user when you change devices), feature usage events, error logs, user experience survey responses (5-point scale), values derived from running records (distance bucket, whether a route exists, and so on; raw figures such as distance and heart rate are excluded)</td>
                 <td className="p-2">Generated automatically while you use the service and sent to analytics tools (Article 5) and to the Team&rsquo;s server (in Korea, Article 3)</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Approximate location (collected automatically)</td>
+                <td className="p-2">Approximate location (collected automatically)</td>
                 <td className="p-2">The country, region, city, and US broadcast market that the analytics tool looks up from the IP address used when the app sends records to it. The analytics tool uses the IP address only for this lookup and does not store it, and the same applies to records passed from the measurement tool (Airbridge) to the analytics tool. GPS location is not used, and latitude and longitude are not sent</td>
                 <td className="p-2">Generated automatically when records are sent and kept in the analytics tool (Article 5)</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Server access records (collected automatically)</td>
+                <td className="p-2">Server access records (collected automatically)</td>
                 <td className="p-2">The connecting IP address when the app sends a request to the Team&rsquo;s server, the requested API path and query conditions (list size, reference time, and type values), the response code, the processing time, and the request time. Request bodies are not recorded, so photos, running record figures, and location are not included</td>
                 <td className="p-2">Recorded automatically by the front of the server (the load balancer) when the app sends a request, and kept on the Team&rsquo;s server (in Korea, Article 3)</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Ad attribution information (collected automatically)</td>
+                <td className="p-2">Ad attribution information (collected automatically)</td>
                 <td className="p-2">
-                  Advertising identifier (IDFA, <strong>only if you allow app tracking</strong>, Article 10), identifier for vendors (IDFV), OS version, device type, language, time zone, IP address, screen size, app install and launch events, share-completed events (name of the channel shared to), the anonymous device identifier above (an alias that links the measurement tool&rsquo;s records with the analytics tool&rsquo;s), and attribution details (names of the ad channel, campaign, ad group, and creative)
+                  Advertising identifier (IDFA, only if you allow app tracking, Article 10), identifier for vendors (IDFV), OS version, device type, language, time zone, IP address, screen size, app install and launch events, share-completed events (name of the channel shared to), the anonymous device identifier above (an alias that links the measurement tool&rsquo;s records with the analytics tool&rsquo;s), and attribution details (names of the ad channel, campaign, ad group, and creative)
                 </td>
                 <td className="p-2">Generated automatically when you install and launch the app and sent to the ad performance measurement tool (Article 5). Attribution details are also recorded in the analytics tool when the measurement tool reports them</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">Server error records (collected automatically)</td>
+                <td className="p-2">Server error records (collected automatically)</td>
                 <td className="p-2">When an error occurs on the Team&rsquo;s server: the error type and code location, the API path and method where it occurred, the error message written by the server (job, device, and account identifiers and processing status only), the request number, app version, iOS family version, device model name (for example, iPhone16,2), the name of the app screen where the error occurred, the count, reference time, and kind values of list queries, and the server environment and release version. The request body, other headers and query values such as login credentials, IP address, email, photos, running record figures, and location are not included, and error messages produced by third-party software are removed before sending</td>
                 <td className="p-2">Generated automatically when an error occurs on the Team&rsquo;s server and sent to the error tracking tool (Article 5)</td>
               </tr>
@@ -210,36 +210,45 @@ export default function PrivacyPage() {
           </table>
         </div>
         <p>
-          <strong>
+          
             All permissions, including HealthKit, Photos, and Notifications, are optional. Declining
             them does not block you from using the service; you can keep using the features that
             remain available.
-          </strong>{" "}
+          {" "}
           For example, you can create content from record screen captures without connecting
           HealthKit. Each permission is requested with an explanation when the feature first needs
           it.
         </p>
         <p>
-          <strong>Signing in is also optional.</strong> You can use the service without signing in
+          Signing in is also optional. You can use the service without signing in
           (as a guest). In that case we do not collect account information, and your records are
           linked only to the anonymous device identifier. Running records made as a guest are not
           stored on the server and stay on your device; they are backed up to your account when you sign in later. Once you sign in, your
           subsequent usage records also carry the account identifier, and usage records collected on
           the same device before you signed in are linked to that account as well. After you sign
           out, later records no longer carry it.
-          <strong>Gender and age group are also optional.</strong> If you skip the form, we do not
+          Gender and age group are also optional. If you skip the form, we do not
           ask again, and you can change your answers at any time on the My Info screen.
+        </p>
+        <p>
+          If a social login account has no record of agreeing to the terms, the app shows a consent screen once. It lists
+          [Required] I am 14 or older, [Required] Terms of Service, and [Optional] Keep health records on server (Article 11);
+          this Privacy Policy is shown as a link only and is not a checkbox. Users who were already signed in also see it
+          once after updating to app version 2.6.0. You are not asked again when you sign in to the same account again or
+          link another social login to the same account. Until you agree to the required items, the app pauses running record
+          backup, receiving changes from the server, and uploading, listing, and restoring projects, and shows the consent
+          screen again the next time you open the app. Closing the consent screen does not sign you out.
         </p>
       </Section>
 
       <Section title="Article 2 (Purposes of Processing)">
         <ul className="list-disc space-y-1 pl-5">
           <li>Importing running records and automatically collecting photos and videos taken during your run</li>
-          <li>Best-shot recommendation (evaluating photo and video quality, faces, and composition on your device; for Quick Stamp, when you are signed in, the person/scenery judgment is made by the AI provider in Article 5 from the photos). <strong>Faces are only detected and evaluated, and are never generated, altered, or retouched except in the freeze-frame creation of AI templates below.</strong></li>
+          <li>Best-shot recommendation (evaluating photo and video quality, faces, and composition on your device; for Quick Stamp, when you are signed in, the person/scenery judgment is made by the AI provider in Article 5 from the photos). Faces are only detected and evaluated, and are never generated, altered, or retouched except in the freeze-frame creation of AI templates below.</li>
           <li>Creating and editing record overlays, reels, and frame content</li>
-          <li>Pose and scene reading and freeze-frame creation in AI templates. In the freeze-frame template, the AI reads the hand position and where the record text can be placed from the single video frame you select, and creates a new freeze-frame image with an effect added based on that frame. Cut Edit and Monthly Recap pick usable cuts from several frames, and Web Shooter judges from several frames the moment the hand motion changes. <strong>When a freeze frame is created, the face and body of the person in the frame may be redrawn by the AI.</strong> The created freeze frame passes through Google once more so the AI can read where the record text can be placed and check the composition, and is then stored on your device and on the Team&rsquo;s server (Article 3); we never process it to identify who someone is (no matching of the same person, no extraction of facial features)</li>
+          <li>Pose and scene reading and freeze-frame creation in AI templates. In the freeze-frame template, the AI reads the hand position and where the record text can be placed from the single video frame you select, and creates a new freeze-frame image with an effect added based on that frame. Cut Edit and Monthly Recap pick usable cuts from several frames, and Web Shooter judges from several frames the moment the hand motion changes. When a freeze frame is created, the face and body of the person in the frame may be redrawn by the AI. The created freeze frame passes through Google once more so the AI can read where the record text can be placed and check the composition, and is then stored on your device and on the Team&rsquo;s server (Article 3); we never process it to identify who someone is (no matching of the same person, no extraction of facial features)</li>
           <li>Auto Edit: creating candidates from the photos and videos taken during your run, having the AI evaluate and pick candidates from the perspective of virtual viewers (followers), and recommending caption text using values calculated from your running records. When the result is ready, we notify you with a push notification. Faces are used only for evaluation, and we never process them to identify who someone is. If Auto Edit also uses an AI template, that processing follows the AI template item above</li>
-          <li>Marketing and analytics using Auto Edit survey answers (to understand our user base and how to promote the service). <strong>Only the answers of users who separately consented on the survey screen are used;</strong> you can use Auto Edit the same way without consenting, and in that case your answers are used only to set up the virtual viewers</li>
+          <li>Marketing and analytics using Auto Edit survey answers (to understand our user base and how to promote the service). Only the answers of users who separately consented on the survey screen are used; you can use Auto Edit the same way without consenting, and in that case your answers are used only to set up the virtual viewers</li>
           <li>Confirming subscription status, managing free trial and usage counts, and preventing payment circumvention and misuse</li>
           <li>AI edit requests: the AI looks at the request sentence, the summary of the current edit, and earlier requests and results in the same edit, interprets the request, and decides which of the app&rsquo;s editing functions to use with which values; when a scene needs to be found, it looks at the frames and finds the moment or interval in the clip that matches the description. The edit itself is applied by the app on your device. The request record on the Team&rsquo;s server is used so that, if your phone loses its connection and asks again with the same request number, the stored answer is returned instead of calling the AI again</li>
           <li>Creating an account and keeping you signed in; backing up and restoring records when you switch devices or reinstall the app</li>
@@ -252,13 +261,13 @@ export default function PrivacyPage() {
           <li>Finding the cause of server failures and slowdowns (checking which requests failed or were slow in the server access records)</li>
           <li>Keeping running course favorites and ranking popular courses by region (counting favorites and exports per course)</li>
           <li>Understanding usage by country and city (checking actual installs from countries where we run ads, deciding which cities to add running courses for)</li>
-          <li>Ad performance measurement (finding out which ad led to an install and a sign-up). <strong>The advertising identifier is used only if you allow app tracking, and photos, location, and health records are never used for ad performance measurement.</strong></li>
+          <li>Ad performance measurement (finding out which ad led to an install and a sign-up). The advertising identifier is used only if you allow app tracking, and photos, location, and health records are never used for ad performance measurement.</li>
         </ul>
       </Section>
 
       <Section title="Article 3 (Processing and Retention Period)">
         <p>
-          <strong>Photos and videos are stored on your device.</strong> The exceptions are the
+          Photos and videos are stored on your device. The exceptions are the
           freeze frame an AI template creates and the project backups of signed-in users, which are
           kept on the server as described below. Account information, device information, and running record backups
           are stored on the Team&rsquo;s server (in Korea). When you delete the app, the information
@@ -268,31 +277,32 @@ export default function PrivacyPage() {
         </p>
         <ul className="list-disc space-y-1 pl-5">
           <li>
-            <strong>Account information, server backups, and notifications are permanently deleted
-            after a 30-day grace period once you request account deletion.</strong> The grace period
+            Account information, server backups, and notifications are permanently deleted
+            after a 30-day grace period once you request account deletion. The grace period
             lets you recover an account deleted by mistake; signing in again during that time cancels
             the deletion.
           </li>
           <li>The push notification token is deleted from the server as soon as you turn service notifications off in the app&rsquo;s settings or revoke the notification permission in iOS, and a token that can no longer receive notifications (for example, after the app is deleted) is deleted as soon as that is confirmed. It is deleted together with the device information when you delete your account. The times of consent to and withdrawal from promotional notifications (offers and news) are kept with the device information as evidence of consent and deleted when you delete your account.</li>
           <li>Auto Edit survey answers and your marketing and analytics consent status are kept with your account information and deleted after a 30-day grace period once you request account deletion. If you withdraw consent, your answers are no longer used for marketing and analytics from then on. The times of consent and withdrawal are recorded as evidence of consent.</li>
-          <li>Subscription transaction information and free trial and usage counts are kept with your account information to confirm your subscription status, and are deleted after a 30-day grace period once you request account deletion. The subscription record for that account held by RevenueCat is deleted at the same time. Where the law requires us to keep them, we keep them separately for that period. <strong>The record that you used the free trial is kept even after you delete your account.</strong> This prevents the free trial from being repeated by signing up again with the same social account; we keep only an irreversibly transformed value (a hash) of the login provider and the user identifier issued by that provider, plus the fact that the trial was used, and not your email or name. It is kept for as long as the Team offers the free trial and deleted when the free trial is no longer offered. Deleting your account does not cancel your Apple subscription automatically, so please cancel it in the App Store (Article 7).</li>
+          <li>Subscription transaction information and free trial and usage counts are kept with your account information to confirm your subscription status, and are deleted after a 30-day grace period once you request account deletion. The subscription record for that account held by RevenueCat is deleted at the same time. Where the law requires us to keep them, we keep them separately for that period. The record that you used the free trial is kept even after you delete your account. This prevents the free trial from being repeated by signing up again with the same social account; we keep only an irreversibly transformed value (a hash) of the login provider and the user identifier issued by that provider, plus the fact that the trial was used, and not your email or name. It is kept for as long as the Team offers the free trial and deleted when the free trial is no longer offered. Deleting your account does not cancel your Apple subscription automatically, so please cancel it in the App Store (Article 7).</li>
+          <li>Health records on the server (heart rate, cadence, and calories, and the project information and preview images that show them, Article 11) are kept until you withdraw your consent to keeping health records on the server, and are deleted when you withdraw it. When you request account deletion, they are deleted together with your other account information after a 30-day grace period. Health records previously stored on the server for accounts that have not consented are deleted on December 15, 2026.</li>
           <li>Running course favorites and export records are kept on the Team&rsquo;s server (in Korea) with your account information and deleted after a 30-day grace period once you request account deletion. When you remove a favorite, its favorite record is deleted right away.</li>
           <li>Server access records are kept on the Team&rsquo;s server (in Korea) for 90 days and then deleted automatically. They are not linked to your account and contain only the connecting IP address and request information.</li>
           <li>Gender and age group are kept with your account information and deleted together when the account is deleted. You can change them on the My Info screen; to erase your answers entirely, contact the Team (admin@rungle.app).</li>
           <li>We no longer store running records made as a guest on the server. Records that earlier versions of the app uploaded as a guest are linked only to the anonymous device identifier, not to an account, and the Team plans to delete them. To delete them sooner, contact the Team (admin@rungle.app).</li>
           <li>Best-shot candidates use only references to your photo library; only the photos and clips you finally select are stored in the app.</li>
           <li>
-            <strong>The frames, photos, video copies, and record values sent to the server when you use an AI template, the Quick Stamp judgment, or Auto Edit are deleted from
-            the server as soon as the job ends (whether it succeeds or fails),</strong> and
+            The frames, photos, video copies, and record values sent to the server when you use an AI template, the Quick Stamp judgment, or Auto Edit are deleted from
+            the server as soon as the job ends (whether it succeeds or fails), and
             are not kept in any cache, log, or storage. Anything that could not be deleted is removed
             within a day by the storage&rsquo;s automatic deletion rule. Server records keep only the job number, the
             requesting account, the request time, file size, and processing status; the contents of
             the frame and the result are not kept. Auto Edit is an exception: its result (editing
             instructions, caption text, and an evaluation summary) is kept on the Team&rsquo;s server
             (in Korea) so you can open it again, and is deleted after a 30-day grace period once you
-            request account deletion. The AI&rsquo;s raw answers used for evaluation are not stored. <strong>The freeze frame created by the AI is kept
+            request account deletion. The AI&rsquo;s raw answers used for evaluation are not stored. The freeze frame created by the AI is kept
             on the Team&rsquo;s server (in Korea, encrypted storage) for 90 days after your last
-            edit (or after it was created, if you never edit it)</strong> so you can keep editing it
+            edit (or after it was created, if you never edit it) so you can keep editing it
             and restore it on another device, and is then deleted automatically. If you request
             account deletion, it is deleted together with your account information after the 30-day
             grace period. AI templates can be used only with a signed-in account, so no freeze frame
@@ -301,12 +311,12 @@ export default function PrivacyPage() {
             stored on your device and is deleted there together with the draft that uses it.
           </li>
           <li>
-            <strong>The request sentence, edit summary, conversation history, and frames sent for AI edit
-            requests are not stored on the server.</strong> They are kept in memory only while the request is
+            The request sentence, edit summary, conversation history, and frames sent for AI edit
+            requests are not stored on the server. They are kept in memory only while the request is
             processed, are not written to server logs, and are gone as soon as the result is returned. Backing up
             the conversation history with a project follows the project backup rules below.{" "}
-            <strong>The request record is kept on the Team&rsquo;s server (in Korea) for 1 day from
-            the request and then deleted.</strong>{" "}
+            The request record is kept on the Team&rsquo;s server (in Korea) for 1 day from
+            the request and then deleted.{" "}
             It contains the request number, account, processing status, retry count, and the edit
             plan and commands the AI produced (which may contain the text you want to insert). This is
             so that, even if your phone loses its connection, asking again with the same request number
@@ -316,8 +326,8 @@ export default function PrivacyPage() {
             Korea) and follows the retention of project backups below.
           </li>
           <li>
-            <strong>Project backups are kept on the Team&rsquo;s server (in Korea, encrypted
-            storage).</strong> When you delete a project in the app, it disappears from the list
+            Project backups are kept on the Team&rsquo;s server (in Korea, encrypted
+            storage). When you delete a project in the app, it disappears from the list
             right away, is kept on the server for 30 days so it can be restored, and is then deleted
             automatically. Photo and video files no longer used by any project (including files whose
             upload stopped partway) are deleted automatically after 24 hours. If you request account
@@ -327,10 +337,10 @@ export default function PrivacyPage() {
             account. Each account has a storage limit, and saves that would exceed it are not
             accepted. Nothing is uploaded while you are a guest.
           </li>
-          <li>Usage records (event logs), error logs, and ad attribution information are stored on the servers of the providers listed in Article 5 and deleted once the purposes of service quality improvement and ad performance measurement are fulfilled. After you delete the app, no new records are collected. <strong>App usage records (the usage records row in Article 1, the same records sent to the analytics tool) are also kept on the Team&rsquo;s server (in Korea) for service quality improvement and are deleted automatically 90 days after they are recorded.</strong> If you request account deletion, after the 30-day grace period we remove the account identifier and anonymous device identifier attached to those records so that no one can tell whose records they are. Daily statistics that only count usage records (with no identifiers) are kept without a time limit. Error records from the Team&rsquo;s server are kept by the error tracking tool (Sentry) for 30 days (90 days on a paid plan) and then deleted automatically.</li>
+          <li>Usage records (event logs), error logs, and ad attribution information are stored on the servers of the providers listed in Article 5 and deleted once the purposes of service quality improvement and ad performance measurement are fulfilled. After you delete the app, no new records are collected. App usage records (the usage records row in Article 1, the same records sent to the analytics tool) are also kept on the Team&rsquo;s server (in Korea) for service quality improvement and are deleted automatically 90 days after they are recorded. If you request account deletion, after the 30-day grace period we remove the account identifier and anonymous device identifier attached to those records so that no one can tell whose records they are. Daily statistics that only count usage records (with no identifiers) are kept without a time limit. Error records from the Team&rsquo;s server are kept by the error tracking tool (Sentry) for 30 days (90 days on a paid plan) and then deleted automatically.</li>
           <li>
-            <strong>The anonymous device identifier stays on your device even after you delete the
-            app.</strong> It is kept in the iOS Keychain (the storage for an app&rsquo;s secret
+            The anonymous device identifier stays on your device even after you delete the
+            app. It is kept in the iOS Keychain (the storage for an app&rsquo;s secret
             values), so reinstalling the app on the same device reuses the same value. It is stored
             so that it is not copied off the device, so it does not carry over in device backups or
             when you move to a new device. The current version has no in-app way to erase this
@@ -342,8 +352,8 @@ export default function PrivacyPage() {
 
       <Section title="Article 4 (Provision to Third Parties)">
         <p>
-          The Team <strong>does not provide your personal information to third parties in
-          principle.</strong>{" "}
+          The Team does not provide your personal information to third parties in
+          principle.{" "}
           Exceptions are when you have given prior consent or when required by law, and the
           following provision may occur for ad performance measurement.
         </p>
@@ -351,15 +361,15 @@ export default function PrivacyPage() {
           <table className="w-full border-collapse text-left">
             <thead>
               <tr className="border-b border-gray-300 bg-gray-50">
-                <th className="p-2 font-bold">Recipient</th>
-                <th className="p-2 font-bold">Information provided</th>
-                <th className="p-2 font-bold">Recipient&rsquo;s purpose</th>
-                <th className="p-2 font-bold">Retention</th>
+                <th className="p-2 font-normal">Recipient</th>
+                <th className="p-2 font-normal">Information provided</th>
+                <th className="p-2 font-normal">Recipient&rsquo;s purpose</th>
+                <th className="p-2 font-normal">Retention</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">
+                <td className="p-2">
                   Meta Platforms, Inc.
                   <br />
                   <a className="underline" href="https://www.facebook.com/privacy/policy/">facebook.com/privacy/policy</a>
@@ -393,14 +403,14 @@ export default function PrivacyPage() {
           <table className="w-full border-collapse text-left">
             <thead>
               <tr className="border-b border-gray-300 bg-gray-50">
-                <th className="p-2 font-bold">Provider</th>
-                <th className="p-2 font-bold">Outsourced work</th>
-                <th className="p-2 font-bold">Location and retention</th>
+                <th className="p-2 font-normal">Provider</th>
+                <th className="p-2 font-normal">Outsourced work</th>
+                <th className="p-2 font-normal">Location and retention</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">
+                <td className="p-2">
                   Amazon Web Services, Inc.
                   <br />
                   <a className="underline" href="https://aws.amazon.com/privacy">aws.amazon.com/privacy</a>
@@ -427,15 +437,15 @@ export default function PrivacyPage() {
           <table className="w-full border-collapse text-left">
             <thead>
               <tr className="border-b border-gray-300 bg-gray-50">
-                <th className="p-2 font-bold">Recipient</th>
-                <th className="p-2 font-bold">Country, timing, and method</th>
-                <th className="p-2 font-bold">Information transferred</th>
-                <th className="p-2 font-bold">Purpose and retention</th>
+                <th className="p-2 font-normal">Recipient</th>
+                <th className="p-2 font-normal">Country, timing, and method</th>
+                <th className="p-2 font-normal">Information transferred</th>
+                <th className="p-2 font-normal">Purpose and retention</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">
+                <td className="p-2">
                   Amplitude, Inc.
                   <br />
                   <a className="underline" href="https://amplitude.com/privacy">amplitude.com/privacy</a>
@@ -447,7 +457,7 @@ export default function PrivacyPage() {
                 <td className="p-2">Usage analysis and service quality improvement, comparing attribution performance by ad, understanding usage by country and city / until the end of the contract or fulfillment of the purpose</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">
+                <td className="p-2">
                   AB180 Inc.
                   <br />
                   (Airbridge)
@@ -461,7 +471,7 @@ export default function PrivacyPage() {
                 <td className="p-2">Ad performance measurement to find out which ad led to an install and a sign-up / until the end of the contract or fulfillment of the purpose</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">
+                <td className="p-2">
                   Google LLC
                   <br />
                   (Firebase Crashlytics)
@@ -475,7 +485,7 @@ export default function PrivacyPage() {
                 <td className="p-2">Diagnosing errors and improving stability / until the end of the contract or fulfillment of the purpose</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">
+                <td className="p-2">
                   Functional Software, Inc.
                   <br />
                   (Sentry)
@@ -489,7 +499,7 @@ export default function PrivacyPage() {
                 <td className="p-2">Diagnosing server errors and improving stability / deleted automatically after 30 days (90 days on a paid plan)</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">
+                <td className="p-2">
                   Apple Inc.
                   <br />
                   <a className="underline" href="https://www.apple.com/legal/privacy/en-ww/">apple.com/legal/privacy/en-ww</a>
@@ -501,7 +511,7 @@ export default function PrivacyPage() {
                 <td className="p-2">Converting the coordinate into a place name (reverse geocoding) and place search / until processing is complete. The returned place name is stored only on your device. A place name you pick from search goes into the project as sticker text and is backed up with the edit information when project backup is on (Article 3)</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">
+                <td className="p-2">
                   Google LLC
                   <br />
                   (Firebase Cloud Messaging)
@@ -515,7 +525,7 @@ export default function PrivacyPage() {
                 <td className="p-2">Push notification delivery / until delivery is complete. The token is deleted from the Team&rsquo;s server when you turn notifications off or revoke the permission</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">
+                <td className="p-2">
                   Google LLC
                   <br />
                   (Gemini API and Vertex AI)
@@ -529,7 +539,7 @@ export default function PrivacyPage() {
                 <td className="p-2">Reading the hand position in the frame; reading where the record text can be placed and checking the composition in the AI-created freeze frame; creating the freeze frame instead when OpenAI&rsquo;s freeze-frame creation is blocked by its safety policy; judging the hand pose and coordinates for Web Shooter; candidate evaluation and caption generation for Auto Edit; request interpretation (deciding which editing functions to use with which values) and scene finding for AI edit requests / until the result is returned. Under its paid API terms, Google does not use the frame for training or product improvement and keeps it only for a limited period to monitor for prohibited use</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">
+                <td className="p-2">
                   OpenAI, L.L.C.
                   <br />
                   <a className="underline" href="https://openai.com/policies/privacy-policy/">openai.com/policies/privacy-policy</a>
@@ -541,7 +551,7 @@ export default function PrivacyPage() {
                 <td className="p-2">Creating the freeze-frame image for the freeze-frame template; picking cuts for Cut Edit and Monthly Recap; judging the moment of the hand motion for Web Shooter; the person/scenery judgment for Quick Stamp; creating and evaluating candidates and generating caption text for Auto Edit; request interpretation (deciding which editing functions to use with which values) and scene finding for AI edit requests / until the result is returned. OpenAI does not use data received through its API for training and deletes it after keeping it for up to 30 days for abuse monitoring</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="p-2 font-semibold">
+                <td className="p-2">
                   RevenueCat, Inc.
                   <br />
                   <a className="underline" href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>
@@ -556,8 +566,8 @@ export default function PrivacyPage() {
           </table>
         </div>
         <p>
-          The transferred information <strong>does not include account information that identifies
-          you, original photos or videos, or raw running record figures.</strong> There are four
+          The transferred information does not include account information that identifies
+          you, original photos or videos, or raw running record figures. There are four
           exceptions: the single starting coordinate sent to Apple for place-name conversion and place search (with the search text when you search); the
           frames and photos sent to Google and OpenAI when you use an AI template or the Quick Stamp
           judgment (Article 1, along with the freeze frame the AI created from the freeze-frame
@@ -580,9 +590,9 @@ export default function PrivacyPage() {
           iOS Settings &gt; Privacy &amp; Security &gt; Tracking (Article 7).
         </p>
         <p>
-          <strong>If you only want to avoid the transfer to AI providers, simply do not use AI
+          If you only want to avoid the transfer to AI providers, simply do not use AI
           templates or the Quick Stamp judgment, do not turn on Auto Edit, and do not send AI edit
-          requests.</strong> For AI templates
+          requests. For AI templates
           and Quick Stamp, no frame is sent until you choose videos or photos and run the feature
           yourself; for Auto Edit, no frame or copy is sent until you start it with the feature turned on; for AI edit requests, no frame, copy, or sentence is sent until you agree on the consent screen shown the first time and then write and send a request; and nothing other than that feature is
           restricted if you do not use it. Guests cannot use these features, so no frames are sent
@@ -613,20 +623,21 @@ export default function PrivacyPage() {
           (admin@rungle.app) and we will act without delay.
         </p>
         <ul className="list-disc space-y-1 pl-5">
-          <li><strong>Revoke access to running records:</strong> iOS Health app &gt; Profile &gt; Apps &gt; Rungle, turn off read access</li>
-          <li><strong>Revoke photo access:</strong> iOS Settings &gt; Rungle &gt; Photos, change or remove the access level</li>
-          <li><strong>Refuse sending data to AI providers:</strong> Simply do not use AI templates or the Quick Stamp judgment, and leave Auto Edit off or turn it off in the app&rsquo;s settings. For AI edit requests, nothing is sent if you do not use the feature or do not agree on the consent screen shown the first time you use it. All other templates and features remain available (Article 5)</li>
-          <li><strong>Change your Auto Edit survey answers and withdraw marketing and analytics consent:</strong> You can change your answers or withdraw consent in the app&rsquo;s settings. You can keep using Auto Edit after withdrawing consent</li>
-          <li><strong>Cancel your subscription:</strong> Cancel it in iOS Settings &gt; Apple Account &gt; Subscriptions (you can also get there from subscription management in the app&rsquo;s settings). Refunds are requested from Apple under Apple&rsquo;s policies. Deleting your account does not cancel the subscription automatically</li>
-          <li><strong>Turn off push notifications:</strong> Turn off service notifications in the app&rsquo;s Settings &gt; Notifications, or turn off notifications in iOS Settings &gt; Rungle. Once off, the push notification token is deleted from the Team&rsquo;s server right away, and you can still read the in-app inbox</li>
-          <li><strong>Withdraw consent to promotional notifications (offers and news):</strong> Turn off the offers and news (ads) switch in the app&rsquo;s Settings &gt; Notifications. The app shows you the result and the date it was processed right away, and turning it back on is recorded as a new consent</li>
-          <li><strong>Change gender or age group:</strong> You can change them on the My Info screen in the app. To erase your answers, contact the Team (Article 3)</li>
-          <li><strong>Revoke app tracking (advertising identifier):</strong> Turn off Rungle in iOS Settings &gt; Privacy &amp; Security &gt; Tracking, or turn off Allow Tracking in iOS Settings &gt; Rungle. Once off, the advertising identifier is no longer used, and the service is not restricted in any way</li>
-          <li><strong>Delete AI-created freeze frames from the server:</strong> To delete them before the 90 days are up, contact the Team. When you delete your account, they are deleted together with your account information (Article 3)</li>
-          <li><strong>Delete a project:</strong> You can delete it from the project list in the app. The backup on the server is deleted 30 days after you delete it; to restore it before then, contact the Team (Article 3)</li>
-          <li><strong>Turn off project backup:</strong> You can turn it off in the app&rsquo;s settings. Once off, new edits are not uploaded to the server, and the edits on your device work as before. Projects already uploaded are kept until you delete them or delete your account (Article 3)</li>
-          <li><strong>Delete your account:</strong> Request it at any time from the My Info screen in the app. 30 days after the request, the account information, running record backups, AI-created freeze frames, and project backups on the server are permanently deleted; signing in again before then cancels the deletion</li>
-          <li><strong>Delete everything:</strong> Deleting the app destroys the information the app stored. Information on the server remains after you delete the app, so also request account deletion as above. Only the anonymous device identifier stays on the device; contact the Team to have it erased (Article 3)</li>
+          <li>Revoke access to running records: iOS Health app &gt; Profile &gt; Apps &gt; Rungle, turn off read access</li>
+          <li>Revoke photo access: iOS Settings &gt; Rungle &gt; Photos, change or remove the access level</li>
+          <li>Refuse sending data to AI providers: Simply do not use AI templates or the Quick Stamp judgment, and leave Auto Edit off or turn it off in the app&rsquo;s settings. For AI edit requests, nothing is sent if you do not use the feature or do not agree on the consent screen shown the first time you use it. All other templates and features remain available (Article 5)</li>
+          <li>Change your Auto Edit survey answers and withdraw marketing and analytics consent: You can change your answers or withdraw consent in the app&rsquo;s settings. You can keep using Auto Edit after withdrawing consent</li>
+          <li>Withdraw consent to keeping health records on the server: Turn off Keep health records on server in the app&rsquo;s settings. After a confirmation dialog, your account&rsquo;s health records on the server are deleted, and the values on your device stay as they are (Article 11)</li>
+          <li>Cancel your subscription: Cancel it in iOS Settings &gt; Apple Account &gt; Subscriptions (you can also get there from subscription management in the app&rsquo;s settings). Refunds are requested from Apple under Apple&rsquo;s policies. Deleting your account does not cancel the subscription automatically</li>
+          <li>Turn off push notifications: Turn off service notifications in the app&rsquo;s Settings &gt; Notifications, or turn off notifications in iOS Settings &gt; Rungle. Once off, the push notification token is deleted from the Team&rsquo;s server right away, and you can still read the in-app inbox</li>
+          <li>Withdraw consent to promotional notifications (offers and news): Turn off the offers and news (ads) switch in the app&rsquo;s Settings &gt; Notifications. The app shows you the result and the date it was processed right away, and turning it back on is recorded as a new consent</li>
+          <li>Change gender or age group: You can change them on the My Info screen in the app. To erase your answers, contact the Team (Article 3)</li>
+          <li>Revoke app tracking (advertising identifier): Turn off Rungle in iOS Settings &gt; Privacy &amp; Security &gt; Tracking, or turn off Allow Tracking in iOS Settings &gt; Rungle. Once off, the advertising identifier is no longer used, and the service is not restricted in any way</li>
+          <li>Delete AI-created freeze frames from the server: To delete them before the 90 days are up, contact the Team. When you delete your account, they are deleted together with your account information (Article 3)</li>
+          <li>Delete a project: You can delete it from the project list in the app. The backup on the server is deleted 30 days after you delete it; to restore it before then, contact the Team (Article 3)</li>
+          <li>Turn off project backup: You can turn it off in the app&rsquo;s settings. Once off, new edits are not uploaded to the server, and the edits on your device work as before. Projects already uploaded are kept until you delete them or delete your account (Article 3)</li>
+          <li>Delete your account: Request it at any time from the My Info screen in the app. 30 days after the request, the account information, running record backups, AI-created freeze frames, and project backups on the server are permanently deleted; signing in again before then cancels the deletion</li>
+          <li>Delete everything: Deleting the app destroys the information the app stored. Information on the server remains after you delete the app, so also request account deletion as above. Only the anonymous device identifier stays on the device; contact the Team to have it erased (Article 3)</li>
         </ul>
       </Section>
 
@@ -634,10 +645,10 @@ export default function PrivacyPage() {
         <p>
           The service is not directed at children under 14, and the Team does not collect personal
           information from children under 14.{" "}
-          <strong>
+          
             A child under 14 who wants to use the service must obtain the consent of a legal
             representative (such as a parent),
-          </strong>{" "}
+          {" "}
           and if we learn that a child&rsquo;s personal information was processed without such
           consent, we destroy it without delay. This age applies even where local law sets a lower
           one (for example, 13 in the United States); if the law where you live sets a higher age,
@@ -648,14 +659,14 @@ export default function PrivacyPage() {
       <Section title="Article 9 (Security Measures)">
         <p>The Team takes the following security measures in accordance with Article 29 of Korea&rsquo;s Personal Information Protection Act.</p>
         <ul className="list-disc space-y-1 pl-5">
-          <li><strong>On-device processing:</strong> Personal information processing, including photo analysis, face evaluation, and text recognition, is performed on your device, and the iOS app sandbox blocks access from other apps. The only exceptions are the frames and photos for AI templates and the Quick Stamp judgment, the copies and record values for Auto Edit, and the request sentence, edit summary, conversation history, and scene-finding frames for AI edit requests (Article 1), which pass through the server to the AI providers. The server deletes the frames, photos, copies, and record values as soon as the job ends and does not store them, and the request sentence, edit summary, conversation history, and frames for AI edit requests are processed only in memory and never put in storage. The request record for AI edit requests is deleted after 1 day (Article 3). The freeze frame the AI creates is kept in encrypted storage that only the Team&rsquo;s server can access, and you download only your own freeze frames through short-lived signed URLs.</li>
-          <li><strong>Project backup:</strong> Before upload, capture details in photos and videos, such as capture location, capture time, and device information, are removed on your device, keeping only the orientation value. The server keeps files in encrypted storage (AES-256), separated by account, and issues the addresses for uploading and downloading files only to the signed-in owner, as signed URLs valid for 1 hour. The storage rejects any request that is not over an encrypted (HTTPS) connection. Photos and videos, including those showing faces, are never used to identify who someone is.</li>
-          <li><strong>Push notifications:</strong> Notifications carry only text keys and a job number, so no photos, record figures, or location leave through the notification path, and the push notification token is never written to logs or analytics events.</li>
-          <li><strong>Subscription confirmation:</strong> Subscription status changes only on results RevenueCat has confirmed with Apple, and notifications from RevenueCat are accepted only when they carry the pre-agreed authentication value. Payment method information is never received.</li>
-          <li><strong>Minimal storage:</strong> Birth year is stored only as a 10-year age group, and the original value is not kept.</li>
-          <li><strong>Administrative measures:</strong> Minimizing the staff who handle personal information and setting internal handling rules</li>
-          <li><strong>Technical measures:</strong> TLS encryption on all external connections; the server is placed in a segment not directly reachable from outside, with access limited to the minimum staff; server credentials are kept in a separate secrets management service</li>
-          <li><strong>Access limited to your own data:</strong> Running records and project backups stored on the server can be viewed and edited only by the signed-in owner; ownership is checked on every request.</li>
+          <li>On-device processing: Personal information processing, including photo analysis, face evaluation, and text recognition, is performed on your device, and the iOS app sandbox blocks access from other apps. The only exceptions are the frames and photos for AI templates and the Quick Stamp judgment, the copies and record values for Auto Edit, and the request sentence, edit summary, conversation history, and scene-finding frames for AI edit requests (Article 1), which pass through the server to the AI providers. The server deletes the frames, photos, copies, and record values as soon as the job ends and does not store them, and the request sentence, edit summary, conversation history, and frames for AI edit requests are processed only in memory and never put in storage. The request record for AI edit requests is deleted after 1 day (Article 3). The freeze frame the AI creates is kept in encrypted storage that only the Team&rsquo;s server can access, and you download only your own freeze frames through short-lived signed URLs.</li>
+          <li>Project backup: Before upload, capture details in photos and videos, such as capture location, capture time, and device information, are removed on your device, keeping only the orientation value. The server keeps files in encrypted storage (AES-256), separated by account, and issues the addresses for uploading and downloading files only to the signed-in owner, as signed URLs valid for 1 hour. The storage rejects any request that is not over an encrypted (HTTPS) connection. Photos and videos, including those showing faces, are never used to identify who someone is.</li>
+          <li>Push notifications: Notifications carry only text keys and a job number, so no photos, record figures, or location leave through the notification path, and the push notification token is never written to logs or analytics events.</li>
+          <li>Subscription confirmation: Subscription status changes only on results RevenueCat has confirmed with Apple, and notifications from RevenueCat are accepted only when they carry the pre-agreed authentication value. Payment method information is never received.</li>
+          <li>Minimal storage: Birth year is stored only as a 10-year age group, and the original value is not kept.</li>
+          <li>Administrative measures: Minimizing the staff who handle personal information and setting internal handling rules</li>
+          <li>Technical measures: TLS encryption on all external connections; the server is placed in a segment not directly reachable from outside, with access limited to the minimum staff; server credentials are kept in a separate secrets management service</li>
+          <li>Access limited to your own data: Running records and project backups stored on the server can be viewed and edited only by the signed-in owner; ownership is checked on every request.</li>
         </ul>
       </Section>
 
@@ -667,8 +678,8 @@ export default function PrivacyPage() {
           Article 5 and to the Team&rsquo;s server (in Korea, Article 3).
         </p>
         <p>
-          <strong>The advertising identifier (IDFA) is collected only if you allow it in App
-          Tracking Transparency (ATT, the iOS prompt that asks whether to allow app tracking).</strong>{" "}
+          The advertising identifier (IDFA) is collected only if you allow it in App
+          Tracking Transparency (ATT, the iOS prompt that asks whether to allow app tracking).{" "}
           On first launch the app explains what it is used for, then asks with the system prompt;
           every feature works the same whether or not you allow it. You can turn it off at any time
           in iOS Settings even after allowing it (Article 7). If you do not allow it, the ad
@@ -679,21 +690,41 @@ export default function PrivacyPage() {
 
       <Section title="Article 11 (Handling of Health Data)">
         <p>
-          <strong>Heart rate, cadence, and calories are health information (sensitive information), so they are stored on
-          the Team&rsquo;s server (in Korea) only if you give the optional &lsquo;keep health records on the server&rsquo;
-          consent, which is asked separately from the Terms of Service agreement when you sign in.</strong> They are kept to
-          restore your running records on another device, until you withdraw consent, and are deleted 30 days after you
-          delete your account. You can use the app without agreeing; if you change devices, values you entered yourself are
-          not restored. You can turn this consent off at any time in Settings &gt; Keep health records on server, which
-          deletes the heart rate, cadence, and calories of your account from the server.
+          Heart rate, cadence, and calories are health information (sensitive information), so they are stored on the
+          Team&rsquo;s server (in Korea) only if you give the optional &lsquo;Keep health records on server&rsquo; consent,
+          which is asked separately from the Terms of Service agreement on the consent screen after sign-in (Article 1). Here,
+          &ldquo;health records&rdquo; means the average and maximum heart rate, cadence, and calories of your running records
+          (both values read from Apple HealthKit and values you entered yourself), the same values shown in overlays of backed-up
+          projects, and the preview images of photo projects that include elements showing these values. Health records are kept
+          until you withdraw consent, and are deleted together with your other account information after a 30-day grace period
+          once you request account deletion (Article 3).
+        </p>
+        <p>
+          If you do not give this consent on app version 2.6.0 or later, the app does not send health records to the server,
+          and the server neither stores nor returns them. The app removes health record display values from the project
+          information it uploads, and does not upload the preview images of photo projects that include health record elements.
+          You can keep using the app, and your health records stay only on your device. Leaving this item unchecked on the
+          consent screen does not delete values already on the server. Health records previously stored on the server
+          for accounts that have not consented are deleted on December 15, 2026, and the consent screen tells existing users
+          this date. Before then, we will raise the minimum supported app version to 2.6.0. Until the minimum version is raised,
+          app versions earlier than 2.6.0 keep storing and returning health records as before, regardless of consent. This is
+          so that empty values on the server do not overwrite the values on the devices of older app versions.
+        </p>
+        <p>
+          You can change this consent in the app&rsquo;s settings under Keep health records on server. If you turn it off, after
+          a confirmation dialog, your account&rsquo;s health records on the server (running record values, health record display
+          values in projects, and the references to preview images of photo projects that include health record elements) are
+          deleted, and the values on your device stay as they are. Preview image files that are no longer linked are destroyed
+          after 24 hours, like other files not used by any project (Article 3). If you turn it back on, the app uploads your device&rsquo;s
+          running records again to fill in the empty health records on the server.
         </p>
         <p>
           Running records read from Apple HealthKit are used only to create content and to back up
           and restore your own records. Measurements of signed-in users (distance, duration, pace,
-          and so on; heart rate, cadence, and calories only with the separate consent below) are stored on the Team&rsquo;s server (in Korea) for backup (records made as a guest are not stored on the server), and <strong>GPS
+          and so on; heart rate, cadence, and calories only with the consent above) are stored on the Team&rsquo;s server (in Korea) for backup (records made as a guest are not stored on the server), and GPS
           routes are not sent to the Team&rsquo;s server, and the server is built not to accept
-          them.</strong> In line with Apple&rsquo;s policies, <strong>health data is never used for
-          advertising or marketing, and is never sold or provided to third parties.</strong>{" "}
+          them. In line with Apple&rsquo;s policies, health data is never used for
+          advertising or marketing, and is never sold or provided to third parties.{" "}
           Neither health data nor values derived from it are sent to the ad performance measurement
           tool in Article 5 or to Meta in Article 4. The frames and photos sent to the AI providers in
           Article 5 for AI templates and the Quick Stamp judgment are the original pictures before any
@@ -705,49 +736,50 @@ export default function PrivacyPage() {
           described below. Push notifications carry no record figures either.
         </p>
         <p>
-          The <strong>project backup</strong> of a signed-in user also stores the running record
-          values shown in that edit&rsquo;s overlays (distance, duration, pace, and so on). This is
+          The project backup of a signed-in user also stores the running record
+          values shown in that edit&rsquo;s overlays (distance, duration, pace, and so on; heart rate, cadence, and calories
+          only with the consent above). This is
           so the edit can be restored exactly on another device, and these values are the same kind
           as the running measurements already backed up to the server. They too are never used for
           advertising or marketing and are never provided to third parties.
         </p>
         <p>
-          When you turn on and start <strong>Auto Edit</strong>, values the app calculates from your
+          When you turn on and start Auto Edit, values the app calculates from your
           running records (this run&rsquo;s distance, duration, and pace, the difference from earlier
           runs, running streaks, cumulative distance over a period, whether it is a personal best or a
           first achievement, and so on) and photo and video copies with a record overlay applied are
           sent to the AI providers in Article 5 (Google and OpenAI) to generate caption text and
           evaluate candidates. Overlays may show the values you see on your record screen and the
-          shape of your route (only the line shape, without a map or coordinates). <strong>Raw running
-          records (the full measurement data) and GPS routes and coordinates are not sent.</strong>{" "}
+          shape of your route (only the line shape, without a map or coordinates). Raw running
+          records (the full measurement data) and GPS routes and coordinates are not sent.{" "}
           These values are used only to create your result; the AI providers, as processors, may not
           use them for training or their own purposes, and the Team never uses them for advertising or
           marketing or sells or provides them to third parties. Nothing is sent if you do not turn on
           Auto Edit.
         </p>
         <p>
-          <strong>The running location name</strong> is generated when you open the overlay editor,
+          The running location name is generated when you open the overlay editor,
           by sending one starting coordinate of the running route to Apple&rsquo;s reverse geocoding
           server (a service that converts coordinates into place names) (Article 5). When you search
           for a place in a place sticker, the same starting coordinate is sent with the search text to
           Apple&rsquo;s place search server to find nearby places first (Article 5). These are the only
-          two times a coordinate leaves your device, and <strong>the returned place name is stored
-          only on your device and never uploaded to the Team&rsquo;s server.</strong> Analytics
+          two times a coordinate leaves your device, and the returned place name is stored
+          only on your device and never uploaded to the Team&rsquo;s server. Analytics
           events record only whether a place name exists (yes or no), not the name itself.
         </p>
         <p>
-          However, for service improvement analysis, <strong>values derived from running
-          records</strong> are sent to the providers in Article 5 and to the Team&rsquo;s server (in Korea). The derived values are the
+          However, for service improvement analysis, values derived from running
+          records are sent to the providers in Article 5 and to the Team&rsquo;s server (in Korea). The derived values are the
           following three, and the raw figures cannot be recovered from them.
         </p>
         <ul className="list-disc space-y-1 pl-5">
-          <li><strong>Distance bucket:</strong> one of under 5 km / 5 km to under 10 km / 10 km or more</li>
-          <li><strong>Whether a route exists:</strong> whether the run has a GPS route (yes or no)</li>
-          <li><strong>Whether a place name exists:</strong> whether a place name was generated for the run (yes or no)</li>
+          <li>Distance bucket: one of under 5 km / 5 km to under 10 km / 10 km or more</li>
+          <li>Whether a route exists: whether the run has a GPS route (yes or no)</li>
+          <li>Whether a place name exists: whether a place name was generated for the run (yes or no)</li>
         </ul>
         <p>
-          These derived values are <strong>used only for analysis to understand which distance
-          ranges produce content well,</strong> and are never used for advertising or marketing, or
+          These derived values are used only for analysis to understand which distance
+          ranges produce content well, and are never used for advertising or marketing, or
           sold or shared elsewhere.
         </p>
       </Section>
@@ -966,16 +998,19 @@ export default function PrivacyPage() {
           is, so it takes effect on the date of notice.
         </p>
         <p className="text-gray-600">
-          Revision of November 7, 2026 (sign-in consent and separate health record consent): We removed the notice that
-          signing in &lsquo;counts as agreeing&rsquo;, and now ask you to check the Terms of Service agreement and confirm you
-          are 14 or older, with keeping health records on the server asked as a separate choice. We added the consent records
-          (terms version and time, the time you confirmed your age, and whether and when you consented to health records) to
-          account information (Article 1), and stated in Article 11 that heart rate, cadence, and calories are stored only with
-          the health record consent. Accounts without that consent no longer have heart rate, cadence, and calories stored on
-          the server from the effective date, so this revision reduces the information processed and takes effect on the date
-          of notice.
+          Revision of November 11, 2026 (sign-in consent and separate health record consent): We added to Article 1 that, if a
+          social login account has no record of agreeing to the terms, the consent screen asks you to confirm you are 14 or older
+          and agree to the Terms of Service (required) and asks about keeping health records on the server (optional), together
+          with the consent records (the Terms of Service version and time of agreement, the time you confirmed you are 14 or
+          older, and whether you consent to keeping health records on the server and when that changed). We reflected in the
+          summary and Articles 1, 3, 7, and 11 that heart rate, cadence, and calories, and the project information and preview
+          images that show them, are stored only if you consent to keeping health records on the server, along with how long
+          they are kept and how to withdraw. Health records previously stored on the server for accounts that have not
+          consented are deleted on December 15, 2026, and users who were already signed in see the consent screen again after
+          updating to app version 2.6.0. Because this changes how existing users&rsquo; information is handled, this revision
+          takes effect 7 days after notice, on November 18, 2026.
         </p>
-        <p><strong>Date of notice: November 7, 2026 / Effective date: November 7, 2026</strong> (the revision announced on November 6, 2026 takes effect on November 6, 2026; the revision announced on November 5, 2026 takes effect on November 5, 2026; the revision announced on November 3, 2026 takes effect on November 3, 2026; the RevenueCat revision announced on October 28, 2026 takes effect on November 4, 2026; the place search revision announced the same day takes effect on October 28, 2026; the revision announced on October 27, 2026 takes effect on November 1, 2026; the revision announced on October 26, 2026 takes effect on October 26, 2026; the revision announced on October 25, 2026 takes effect on November 1, 2026; the revision announced on October 12, 2026 takes effect on October 19, 2026; the revision announced on October 8, 2026 takes effect on October 8, 2026; the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
+        <p>Date of notice: November 11, 2026 / Effective date: November 18, 2026 (the revisions announced on November 7, 2026 take effect on November 7, 2026; the revision announced on November 6, 2026 takes effect on November 6, 2026; the revision announced on November 5, 2026 takes effect on November 5, 2026; the revision announced on November 3, 2026 takes effect on November 3, 2026; the RevenueCat revision announced on October 28, 2026 takes effect on November 4, 2026; the place search revision announced the same day takes effect on October 28, 2026; the revision announced on October 27, 2026 takes effect on November 1, 2026; the revision announced on October 26, 2026 takes effect on October 26, 2026; the revision announced on October 25, 2026 takes effect on November 1, 2026; the revision announced on October 12, 2026 takes effect on October 19, 2026; the revision announced on October 8, 2026 takes effect on October 8, 2026; the revision announced on October 5, 2026 takes effect on October 7, 2026; the revision announced on October 1, 2026 takes effect on October 8, 2026; AI template provisions first effective September 9, 2026)</p>
       </Section>
     </main>
   );
